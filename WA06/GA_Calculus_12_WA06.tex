@@ -1,5 +1,5 @@
 \documentclass{article}
-\input{../preamble.tex}
+\input{../Preamble/preamble.tex}
 \title{}
 \date{}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -45,7 +45,7 @@ A \Emph{tetrahedron} is a three dimensional object with four, triangular, flat s
 \begin{figure}[h]
   \vspace{-1pt}
   \begin{center}
-    \includegraphics[width=0.35\textwidth]{WA06Tetrahedrons.jpg}
+    \includegraphics[width=0.35\textwidth]{ImgTetrahedrons.jpg}
   \end{center}
 \end{figure}\\
 Consider the tetrahedron that is bounded by the three coordinate planes in $\R^3$, and by the plane $z = 1 - x - \frac{y}{2}$.
@@ -65,7 +65,7 @@ Note that
 \Emph{Area of a General Region}\\
 \BEN
 \item Question 11 from Section 3.2 of \VCT. \textit{Hint: Figure 3.2.5 is also helpful.}
-\item Use the result from part (a) to compute the double integrals ...
+\item Use the result from part (a) to compute the area of the region bounded by the curves $y = x^2$ and $x=y^2$.
 \EEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % FLUID MECHANICS
@@ -113,20 +113,48 @@ where $D$ is the square $0\le x \le 1$, $0\le y \le 1$, and $f(x,y) = \sin(x+y)$
 \end{align*}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % SYMMETRY
-You may have 
+\textbf{Symmetry in Double Integration} \\
+With single variable functions, there are certain symmetry properties of functions that we can use when integrating over intervals centered about the origin. You may know that:
 \begin{align*}
-  \iint\limits_D xe^{xy}dA,
- \end{align*}
-where $D$ is the square $0\le x\le 1$ and $0\le y \le 1$. Observe that the integrand, $xe^{xy}$, is finite and continuous everywhere on $D$. Evaluate the double integral by first integrating with respect to $x$, if possible! \textit{Hint: you may find that the integral can't be determined using the methods we have introduced in this course.}  \\ \\ \textit{Did I screw up somewhere, are we going too far beyond the scope of this course, do we want to make this a bonus question, or do we leave it as is?}
+  \text{If }f(x)\text{ is odd, then } & \int_{-a}^{a} f(x) dx = 0 . \\
+  \text{If }f(x)\text{ is even, then } & \int_{-a}^{a} f(x) dx = 2 \int_0^a f(x) dx.
+\end{align*}
+There are similar results for integrals of two variables, but in order to introduce them, we first need to extend our concepts of even and odd functions to functions of two variables, and we need to describe regions that are symmetric about the $x$-axis and about the $y$-axis. 
 
+If $R$ is a region that is \Emph{symmetric about the $y$-axis}, and $(x_0,y_0)$ is a point inside $R$, then the point $(-x_0,y_0)$ is also inside $R$. Similarily, if $S$ is a region that is \Emph{symmetric about the $x$-axis}, and $(x_1,y_1)$ is a point inside $S$, then the point $(x_1,-y_1)$ is also inside $S$. Above are examples of regions that have these symmetries.\\
+
+\begin{figure}[h]
+  \vspace{-1pt}
+  \begin{center}
+    \includegraphics[width=0.95\textwidth]{ImgRegions.jpg}
+  \end{center}
+ \begin{quote} \caption{\small{a) the blue region is symmetric about the $x$-axis, b) the blue region is symmetric about the $y$-axis, and c) the blue region is symmetric about the $x$-axis and the $y$-axis.}}\end{quote}
+\end{figure}
+
+Moreover, if $g(x,y)$ is odd in $x$, then 
+\begin{align*}
+  g(-x,y) = - g(x,y).
+\end{align*}
+But if $g(x,y)$ were even in $x$, then 
+\begin{align*}
+  g(-x,y) =  g(x,y).
+\end{align*}
+Combining these concepts yields helpful results for computing double integrals. For example, if $R$ is symmetric about the $y$-axis, and if $g(x,y)$ is odd in $x$, then
+\begin{align*}
+  \iint\limits_R g(x,y) dxdy = 0.
+\end{align*}
+Similar results can be stated if $g$ were even in $x$ or in $y$, and if $R$ has symmetry about the $x$-axis. 
+\BEN
+\item Provide an example of a non-zero function of two variables, $h(x,y)$, that is odd in $x$. Verify that your function is odd in $x$.
+\item Provide an example of a region, $D$, that is symmetric about the $y$-axis, but is not symmetric about the $x$-axis. 
+\item Show that, for your $h(x,y)$ and region $D$, that 
+\begin{align*}
+  \iint\limits_D g(x,y) dxdy = 0.
+\end{align*}
+\EEN
 
 \EEN % END OF QUESTIONS
 
-%
-%\noindent \textbf{References} \\
-%The wind tunnel problem was based on a similar exercise in Linear Algebra and Its Applications, 4th Edition, by David C. Lay, Addison-Wesley, 2012.
-%
-% 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -144,7 +172,7 @@ where $D$ is the square $0\le x\le 1$ and $0\le y \le 1$. Observe that the integ
 \begin{figure}[h]
   \vspace{-1pt}
   \begin{center}
-    \includegraphics[width=0.35\textwidth]{WA06Solid.jpg}
+    \includegraphics[width=0.35\textwidth]{ImgSolid.jpg}
   \end{center}
 \end{figure}
 \item We must integrate:
@@ -165,7 +193,7 @@ where $D$ is the square $0\le x\le 1$ and $0\le y \le 1$. Observe that the integ
 \begin{figure}[h]
   \vspace{-1pt}
   \begin{center}
-    \includegraphics[width=0.35\textwidth]{WA06TetExample.jpg}
+    \includegraphics[width=0.35\textwidth]{ImgTetExample.jpg}
   \end{center}
 \end{figure}
 % ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  ~  
@@ -194,6 +222,8 @@ The double integral is
 \EEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % DOUBLE INTEGRAL IS AREA IF F=1
+\BEN
+\item
 Suppose that we subdivide region $R$ into a rectangular grid of sub-rectangles (as in Figure 3.2.5), so that we only consider the sub-rectangles that are completely enclosed in $R$. Then, the area of region $R$ is approximated by the double sum
 \begin{align*}
   \sum_j\sum_i\Delta x_i \Delta y_j
@@ -212,6 +242,19 @@ as the limit of Equation (\ref{abefaberabreabr}) as the longest diagonal goes to
   \mathop{\int \!\!\! \int} 1 dA
 \end{align*}
 is the area of region $R$. 
+\item The region may be defined as
+\begin{align*}
+  R = \{ (x,y) \ | \ 0 \le x \le 1, \ x^2 \le y \le \sqrt{x} \}.
+\end{align*}
+The area of $R$ is 
+\begin{align*}
+  \mathop{\int_0^1 \!\!\! \int_{x^2}^{\sqrt{x}}} dydx 
+  &= \int_0^1 \Big(\sqrt{x} - x^2 \Big) dx \\
+  &= \Big(\frac{2}{3}x^{3/2}  - \frac{x^3}{3} \Big)\Big|_0^1 \\
+  &= \frac{2}{3} - \frac{1}{3} \\
+  &= \frac{1}{3}
+\end{align*}
+\EEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item
 \BEN
@@ -304,7 +347,7 @@ The region over which we are integrating $f(x,y)$ is the shaded area below.
 \begin{figure}[h]
   \vspace{-1pt}
   \begin{center}
-    \includegraphics[width=0.55\textwidth]{Log.jpg}
+    \includegraphics[width=0.55\textwidth]{ImgLog.jpg}
   \end{center}
 \end{figure}\\
 The region is bounded by the lines $y=0$, $x=1+e$, and by the curve $y=\ln(x-1)$. Using horizontal slices, values of $y$ range from 0 to 1, and values of $x$ range from $e^y-1$ to $1+e$. The double integral becomes
@@ -322,47 +365,28 @@ because $x+y$ is between 0 and 2, and $\sin(2) < 1$. Then
   0 = \iint\limits_D 0 dA  \le  \iint\limits_D f(x,y) dA \le  \iint\limits_D (1) dA = 1.
 \end{align*}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % THE UNDEFINED INTEGRAL
-%\BEN
-%\item Integrating with respect to $y$ first yields
-%\begin{align*} 
-%  \iint\limits_R xe^{xy}dA
-%  &=  \mathop{\int_0^1 \!\!\! \int_0^1} xe^{xy} dydx \\
-%  &=  \int_0^1x \Bigg(\int_0^1e^{xy} dy \Bigg) dx \\
-%  &=  \int_0^1 x \Bigg( \frac{1}{x}e^{xy} \Big|_{y=0}^{y=1}\Bigg) dx \\  
-%  &=  \int_0^1 e^{xy} \Big|_0^1 dx \\  
-%  &=  \int_0^1 (e^{x} - 1 )dx \\  
-%  &=  (e^{x} - x) \Big|_0^1\\
-%  &=  (e - 1) - (1 - 0) \\
-%  &=  e  - 2  
-%\end{align*}
-Integrating with respect to $x$ first gives us the double integral
-\begin{align*} 
-  \iint\limits_D xe^{xy}dA &=  \mathop{\int_0^1 \!\!\! \int_0^1} xe^{xy} dxdy .
+\item % SYMMETRY
+\BEN
+\item 
+Suppose we use the function
+\begin{align*}
+ h(x,y) & = 11xy.
 \end{align*}
-Let's first consider the integration with respect to $x$ in isolation:
-\begin{align*} 
-  \int_0^1 xe^{xy} dx  .
-  \end{align*}
-Using integration by parts with $u=x$ and $dv = e^{xy}$, and treating $y$ as a constant, 
-\begin{align*} 
-  \int_0^1 xe^{xy} dx  
-  &= x\Big(\frac{e^{xy}}{y}\Big)\Big|_0^1 - \int_0^1 \frac{1}{y}e^{xy}dx \\
-  &= \frac{e^{y}}{y} -  \frac{1}{y} \int_0^1e^{xy}dx \\
-  &= \frac{e^{y}}{y} -  \frac{1}{y^2} e^{xy}\big|_0^1\\
-  &= \frac{e^{y}}{y} -  \frac{1}{y^2} (e^{y} - 1)
+Then $h(-x,y) = 11(-x)y = -11xy = -h(x,y)$. 
+\item An example of a region that is symmetric about the $y$-axis, but not symmetric about the $x$-axis, is the region bounded by the curves
+\begin{align*}
+  x = -1,  \quad x = 1, \quad y = 0, \quad y = - 1.
 \end{align*}
-We now must integrate 
-\begin{align*} 
- \mathop{\int_0^1 \!\!\! \int_0^1} xe^{xy} dxdy &=\int_0^1 \Big(  \frac{e^{y}}{y} -  \frac{1}{y^2} (e^{y} - 1) \Big)dy\\
- &=\int_0^1   \frac{e^{y}}{y} dy - \int_0^1 \frac{e^{y} }{y^2}  dy + \int_0^1 \frac{1}{y^2}   dy
+\item The double integral for our region is
+\begin{align*}
+  \iint\limits_D g(x,y) dxdy 
+  &=  \mathop{\int_{-1}^1 \! \int_{-1}^0} 11xy dydx\\
+  &=  -\frac{11}{2} \int_{-1}^1 x dx\\
+  &=  -\frac{11}{4} \Big(x^2 \Big)\Big|_{-1}^{1} \\
+  &=  -\frac{11}{4} (0)\\
+  &= 0.
 \end{align*}
-The above three integrals do not exist! However, the double integral 
-\begin{align*} 
-  \mathop{\int_0^1 \!\!\! \int_0^1} xe^{xy} dxdy 
-\end{align*}
-exists, because the integrand is finite everywhere on $D$. The methods we are using in this course will not allow us to find the value of this double integral by first integrating with respect to $x$.
-
+\EEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \EEN % END OF SOLUTIONS
 
