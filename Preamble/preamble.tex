@@ -3,8 +3,14 @@
 \usepackage{amssymb} % for \mathbb
 \usepackage{graphicx} % for figures
 \usepackage{color}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{hyperref} % for hyperlinks
 \usepackage{float} % for figures
+% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+% ENUMERATION
+
+\usepackage{enumitem}   % so that question numbers can be formatted 
+\setenumerate[1]{label=\thesubsection.\arabic*.} % enumerate environment: add section numbers to items
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 % MARGINS
 \usepackage{anysize}
@@ -16,10 +22,9 @@
 % Custom Commands
 \newcommand{\Emph}[1]{\textbf{#1}} % Emphasize
 \newcommand{\R}{\mathbb{R}} 
-\newcommand{\rednote}[1]{{\color{red}\textit{#1}}} % Shortcut for red italics (NOT USED?)
 \newcommand{\BM}{\begin{bmatrix}} % Begin Matrix
 \newcommand{\EM}{\end{bmatrix}} % End Matrix
-\newcommand{\BEN}{\begin{enumerate}} % Begin ENumerate
+\newcommand{\BEN}{\begin{enumerate}[leftmargin=1.1cm]}% Begin ENumerate
 \newcommand{\EEN}{\end{enumerate}} % End ENumerate
 \newcommand{\MB}{\mathbf} % Math Bold
 
@@ -32,13 +37,18 @@
 
 \newcommand{\VCT}{\textit{Vector Calculus} by Michael Corral} % Vector Calculus Textbook
 \newcommand{\CAT}{\textit{College Algebra} by Carl Stitz and Jeff Zeager} % College Algebra Textbook
-\newcommand{\From}{Questions in this assignment are based on } % Questions ....
+\newcommand{\From}{The following questions are related to } % Questions ....
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-% Special Commands
-
-% Augmented matrix macro, thanks to http://tex.stackexchange.com/questions/2233/whats-the-best-way-make-an-augmented-coefficient-matrix
+% ONLY USED FOR EDITING
+\newcommand{\rednote}[1]{{\color{red}\textit{#1}}} % Shortcut for red italics
+\newcommand{\purple}[1]{{\color{Violet}\textit{#1}}} % Shortcut for red italics 
+% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+% AUGMENTED MATRIX MACRO
+% thanks to http://tex.stackexchange.com/questions/2233/whats-the-best-way-make-an-augmented-coefficient-matrix
 \newenvironment{amatrix}[1]{%
   \left[\begin{array}{@{}*{#1}{c}|c@{}}
 }{%
   \end{array}\right]
 }
+
+

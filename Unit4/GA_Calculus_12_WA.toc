@@ -1,0 +1,17 @@
+\contentsline {part}{I\hspace {1em}Questions for Written Assignments}{1}{part.1}
+\contentsline {section}{\numberline {1}Multivariable Functions and Algebra}{1}{section.1}
+\contentsline {section}{\numberline {2}Partial Derivatives}{1}{section.2}
+\contentsline {section}{\numberline {3}Multiple Integrals}{1}{section.3}
+\contentsline {subsection}{\numberline {3.1}Double Integrals}{2}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Double Integrals Over a General Region}{2}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Triple Integrals}{4}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Change of Variables in Multiple Integrals}{5}{subsection.3.4}
+\contentsline {section}{\numberline {4}Line and Surface Integrals}{6}{section.4}
+\contentsline {part}{II\hspace {1em}Solutions to Written Assignment Questions}{6}{part.2}
+\contentsline {section}{\numberline {1}Multivariable Functions and Algebra}{6}{section.1}
+\contentsline {section}{\numberline {2}Partial Derivatives}{6}{section.2}
+\contentsline {section}{\numberline {3}Multiple Integrals}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1}Double Integrals}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Double Integrals Over a General Region}{8}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Triple Integrals}{11}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Change of Variables in Multiple Integrals}{13}{subsection.3.4}

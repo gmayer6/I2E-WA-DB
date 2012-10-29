@@ -1,5 +1,6 @@
 \documentclass{article}
-\input{../preamble.tex}
+\input{../Preamble/preamble.tex}
+
 \title{}
 \date{}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -8,79 +9,8 @@
 \begin{center}
 \textsc{\LARGE Written Assignment 7}\\[0.5cm]
 \end{center}
-\From sections 3.3, 3.5 and 3.6 of \VCT.
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%\section*{Wolfram Alpha Syntax}
-%You may want to use Wolfram Alpha (wolframalpha.com) to check your answers. If you're not sure what syntax to use to compute double integrals with Wolfram Alpha, let's suppose that we want to determine the value of
-%\begin{align*} 
-%   \mathop{\int_{-2}^{-1} \!  \int_0^{x-1}}( x^{2C} +y)  dy  dx
-%\end{align*}
-%where $C$ is a constant. The syntax we could use to compute this particular integral is
-%\begin{quote}
-%  \begin{verbatim}
-%    integrate x^{2C}+y dydx, x from -2 to -1 and y from 0 to (x-1)
-%  \end{verbatim}
-%\end{quote}
-%%The syntax for single and triple integrals is similar, and you can probably figure out what would work. 
-%Note also that Wolfram Alpha is very forgiving the syntax, so 
-%\begin{quote}
-%  \begin{verbatim}
-%    int x^(2c)y cos(3y) dydx, x in -2, -1 and y in 0, 1
-%  \end{verbatim}
-%\end{quote}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\section*{Questions}
-\BEN
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % GENERAL TRANSFORMATION
-Under the linear transformation 
-\begin{align*}
-  x = c_1u + c_2v , \quad y =d_1u + d_2v, \quad d_1c_2 - d_2c_1 \ne 0
-\end{align*}
-straight lines in the $uv$-plane are mapped to straight lines in the $xy$-plane. 
-\BEN
-\item Determine the equation of the vertical line $v=v_0$ in the $xy$-plane. 
-\item Determine the equation of the horizontal line $y=y_0$ in the $uv$-plane.
-\EEN
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % STRAIGHTFORWARD CHANGE OF VARIABLES
-Use an appropriate transformation to evaluate the integral
-\begin{align*}
-  \iint\limits_R \big(x^2 - y^2\big) dxdy,
-\end{align*}
-where $R$ is the parallelogram bounded by 
-\begin{align*}
-  x+y = 0, \quad x+y = 1, \quad x-y=0, \quad x-y=1.
-\end{align*}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % TETRAHEDRON
-\Emph{Volume of a Tetrahedron, Part II} \\
-The textbook points out that the triple integral 
-\begin{align*}
-  \iiint\limits_S f(x,y,z) dV
-\end{align*}
-for the special special case when $f(x,y,z) = 1$ for all points in $S$, gives the volume of $S$
-\begin{align*}
-  V(S) &= \iiint\limits_S dV.
-\end{align*}
-Consider again the tetrahedron that is bounded by the three coordinate planes in $\R^3$, and by the plane $z = 1 - x - \frac{y}{2}$. We derived an expression for the volume of this tetrahedron in a previous assignment using a double integral. Now set-up and find the volume of the tetrahedron using a triple integral.
+Your instructor may assign all of these questions, or a subset of these questions. Additional problems may also be assigned. Before you start this assignment, be sure that you are aware of which questions your instructor expects you to complete.
 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % VOLUME OF AN ELLIPSOID
-\textbf{Volume of an Ellipsoid, Part I}\\
-Solve Question 10 from Section 3.5 of \VCT.
-%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%\item % BETA FUNCTION  KEEP??????
-%\textbf{Application to the Beta Function}\\
-%The Beta function, 
-%\BEN 
-%\item Solve Question 11 from Section 3.5 of \VCT. \textit{Hint: You do not need to integrate the Beta function}. 
-%\item Solve Question 12 from Section 3.5 of \VCT.  
-%\EEN
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % FLOOD GATE? TRIM 14.4
-
-\EEN % END OF QUESTIONS
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,117 +20,6 @@ Solve Question 10 from Section 3.5 of \VCT.
 \newpage
 \section*{Solutions}
 
-\BEN
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % GENERAL TRANSFORMATION
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % STRAIGHTFORWARD CHANGE OF VARIABLES
-The integral can be written as
-\begin{align*}
-  \iint\limits_R \big(x^2 - y^2\big) dxdy =  \iint\limits_R (x - y)(x+y) dxdy
-\end{align*}
-which suggests the transformation 
-\begin{align}
-  u = x+y  \label{zcvzcxvvad}\\
-  v = x - y \label{ntrsraaewvbernst}
-\end{align}
-In order to compute the Jacobian, we need explicit expressions for $u$ and $v$. If we add  equations \ref{zcvzcxvvad} and \ref{ntrsraaewvbernst} we find that 
-\begin{align*}   x = \frac{u+v}{2}   \end{align*}
-And if we subtract equations \ref{zcvzcxvvad} and \ref{ntrsraaewvbernst} we find that
-\begin{align*}   y = \frac{u-v}{2}   \end{align*}
-The Jacobian becomes
-\begin{align*}   J &=  
-  \begin{vmatrix}
-   \pxu &  \pxv \\ \\
-   \pyu & \pyv \\
-  \end{vmatrix}
-  =     \begin{vmatrix}
- \frac{1}{2} &  \frac{1}{2} \\ \\
-   \frac{1}{2} & -\frac{1}{2} \\
-  \end{vmatrix}
-  = - \frac{1}{4}- \frac{1}{4} = - \frac{1}{2}.
- \end{align*}
-We also need to find the limits of  integration in the transformed integral. Recall that $R$ is the region bounded by
-\begin{align*}
-  x+y = 0, \quad x+y = 1, \quad x-y=0, \quad x-y=1.
-\end{align*}
-Using equations \ref{zcvzcxvvad} and \ref{ntrsraaewvbernst} these four lines become 
-\begin{align*}
-  u = 0, \quad u = 1, \quad v=0, \quad v=1.
-\end{align*}
-The double integral therefore becomes
-\begin{align*}
-  \iint\limits_R \big(x^2 - y^2\big) dxdy 
-  &=  \iint\limits_R (x - y)(x+y) dxdy \\
-  &=    \mathop{\int_0^1 \! \int_0^1} uv \Big(-\frac{dudv}{2} \Big) \\
-  &=   -  \frac{1}{2}\mathop{\int_0^1 \! \int_0^1} (uv) dudv \\
-  &=   -  \frac{1}{2}\int_0^1 \frac{v}{2} dv \\
-  &=  - \frac{1}{8}.
-\end{align*}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % TETRAHEDRON
-\Emph{Volume of a Tetrahedron, Part II} \\
-\begin{figure}[h]
-  \vspace{-1pt}
-  \begin{center}
-    \includegraphics[width=0.35\textwidth]{TetExample.jpg}
-  \end{center}
-\end{figure}\\
-Recall that the volume is the region under the plane $z = 1 - x - y/2$ and over  
-\begin{align*}
-  R = \{ (x,y) \ | \ 0 \le x \le 1- y/2, \ 0 \le y \le 2 \}.
-\end{align*}
-Because $z$ lies between 0 and $z = 1 - x - y/2$, the volume, $S$, can be described as
-\begin{align*}
-  S = \{ (x,y,z) \ | \ 0 \le x \le 1- y/2, \ 0 \le y \le 2, \ 0 \le z \le 1 - x - y/2 \}.
-\end{align*}
-The volume can be calculated with the triple integral
-\begin{align*}
-  \mathop{\int_{0}^{2} \! \int_0^{1-y/2} \int_0^{1-x-y/2} }dzdxdy
-  &= \mathop{\int_{0}^{2} \! \int_0^{1-y/2}  } ( 1-x-y/2) dxdy\\
-  &= \mathop{\int_{0}^{2}  } \Big( x-\frac{x^2}{2}-\frac{xy}{2}\Big)\Big|_0^{1-y/2} dy \\
-  &= \mathop{\int_{0}^{2}  } \Big( (1-y/2)-\frac{(1-y/2)^2}{2}-\frac{(y-y^2/2)}{2}\Big) dy \\
-  &= \mathop{\int_{0}^{2}  } \Big( 1 - \frac{y}{2}-\frac{1}{2} + \frac{y}{4} -\frac{y^2}{2}-\frac{y}{2}+\frac{y^2}{4}\Big) dy \\
-  &= \mathop{\int_{0}^{2}  } \Big( \frac{1}{2} - \frac{y}{2}  -\frac{y^2}{4} \Big) dy \\
-  &= \frac{2}{2} - \frac{4}{4}  -\frac{8}{12} \\
-  &=  -\frac{3}{4}
-\end{align*} 
-Wrong!
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % VOLUME OF AN ELLIPSOID
-We are given the transformations
-\begin{align*}
-  x=au, \quad y=bv, \quad z=cw.
-\end{align*}
-The Jacobian becomes
-\begin{align*}   J &=  
-  \begin{vmatrix}
-   \pxu &  \pxv \\ \\
-   \pyu & \pyv \\
-  \end{vmatrix}
-  =     \begin{vmatrix}
- a&0&0\\
- 0&b&0\\
- 0&0&c\\
-  \end{vmatrix}
-  = abc.
- \end{align*}
- The solid enclosed by the ellipsoid is the image of the unit sphere $u^2 + v^2 + w^2 \le 1$. Using that a sphere has volume $\frac{4}{3} \pi r^3$, we find that 
-\begin{align*}
-  \iiint\limits_{V} dxdydz
-  &=  \iiint\limits_{u^2+v^2+w^2 \le 1} abc \ dudvdw \\
-  &=  abc \iiint\limits_{u^2+v^2+w^2 \le 1} \ dudvdw \\
-  &=  abc (\text{volume of a sphere}) \\
-  &=   \frac{4\pi abc}{3} 
-\end{align*}
-%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%\item % BETA FUNCTION  KEEP?????
-% We are given that 
-% \begin{align*}
-%  B(x,y) &= \int_0^1 t^{x-1}(1-t)^{y-1}dt.
-%\end{align*}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\EEN % END OF SOLUTIONS
 
 \end{document}
 

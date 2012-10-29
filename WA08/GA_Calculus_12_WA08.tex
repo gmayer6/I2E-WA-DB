@@ -31,45 +31,7 @@
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \section*{Questions}
 \BEN
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % CHANGE OF VARIABLES TWICE
-When working with double integrals in polar coordinates, a helpful simplification  ...
-\begin{align*}
-   \iint\limits_{R} g(x) h(y) dA 
-  & = \int_a^b g(x) dx \int_c^d h(y) dy  
-\end{align*}
-Use this property and the transformation $x = 3u, y = 2v$ to evaluate the double integral
-\begin{align*}
-  \iint\limits_E x^2 \ dxdy,
-\end{align*}
-where $E$ is region bounded by the ellipse $4x^2 + 9y^2 = 36$. 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % SIMPLE CYLINDRICAL WITH CONE
-Evaluate the integral
-\begin{align*}
-  \iiint\limits_S y^2dV,
-\end{align*}
-where $S$ is the solid that lies inside the cylinder $x^2+y^2 = 1$, above the plane $z=0$ and below the cone $z^2 = 9x^2 + 9y^2$. 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % FROM SALAS, ETC
-Evaluate the integral
-\begin{align*}
-  \iiint\limits_V \frac{1}{\sqrt{x^2+y^2}}dV,
-\end{align*}
-using cylindrical coordinates, where $V$ is the region:
-\begin{align*}
-  0 \le &x \le 2 \\
-  0 \le &y \le \sqrt{4 - x^2}\\
-  0 \le &z \le \sqrt{4 - x^2}
-\end{align*} 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % EVEN AND ODD
-Determine the value of
-\begin{align*}
-  \mathop{\int_0^{\pi} \!\! \int_{-1}^1} x^4e^{x^2 + y^2}\sin(y) dydx.
-\end{align*}
-\textit{Hint: integration by parts is not necessary.}\\
-\textit{push this question to a midterm or final exam?}
+
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % FLOOD GATE? TRIM 14.4
 
@@ -90,68 +52,6 @@ Determine the value of
 \section*{Solutions}
 
 \BEN
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % CHANGE OF VARIABLES TWICE WITH POLAR
-The Jacobian is
-\begin{align*}   J &=  
-  \begin{vmatrix}
-   \pxu &  \pxv \\ \\
-   \pyu & \pyv \\
-  \end{vmatrix}
-  =     \begin{vmatrix}
-   3 & 0 \\ \\
-   0 & 2 \\
-  \end{vmatrix}
-  = 6 .
- \end{align*}
-We also need to find the limits of integration in the transformed integral. The region $R$ is bounded by the ellipse, $4x^2 + 9y^2 = 36$, which becomes the region bounded by the circle $u^2 + v^2 = 1$. Therefore
-\begin{align*}
-  \iint\limits_R x^2 \ dxdy &= \iint\limits_{u^2 + v^2 \le 1} (9u^2) 6dudv =  54 \iint\limits_{u^2 + v^2 \le 1} (u^2) dudv
-\end{align*}
-Switching to polar coordinates, 
-\begin{align*}
-  u = r\cos\theta, \quad v = r\sin\theta, \quad J = r
-\end{align*}
-our double integral becomes
-\begin{align*}
-  54 \iint\limits_{u^2 + v^2 \le 1} (u^2) dudv 
-  & = 54 \mathop{\int_0^{2\pi} \!\! \int_0^1} r^3\cos^2\theta drd\theta  \\
-  & = 54 \Bigg( \int_0^{2\pi} \cos^2\theta d\theta \Bigg)\Bigg( \int_0^1 r^3 dr \Bigg) \\
-  & = 54 \Bigg( \int_0^{2\pi} \frac{1}{2} \big(1+\cos(2\theta) \big) d\theta \Bigg) \Bigg( \frac{1}{4} \Bigg) \\
-  & =\frac{27}{4} \Bigg( \int_0^{2\pi}  \big(1+\cos(2\theta) \big) d\theta \Bigg) \\
-  & =\frac{27}{4} \big(\theta+\frac{1}{2}\sin(2\theta) \big|_0^{2\pi}  \\
-  & =\frac{27}{4} \big(2\pi\big)  \\
-  & =\frac{27\pi}{2} 
-\end{align*}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % SIMPLE CYLINDRICAL WITH CONE
-In cylindrical coordinates, the region is described by 
-\begin{align*}
-  V = \{(r,\theta,z) \ | \ 0 \le r \le 1, 0 \le \theta \le 2\pi, 0 \le z \le 3r \}.
-\end{align*}
-Our integral becomes 
-\begin{align*}
-  \iiint\limits_V (r\sin\theta)^2 rdzdrd\theta 
-  &=    \mathop{\int_0^{2\pi} \!\! \int_0^1  \!\! \int_0^{3r}} r^3\sin^2\theta dzdrd\theta  \\
-  &=   3 \mathop{\int_0^{2\pi} \!\! \int_0^1} r^4\sin^2\theta drd\theta  \\
-  &=   \frac{3}{5} \int_0^{2\pi} \sin^2\theta d\theta  \\
-  &=   \frac{3}{10} \int_0^{2\pi} \big(1 - \cos(2\theta)\big) d\theta  \\
-  &=   \frac{3}{10} \big(\theta - \frac{1}{2}\sin(2\theta)\big) \Big|_0^{2\pi} \\
-  &=   \frac{3\pi}{5}
-\end{align*}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % EVEN AND ODD
-The integral can be written as
-\begin{align*}
-  \mathop{\int_0^{\pi} \!\! \int_{-1}^1} e^{x^2 + y^2}\sin(y) dydx 
-  &= \mathop{\int_0^{\pi} \!\! \int_{-1}^1} e^{x^2}e^{y^2}\sin(y) dydx  = \Bigg( \int_0^{\pi} e^{x^2} dx \Bigg)\Bigg( \int_{-1}^1 e^{y^2}\sin(y)dy \Bigg)  
-\end{align*}
-The second integral is the integral of an odd function over a symmetrical interval, and so is equal to zero. Therefore,
-\begin{align*}
-  \mathop{\int_0^{\pi} \!\! \int_{-1}^1} e^{x^2 + y^2}\sin(y) dydx =0.
-\end{align*}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \EEN % END OF SOLUTIONS
 
