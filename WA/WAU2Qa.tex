@@ -1,0 +1,112 @@
+\subsection{Dot Products and Cross Products}
+
+\purple{\From sections 1.3 and 1.4 of \VCT.}
+
+\BEN 
+
+\item % QUESTION 
+Find two unit vectors perpendicular to vectors $\begin{bmatrix} 1 \\ 0\\4 \end{bmatrix}$ and $\mathbf{i}-2\mathbf{j}+\mathbf{k}$. 
+% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+\item 
+Suppose vectors $\mathbf{a}$, $\mathbf{b}$, and $\mathbf{c}$ are in $\mathbb{R}^3$, and \textbf{a}$\ne 0$. If \textbf{a}$\cdot\mathbf{b}=\mathbf{a}\cdot\mathbf{c}$, does it follow that $\mathbf{b}=\mathbf{c}$? Briefly explain your answer. 
+
+% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+\item % QUESTION 
+Consider the following vectors in $\R^2$:
+\begin{align*}
+\mathbf{a} = \begin{bmatrix} 1/\sqrt{2} \\ -1/\sqrt{2} \end{bmatrix}, \quad
+\mathbf{b} = \begin{bmatrix} 1/\sqrt{2} \\ 1/\sqrt{2} \end{bmatrix}, \quad
+\mathbf{r} =  \begin{bmatrix} 3 \\ 1 \end{bmatrix}.
+\end{align*}
+\begin{enumerate}
+\item Verify that $\mathbf{a}$ and $\mathbf{b}$ are perpendicular unit vectors. 
+\item Use your results from part (a) to find constants $C_1$ and $C_2$ so that $\mathbf{r}=C_1\mathbf{a}+C_2\mathbf{b}$.
+\end{enumerate}
+% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+\item % QUESTION 
+Suppose that $\mathbf{a}$, $\mathbf{b}$ and $\mathbf{c}$ are nonzero vectors in $\R^3$. Prove the following statements.
+\begin{enumerate}
+\item If $||\mathbf{a} + \mathbf{b}||^2 = ||\mathbf{a}||^2 + ||\mathbf{b}||^2$, then vectors $\mathbf{a}$ and $\mathbf{b}$ are perpendicular. 
+\item If $\mathbf{a}\times\mathbf{b} = \mathbf{a}\times\mathbf{c}$ and $\mathbf{a}\cdot\mathbf{b} = \mathbf{a}\cdot\mathbf{c}$, then $\mathbf{b} =\mathbf{c}$.
+\end{enumerate}
+% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+\item 
+Suppose that $\mathbf{a}$, $\mathbf{b}$ and $\mathbf{c}$ are nonzero vectors in $\R^3$. Identify which of the following statements are meaningless and which statements are not meaningless. Explain your reasoning.
+\begin{enumerate}
+\item  $\mathbf{a}\cdot (\mathbf{b} \times \mathbf{c})$ 
+\item  $\mathbf{a}\cdot (\mathbf{b} \cdot \mathbf{c})$ 
+\item  $\mathbf{a}\times (\mathbf{b} \cdot \mathbf{c})$ 
+\item  $\mathbf{a}\times (\mathbf{b} \times \mathbf{c})$ 
+\end{enumerate}
+% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+\item \textbf{Application to Mechanics} \\
+Torque plays a fundamental role in many branches of engineering. It is vector that describes rotation rotation about a point or axis due to an applied force. If you haven't yet encountered torque, its mathematical definition is straightforward:
+\begin{quote}
+The torque, $\boldsymbol\tau$, about a pivot point $P$, that is produced by a force \textbf{F} applied at a point $Q$, is defined as $\boldsymbol\tau = \mathbf{r} \times \mathbf{F}$, where $\mathbf{r}=\overrightarrow{PQ}$.
+\end{quote}
+Torque is a vector that is produced by an applied force. For example, suppose that a force $\MB{F}=\frac{1}{2}\MB{i} + 0\MB{j} + 0\MB{k}$ is applied at the point $(1,C,0)$, about the pivot point (1,0,0), where $C\in\R$ is a constant. The resulting torque is simply 
+\begin{align*}
+\boldsymbol\tau =   
+\begin{vmatrix}
+   \MB{i} &  \MB{j} &  \MB{k} \\
+   1-1 &  C-0 &  0 \\
+   0.5 & 0 &  0 \\
+  \end{vmatrix}=-\frac{C}{2}\MB{k}
+\end{align*} 
+A plot of the applied force and produced torque vectors is shown in Figure \ref{FigTorque}.
+\begin{figure}[!htbp]
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{ImgTorqueExample.jpg}
+          \caption{\small{The torque, $\boldsymbol\tau$, about the pivot point (1,0,0), is produced by the applied force $\MB{F}$.\label{FigTorque} }}
+  \end{center}
+\end{figure}
+
+Note that the magnitude of the torque vector is $||\boldsymbol\tau|| = C/2$, and that if we increase the value of $C$, two things happen: the applied force moves further away from the pivot point, and the magnitude of the produced torque increases. \\\\
+% Consider that:
+%\begin{itemize}
+%\item intuitively, it is easier to rotate a screwdriver with a \textbf{large} handle than it is to rotate a screwdriver a small handle. If the 
+%\item It is easier to spin a large wheel by pushing on its edge, rather than pushing on some point in the middle of the wheel. Moreover, we 
+%\end{itemize}
+\textbf{Units}\\
+When \textbf{F} has units of Newtons (N), and $\MB{r}$ has units of meters (m), torque has units of $\text{N}\cdot\text{m}$.\\\\
+\textbf{Questions}\\
+Suppose that a bicycle has pedal arms that are 0.14 m long, and that a constant downward force of $100 \text{ N}$ is applied by a cyclist on one pedal.  Let $\theta \in [0,360^{\circ})$ be the angle between the vertical and the pedal arm, as shown in Figure \ref{FigCycle}. 
+\begin{figure}[!htbp]
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{ImgBicycle.jpg}
+      \caption{\small{The pedal arm (orange) rotates about the pivot point. The angle it makes with the vertical direction is $\theta$, measured counter-clockwise. A constant downward force of 100 N is applied to the pedal, which is attached to the other end of the pedal arm.\label{FigCycle} }}
+  \end{center}
+\end{figure}
+\BEN
+  \item Determine the magnitude of the torque about the pivot point when $\theta$ is $30^{\circ}$ and when $\theta$ is $90^{\circ}$. Your answers should include the units of measurement. 
+  \item Determine the magnitude of the torque about the pivot point for any $\theta$. Your answer should be a function of $\theta$.  
+  \item What value(s) of $\theta$ minimize the produced torque? Briefly explain why. You should not need to compute any derivatives to answer this question. 
+\EEN
+Naturally, the torque vector can also be a function of time. In our bicycle example, the torque that is produced by the cyclist could change continuously as the pedal rotates about the pivot point. We will revisit the concept of torque as a vector function in a later assignment, after we have defined vector functions and their derivatives. 
+
+%% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+% QUESTION 
+
+Find all values of $x$ that satisfy the following equations.
+
+\begin{enumerate}
+\item \(
+ \begin{vmatrix}
+  3 &  2 &  0 \\
+  1 &  x &  0 \\
+  7 & -3 &  4
+ \end{vmatrix} = 4.
+\)
+\item \(
+ \begin{vmatrix}
+  x & 1 \\
+  4 & 4x
+ \end{vmatrix} = \begin{vmatrix}
+  -x & -2 \\
+  2 & 2x + 8
+ \end{vmatrix}
+\).
+\end{enumerate}
+\EEN
