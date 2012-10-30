@@ -1,0 +1,293 @@
+\documentclass{article}
+\input{../Preamble/preamble.tex}
+\usepackage{multienum}
+\usepackage{wrapfig}
+
+\date{}
+% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+\begin{document}
+\begin{center}
+\textsc{\LARGE Written Assignment 5}\\[0.5cm]
+\end{center}
+\From sections 2.5, 2.7 and parts of 4.6 of \VCT.
+
+\section*{Questions}
+
+\begin{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+Use the second derivative test to classify the local extrema of the
+following functions:
+\begin{enumerate}
+ \item $f(x,y) = x^2 + 2x - xy + y^2$
+ \item $h(x,y) = \sin(xy)$
+\end{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+Find the extreme values of
+\begin{enumerate}
+ \item the function
+  $f(x,y) = e^{-(x^2+y^2)}$
+  along the curve $x = y^2$
+ \item the function
+  $g(x,y) = e^{x-y^2}$ along the boundary of the ellipse
+  $\frac{x^2}{4}+y+y^2=1$
+\end{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+Consider the function $f(x,y,z) = \begin{bmatrix}
+                                   x^2 + y^2 \\
+                                   y^2 + z^2 \\
+                                   z^2 + x^2
+                                  \end{bmatrix}$.
+Find its divergence $\nabla \cdot f$ and curl $\nabla \times f$.
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+Find the point on the sphere $x^2 + y^2 + z^2 = 1$ that is closest
+to the plane $x + 2y + 2z = 5$.
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+\Emph{Application: Cost Optimization}
+
+Suppose you are given a budget of \$500 to build a large glass
+triangular prism.  Each rectangular side must have equal dimensions 
+and the two triangular sides must also have equal dimensions.  You
+can purchase glass for the rectangular sides at a cost of $\$8/ft^2$ 
+and for the triangular sides at a cost of $\$10/ft^2$.
+
+What is the volume of the prism of maximum surface area that you can 
+build under these constraints?
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+\Emph{Application: Labor and Capital}
+
+%http://people.ucsc.edu/~lewis/Math140/econ_lag_mult.pdf
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% SOLUTIONS
+\newpage
+\section*{Solutions}
+\begin{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+Local extreme values of a function occur at points where the gradient of
+the function is the zero vector.
+
+ \begin{enumerate}
+  \item First we find the critical points:
+   \begin{align*}
+    \nabla f(x,y) &= \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+    \begin{bmatrix}
+     \dfrac{\partial}{\partial x}(x^2 + 2x - xy + y^2) \\
+     \dfrac{\partial}{\partial y}(x^2 + 2x - xy + y^2)
+    \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+    \begin{bmatrix}
+     2x + 2 \\
+     -x + 2y
+    \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+    x &= -1 \\
+    y &= -\frac{1}{2}
+   \end{align*}
+   To categorize this point $(-1, -\frac{1}{2})$ as a local minimum or maximum
+   we apply the second partial derivative test:
+   \begin{align*}
+    D(x,y)
+    &= \begin{vmatrix}
+     \dfrac{\partial^2 f(x,y)}{\partial x^2} &
+      \dfrac{\partial^2 f(x,y)}{\partial y \partial x} \\
+     \dfrac{\partial^2 f(x,y)}{\partial x \partial y} &
+      \dfrac{\partial^2 f(x,y)}{\partial y^2}
+    \end{vmatrix} \\
+    &= \begin{vmatrix}
+     \dfrac{\partial^2}{\partial x^2}(x^2 + 2x - xy + y^2) &
+      \dfrac{\partial^2}{\partial y \partial x}(x^2 + 2x - xy + y^2) \\
+     \dfrac{\partial^2}{\partial x \partial y}(x^2 + 2x - xy + y^2) &
+      \dfrac{\partial^2}{\partial y^2}(x^2 + 2x - xy + y^2)
+    \end{vmatrix} \\
+    &= \begin{vmatrix} 2 & 0 \\ -1 & 2 \end{vmatrix} \\
+    &= 4 \\
+    &> 0
+   \end{align*}
+  for all values of $x,y$.
+  Additionally, $\dfrac{\partial^2 f(x,y)}{\partial x^2} = 2 > 0$, so that
+  the point $(-1, -\frac{1}{2})$ is a local minimum.
+
+  \item Again, we look for the critical points by setting the gradient to zero.
+   \begin{align*}
+    \nabla h(x,y) &= \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+    \begin{bmatrix} y\cos(xy) \\ x\cos(xy) \end{bmatrix}
+    &= \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+   \end{align*}
+  The solutions (and therefore the critical points) are the point $(0, 0)$
+  and the family of curves $xy = \pi/2 + k\pi$, where $k \in \mathbb{Z}$.
+
+  To categorize the points, again compute the matrix
+  \begin{align*}
+   D(x,y)
+    &= \begin{vmatrix}
+     \dfrac{\partial^2 h(x,y)}{\partial x^2} &
+      \dfrac{\partial^2 h(x,y)}{\partial y \partial x} \\
+     \dfrac{\partial^2 h(x,y)}{\partial x \partial y} &
+      \dfrac{\partial^2 h(x,y)}{\partial y^2}
+    \end{vmatrix} \\
+    &= \begin{vmatrix}
+     \dfrac{\partial^2}{\partial x^2}(\sin(xy)) &
+      \dfrac{\partial^2}{\partial y \partial x}(\sin(xy)) \\
+     \dfrac{\partial^2}{\partial x \partial y}(\sin(xy)) &
+      \dfrac{\partial^2}{\partial y^2}(\sin(xy))
+    \end{vmatrix} \\
+    &= \begin{vmatrix}
+     -y^2\sin(xy) & \cos(xy) - xy\sin(xy) \\
+     \cos(xy) - xy\sin(xy) & -x^2\sin(xy)
+    \end{vmatrix} \\
+    D(0,0) &= \begin{vmatrix} 0 & 1 \\ 1 & 0 \end{vmatrix} \\
+           &= -1 \\
+   \end{align*}
+
+   So $(0, 0)$ is a saddle point.
+
+   \begin{align*}
+    D(x, \frac{\pi/2 + k\pi}{x})
+    &= \begin{vmatrix}
+     -\dfrac{\pi/2 + k\pi}{x}^2\sin(\pi/2 + k\pi)
+     & \cos(\pi/2 + k\pi) - (\pi/2 + k\pi)\sin(\pi/2 + k\pi) \\
+     \cos(\pi/2 + k\pi) - (\pi/2 + k\pi)\sin(\pi/2 + k\pi)
+     & -x^2\sin(\pi/2 + k\pi)
+    \end{vmatrix} \\
+    &= \begin{vmatrix}
+     -(\dfrac{\pi/2 + k\pi}{x})^2 (-1)^k & - (\pi/2 + k\pi)(-1)^k \\
+     - (\pi/2 + k\pi)(-1)^k & -x^2 (-1)^k
+    \end{vmatrix} \\
+    &= (\pi/2 + k\pi)^2 - (\pi/2 + k\pi)^2 \\
+    &= 0
+  \end{align*}
+
+  So the test is inconclusive.
+
+ \end{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+We use the method of Lagrange Multipliers.  To find the extreme values
+of the function $f(x,y)$ subject to the constraint $g(x,y)=c$, we define
+a new function $F(x,y,t) = f(x,y) + t(g(x,y) - c)$ and solve the equation
+$\nabla F(x,y,t) = 0$.  The solutions $(x,y)$ are the candidate solutions,
+which we test by plugging into the original equation $f$.
+
+\begin{enumerate}
+ \item
+  Define $F(x,y,t) = e^{-(x^2+y^2)} - t(x - y^2)$.  Then
+  \begin{align}
+   \nabla F(x,y,t) &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
+   \begin{bmatrix}
+    -2xe^{-(x^2+y^2)} - t \\
+    -2ye^{-(x^2+y^2)} + 2yt \\
+    -(x - y^2)
+   \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}. \label{lagr:2}
+  \end{align}
+  $(0,0)$ is one solution.  When $x \neq 0$, by the third component of
+  (\ref{lagr:2}) we see that $y \neq 0$, so that we get $t = e^{-(x^2+y^2)}$
+  from the second component, which in turn by the first component shows
+  that $x = -1/2$.  However, there is no $y$ that satisfies the third
+  component of (\ref{lagr:2}) when $x = -1/2$.  Thus $(0, 0)$ is the only
+  extreme value.
+  
+ \item
+  Define $F(x,y,t) = e^{x-y^2} - t(\frac{x^2}{4}+y+y^2 - 1)$.  Then
+  \begin{align}
+   \nabla F(x,y,t) &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
+   \begin{bmatrix}
+    e^{x-y^2} - tx/2 \\
+    -2ye^{x-y^2} - t + 2yt \\
+    -(\frac{x^2}{4}+y+y^2 - 1)
+   \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}. \label{lagr:1}
+  \end{align}
+  From the first two components we see that
+  \begin{align*}
+   e^{x-y^2} &= tx/2 \\
+   e^{x - y^2} &= \frac{t-2yt}{-2y}.
+  \end{align*}
+  This yields the equation $y = \dfrac{1}{2-x}$, so that the extreme values
+  of $f$ fall on the intersection of the ellipse $\frac{x^2}{4}+y+y^2 = 1$
+  and the curve $y = \dfrac{1}{2-x}$.
+  Plugging $y$ into the third component of (\ref{lagr:1}) gives the equation
+  $\frac{x^2}{4} + \frac{1}{2-x} + (\frac{1}{2-x})^2 = 1$.
+
+\end{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+The divergence is given by the equation \[
+ \nabla \cdot f = \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y} + \frac{\partial f_3}{\partial z}
+\] and the curl by the equation \[
+ \nabla \times f = \begin{bmatrix}
+  \dfrac{\partial f_3}{\partial y} - \dfrac{\partial f_2}{\partial z} \\
+  \dfrac{\partial f_1}{\partial z} - \dfrac{\partial f_3}{\partial x} \\
+  \dfrac{\partial f_2}{\partial x} - \dfrac{\partial f_1}{\partial y}
+ \end{bmatrix}.
+\]  Applying these equations yields the solutions:
+
+\begin{align*}
+ \nabla \cdot f &= \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y} + \frac{\partial f_3}{\partial z} \\
+ &= \frac{\partial}{\partial x}(x^2+y^2) + \frac{\partial}{\partial y}(y^2+z^2) + \frac{\partial}{\partial z}(z^2+x^2) \\
+ &= 2x + 2y + 2z \\
+ \nabla \times f &= \begin{bmatrix}
+  \dfrac{\partial f_3}{\partial y} - \dfrac{\partial f_2}{\partial z} \\
+  \dfrac{\partial f_1}{\partial z} - \dfrac{\partial f_3}{\partial x} \\
+  \dfrac{\partial f_2}{\partial x} - \dfrac{\partial f_1}{\partial y}
+ \end{bmatrix} \\
+ &= \begin{bmatrix} - 2z \\ - 2x \\ - 2y \end{bmatrix}.
+\end{align*}
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+It is possible to solve this problem using Lagrangian optimization;
+however, the closest point on the sphere to the plane will occur at
+the point on the sphere where its normal vector is parallel to the plane's
+normal vector.
+
+% Should include more explanation for this?  Maybe not a proof,
+% but perhaps a picture...
+
+Knowing this, we first find the sphere's normal vector by computing
+the gradient of the function $F(x,y,z) = x^2 + y^2 + z^2 - 1$, which by
+a straightforward calculation is the vector
+$\nabla F = \begin{bmatrix} 2x \\ 2y \\ 2z \end{bmatrix}$.  Now, by
+rearranging the equation $x + 2y + 2z = 5$ into the form
+$\begin{bmatrix} x - 3 \\ y -2 \\ z + 1 \end{bmatrix} \cdot
+ \begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix} = 0$, we see that
+$\begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}$ is a vector normal to the plane.
+
+We want to find a point on the sphere where these two normal vectors are
+parallel; equivalently, we want to find a point on the sphere such that
+$\begin{bmatrix} 2x \\ 2y \\ 2z \end{bmatrix}
+ = k\begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}$ for some $k$.  We can plug
+$x = k/2$, $y = k$, $z = k$ into the equation $x^2 + y^2 + z^2 = 1$, which
+yields the solution $k = 2/3$.  Thus $(1/3, 2/3, 2/3)$ is a point on the
+sphere where the sphere's normal vector is parallel to the plane's, and
+therefore is the point closest to the plane.
+
+\end{enumerate}
+
+\end{document}
