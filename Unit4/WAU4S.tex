@@ -297,9 +297,8 @@ The Jacobian becomes
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % VOLUME OF SOLID
 \textbf{Volume of a Solid}\\
-
-\EEN
-
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\EEN % END OF SUBSECTION
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 \subsection{Change of Variables in Multiple Integrals}
@@ -461,13 +460,90 @@ The solid is a section of a sphere with radius 1, centered at the origin. The se
   &=  \pi/12
 \end{align*}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\EEN % END OF SUBSECTION
+% s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
+% s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
+\subsection{Application: Center of Mass}
+\BEN
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % CENTER OF MASS OF 2D TRIANGULAR PLATE
+\Emph{Center of Mass of a 2D Triangular Plate} \\
+The total mass of the plate is
+\begin{align*}
+  M 
+  &= \iint\limits_R \delta(x,y) dA \\
+  &=    \mathop{\int_0^1 \!\! \int_{2x}^{4x} } xy \ dydx \\
+  &=  \frac{1}{2}  \int_0^1 x(16x^2 - 4x^2) \ dx \\
+  &= 6  \int_0^1 x^3 \ dx \\
+  &=   \frac{3}{2}.
+\end{align*}
+
+The $x$-coordinate of the center of mass is
+\begin{align*}
+  \bar{x} = \frac{M_y}{M} 
+  &= \frac{2}{3} \iint\limits_R x \delta(x,y) dA \\
+  &=    \mathop{\int_0^1 \!\! \int_{2x}^{4x} } x^2y \ dydx \\
+  &=  \frac{1}{2}  \int_0^1 x^2(16x^2 - 4x^2) \ dx \\
+  &= 6  \int_0^1 x^4 \ dx \\
+  &=   \frac{6}{5}.
+\end{align*}
+
+The $y$-coordinate of the center of mass is
+\begin{align*}
+  \bar{y} = \frac{M_x}{M} 
+  &= \frac{2}{3} \iint\limits_R y \delta(x,y) dA \\
+  &=    \mathop{\int_0^1 \!\! \int_{2x}^{4x} } xy^2 \ dydx \\
+  &=  \frac{1}{3}  \int_0^1 x(64x^3 - 8x^3) \ dx \\
+  &=  \frac{56}{3}  \int_0^1 x^4 \ dx \\
+  &=   \frac{56}{15}.
+\end{align*}
+Thus, the coordinates of the center of mass are $(6/5,56/15)$.
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % CENTER OF MASS OF 2D RADIAL DENSITY FUNCTION
+\Emph{Center of Mass of a 2D Plate, Radial Density Function} \\
+We could express the coordinates of the center of mass using either Cartesian or polar coordinates. Using Cartesian coordinates, the density, $\delta$, at point $(x,y)$, is given by
+\begin{align*}
+  \delta(x,y) = L(x,y) = a - \sqrt{x^2+y^2}.
+\end{align*}
+\BEN
+\item
+The $x$-coordinate of the center of mass is
+\begin{align*}
+  \bar{x} = \frac{M_y}{M} 
+  = \frac{1}{M} \iint\limits_R x \delta(x,y) dA 
+  = \frac{1}{M}  \mathop{\int_{-a}^{a} \!\! \int_{0}^{\sqrt{x^2+y^2}}} x\Big( a - \sqrt{x^2+y^2}\Big) \ dydx 
+\end{align*}
+\item
+The $y$-coordinate of the center of mass is
+\begin{align*}
+  \bar{y} = \frac{M_x}{M} 
+  = \frac{1}{M} \iint\limits_R y \delta(x,y) dA 
+  = \frac{1}{M}  \mathop{\int_{-a}^{a} \!\! \int_{0}^{\sqrt{x^2+y^2}}} y\Big( a - \sqrt{x^2+y^2}\Big) \ dydx 
+\end{align*}
+\item The center of mass is located on the $y$-axis. In other words, $\bar{x}=0$. This is because of symmetry: the integrand of $\bar{x}$ is odd in $x$, the integral with respect to $x$ is calculated about an interval that is symmetric about the $y$-axis, and so the integral with respect to $x$ is zero. 
+\EEN
+Note that we could just as easily set up the above integrals using polar coordinates. The 2D circular plate, in polar coordinates, is bounded by 
+\begin{align*}
+  0 \le r \le a, \quad 0 \le \theta \le \pi, \quad a > 0.
+\end{align*}
+The coordinates for the center of mass are
+\begin{align*}
+  \bar{x} &= \frac{M_y}{M} 
+  = \frac{1}{M} \iint\limits_R x \delta(x,y) dA 
+  = \frac{1}{M}  \mathop{\int_{0}^{\pi} \!\! \int_{0}^r} r\cos(\theta) ( a - r ) \ rdrd\theta \\
+  \bar{y} &= \frac{M_x}{M} 
+  = \frac{1}{M} \iint\limits_R y \delta(x,y) dA 
+  = \frac{1}{M}  \mathop{\int_{0}^{\pi} \!\! \int_{0}^r} r\sin(\theta) ( a -r ) \ rdrd\theta
+\end{align*}
+ 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % EVEN AND ODD
 The integral can be written as
 \begin{align*}
   \mathop{\int_0^{\pi} \!\! \int_{-1}^1} e^{x^2 + y^2}\sin(y) dydx 
   &= \mathop{\int_0^{\pi} \!\! \int_{-1}^1} e^{x^2}e^{y^2}\sin(y) dydx  = \Bigg( \int_0^{\pi} e^{x^2} dx \Bigg)\Bigg( \int_{-1}^1 e^{y^2}\sin(y)dy \Bigg)  
 \end{align*}
-The second integral is the integral of an odd function over a symmetrical interval, and so is equal to zero. Therefore,
+The second term is the integral of an odd function over a symmetrical interval, and so is equal to zero. Therefore,
 \begin{align*}
   \mathop{\int_0^{\pi} \!\! \int_{-1}^1} e^{x^2 + y^2}\sin(y) dydx =0.
 \end{align*}

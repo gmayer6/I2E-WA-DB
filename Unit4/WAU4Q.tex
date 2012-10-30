@@ -1,7 +1,8 @@
+\setcounter{subsection}{-1}
 
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
-\subsection*{Wolfram Alpha Syntax (optional)}
+\subsection{Wolfram Alpha Syntax (optional)}
 You may want to use Wolfram Alpha (wolframalpha.com) to check your answers. If you're not sure what syntax to use to compute double integrals with Wolfram Alpha, let's suppose that we want to determine the value of
 \begin{align*} 
    \mathop{\int_{-2}^{-1} \!  \int_0^{x-1}}( x^{2C} +y)  dy  dx
@@ -12,6 +13,7 @@ where $C$ is a constant. The syntax we could use to compute this particular inte
     integrate x^{2C}+y dydx, x from -2 to -1 and y from 0 to (x-1)
   \end{verbatim}
 \end{quote}
+% END OF SUBSECTION
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 \subsection{Double Integrals}
@@ -22,7 +24,7 @@ where $C$ is a constant. The syntax we could use to compute this particular inte
 \item % VOLUME OF SIMPLE SOLID 
 Consider the solid that lies under the plane $z = -x-2y+2$ and above the rectangle \\$\{(x,y) \ | \ -2\le x\le 0, 0\le y \le1 \}$.
 \BEN
-\item Sketch the solid in $\R^3$. 
+\item Sketch the solid in $\R^3$. \textit{Hint: start by plotting the points that are located on the given plane and above the corners of the rectangle. Then connect the points with solid lines.}
 \item Find the volume of the solid.
 \EEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,7 +40,8 @@ In a two-dimensional, steady-state, incompressible fluid flow, the velocity \tex
 \EEN
 \textit{Hint: you are asked to find the most \Emph{general} form of functions u and v}.
 
-\EEN % END OF QUESTIONS
+\EEN % END OF SUBSECTION
+% s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 \subsection{Double Integrals Over a General Region}
 \purple{\From Section 3.2 of \VCT.}
@@ -148,21 +151,9 @@ Similar results can be stated if $g$ were even in $x$ or in $y$, and if $R$ has 
 \end{align*}
 \EEN
 
-\EEN % END OF QUESTIONS
+\EEN % END OF SUBSECTION
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
-
-
-
-
-
-
-
-
-
-
-
-
 
 \subsection{Triple Integrals}
 \purple{\From Section 3.3 of \VCT.}
@@ -192,11 +183,12 @@ Find the volume of the solid enclosed by the planes
   z & = x+y\\
   y &= x \\
   x &= 0 \\
-  z &= 0 \\
+  z &= -1 \\
   y &= 2
 \end{align*}
-\textit{Hint: it may help to start by plotting the planes in Google or in Wolfram Alpha.}
-\EEN
+\textit{Hint: it may help to start by plotting the planes in Google or in Wolfram Alpha.}\\
+\rednote{The solutions need to be adjusted so that z is in -1 to x+y}
+\EEN % END OF SUBSECTION
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 \subsection{Change of Variables in Multiple Integrals}
@@ -266,6 +258,41 @@ The integral
   \mathop{\int_0^{\pi/4} \!\! \int_{0}^{\pi/2} \!\! \int_0^1 } ( \rho^2 \sin\phi ) \ d\rho\  d\phi\  d\theta
 \end{align*}
 represents the volume of a solid. Describe the shape of the solid, and find its volume. \\\rednote{Textbook doesn't do a great job of integrals in cylindrical and spherical}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\EEN % END OF SUBSECTION 
+% s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
+% s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
+\subsection{Application: Center of Mass}
+\purple{\From Section 3.6 of \VCT.}
+\BEN
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % CENTER OF MASS OF 2D TRIANGULAR PLATE
+\Emph{Center of Mass of a 2D Triangular Plate} \\
+A two-dimensional plate has density $\delta(x,y) = xy$, and occupies a triangular region whose vertices are located at the points (0,0), (1,2), and (1,4). Find the $x$-coordinate and the $y$-coordinate of the center of mass of the triangular plate. 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % CENTER OF MASS OF 2D RADIAL DENSITY FUNCTION
+\Emph{Center of Mass of a 2D Plate, Radial Density Function} \\
+A 2D semi-circular plate of mass $M$ is bounded by 
+\begin{align*}
+  -a \le x \le a, \quad 0 \le y \le \sqrt{a^2 - x^2}, \quad a > 0.
+\end{align*}
+The density of the plate at a point $(x,y)$, is equal to the shortest distance, $L$, between that point and the upper edge of the plate, as shown in Figure \ref{FigCircPlate}. 
+\BEN
+\item Set up an integral that represents the $x$-coordinate of the center of mass of the plate, $\bar{x}$. 
+\item Set up an integral that represents the $y$-coordinate of the center of mass of the plate, $\bar{y}$. 
+\item Determine the $x$-coordinate of the center of mass of the plate, without performing any integration. Briefly describe how you found your answer. 
+\EEN
+You do not need to perform any integration for this question. Note also that $L$ is a function of $x$ and $y$. 
+\begin{figure}[h]
+  \vspace{-1pt}
+  \begin{center}
+    \includegraphics[width=0.65\textwidth]{ImgRadialCenterOfMass.jpg}
+  \end{center}
+ \begin{quote} \caption{\label{FigCircPlate}\small{The density of the plate at $(x,y)$ is equal to $L$.}}\end{quote}
+\end{figure}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % MOMENTS OF A CYLINDER
+\Emph{Center of Mass of a 2D Plate, Radial Density Function} \\
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % EVEN AND ODD
@@ -274,13 +301,10 @@ Determine the value of
 \begin{align*}
   \mathop{\int_0^{\pi} \!\! \int_{-1}^1} x^4e^{x^2 + y^2}\sin(y) dydx.
 \end{align*}
-\textit{Hint: integration by parts is not necessary.}
+Do not use integration by parts.
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\EEN % END OF SUBSECTION 
 
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-\EEN % END OF QUESTIONS
 
 
 
