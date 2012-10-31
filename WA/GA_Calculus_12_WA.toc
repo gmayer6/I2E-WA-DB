@@ -1,0 +1,25 @@
+\contentsline {part}{I\hspace {1em}Questions for Written Assignments}{2}{part.1}
+\contentsline {section}{\numberline {2}Multivariable Functions and Algebra}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Dot Products and Cross Products}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Lines and Planes}{5}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Linear Systems}{6}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Vector-Valued Functions}{8}{subsection.2.4}
+\contentsline {section}{\numberline {3}Multiple Integrals}{10}{section.3}
+\contentsline {subsection}{\numberline {3.0}Wolfram Alpha Syntax (optional)}{10}{subsection.3.0}
+\contentsline {subsection}{\numberline {3.1}Double Integrals}{10}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Double Integrals Over a General Region}{10}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Triple Integrals}{12}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Change of Variables in Multiple Integrals}{13}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Application: Center of Mass}{14}{subsection.3.5}
+\contentsline {part}{II\hspace {1em}Solutions to Written Assignment Questions}{16}{part.2}
+\contentsline {section}{\numberline {2}Multivariable Functions and Algebra}{16}{section.2}
+\contentsline {subsection}{\numberline {2.1}Dot Products and Cross Products}{16}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Lines and Planes}{19}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Linear Systems}{24}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Vector-Valued Functions}{28}{subsection.2.4}
+\contentsline {section}{\numberline {3}Multiple Integrals}{30}{section.3}
+\contentsline {subsection}{\numberline {3.1}Double Integrals}{30}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Double Integrals Over a General Region}{31}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Triple Integrals}{34}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Change of Variables in Multiple Integrals}{36}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Application: Center of Mass}{39}{subsection.3.5}
