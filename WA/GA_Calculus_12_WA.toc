@@ -3,23 +3,25 @@
 \contentsline {subsection}{\numberline {2.1}Dot Products and Cross Products}{2}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}Lines and Planes}{5}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}Linear Systems}{6}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Vector-Valued Functions}{8}{subsection.2.4}
-\contentsline {section}{\numberline {3}Multiple Integrals}{10}{section.3}
-\contentsline {subsection}{\numberline {3.0}Wolfram Alpha Syntax (optional)}{10}{subsection.3.0}
-\contentsline {subsection}{\numberline {3.1}Double Integrals}{10}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Double Integrals Over a General Region}{10}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Triple Integrals}{12}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Change of Variables in Multiple Integrals}{13}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Application: Center of Mass}{14}{subsection.3.5}
-\contentsline {part}{II\hspace {1em}Solutions to Written Assignment Questions}{16}{part.2}
-\contentsline {section}{\numberline {2}Multivariable Functions and Algebra}{16}{section.2}
-\contentsline {subsection}{\numberline {2.1}Dot Products and Cross Products}{16}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Lines and Planes}{19}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Linear Systems}{24}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Vector-Valued Functions}{28}{subsection.2.4}
-\contentsline {section}{\numberline {3}Multiple Integrals}{30}{section.3}
-\contentsline {subsection}{\numberline {3.1}Double Integrals}{30}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Double Integrals Over a General Region}{31}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Triple Integrals}{34}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Change of Variables in Multiple Integrals}{36}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}Application: Center of Mass}{39}{subsection.3.5}
+\contentsline {subsection}{\numberline {2.4}Surfaces}{8}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Curvilinear Coordinates}{9}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.6}Vector-Valued Functions}{10}{subsection.2.6}
+\contentsline {section}{\numberline {3}Multiple Integrals}{12}{section.3}
+\contentsline {subsection}{\numberline {3.0}Wolfram Alpha Syntax (optional)}{12}{subsection.3.0}
+\contentsline {subsection}{\numberline {3.1}Double Integrals}{12}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Double Integrals Over a General Region}{12}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Triple Integrals}{14}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Change of Variables in Multiple Integrals}{15}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Application: Center of Mass}{16}{subsection.3.5}
+\contentsline {part}{II\hspace {1em}Solutions to Written Assignment Questions}{18}{part.2}
+\contentsline {section}{\numberline {2}Multivariable Functions and Algebra}{18}{section.2}
+\contentsline {subsection}{\numberline {2.1}Dot Products and Cross Products}{18}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Lines and Planes}{21}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Linear Systems}{26}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Vector-Valued Functions}{30}{subsection.2.4}
+\contentsline {section}{\numberline {3}Multiple Integrals}{32}{section.3}
+\contentsline {subsection}{\numberline {3.1}Double Integrals}{32}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Double Integrals Over a General Region}{33}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Triple Integrals}{36}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}Change of Variables in Multiple Integrals}{38}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}Application: Center of Mass}{41}{subsection.3.5}
