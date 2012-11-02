@@ -2,7 +2,7 @@
 
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
-\subsection{Wolfram Alpha Syntax (optional)}
+\subsection{Wolfram Alpha Syntax}
 You may want to use Wolfram Alpha (wolframalpha.com) to check your answers. If you're not sure what syntax to use to compute double integrals with Wolfram Alpha, let's suppose that we want to determine the value of
 \begin{align*} 
    \mathop{\int_{-2}^{-1} \!  \int_0^{x-1}}( x^{2C} +y)  dy  dx
@@ -17,7 +17,7 @@ where $C$ is a constant. The syntax we could use to compute this particular inte
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 \subsection{Double Integrals}
-\purple{\From Section 3.1 of \VCT.}
+\FromC{\From Section 3.1 of \VCT.}
 
 \BEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,10 +41,11 @@ In a two-dimensional, steady-state, incompressible fluid flow, the velocity \tex
 \textit{Hint: you are asked to find the most \Emph{general} form of functions u and v}.
 
 \EEN % END OF SUBSECTION
+\newpage
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 \subsection{Double Integrals Over a General Region}
-\purple{\From Section 3.2 of \VCT.}
+\FromC{\From Section 3.2 of \VCT.}
 
 \BEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -152,11 +153,12 @@ Similar results can be stated if $g$ were even in $x$ or in $y$, and if $R$ has 
 \EEN
 
 \EEN % END OF SUBSECTION
+\newpage
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 
 \subsection{Triple Integrals}
-\purple{\From Section 3.3 of \VCT.}
+\FromC{\From Section 3.3 of \VCT.}
   
 \BEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -174,25 +176,29 @@ Consider again the tetrahedron that is bounded by the three coordinate planes in
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % VOLUME OF AN ELLIPSOID
 \textbf{Volume of an Ellipsoid}\\
-Solve Question 10 from Section 3.5 of \VCT.
+Solve Question 10 from Section 3.5 of \VCT, which is the following: 
+\begin{quotation}
+\noindent
+Show that the volume inside the ellipsoid $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$ is $\frac{4\pi abc}{3}$ . (Hint: Use the
+change of variables $x = au$, $y = bv$, $z = cw$, then consider Example 3.12.)
+\end{quotation}
+
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % VOLUME OF SOLID
-\textbf{Volume of a Solid}\\
-Find the volume of the solid enclosed by the planes
+\item % CHANGING ORDER OF INTEGRATION
+\textbf{Changing the Order of Integration}\\
+Express the triple integral in three different ways. \rednote{Change the limits here}
 \begin{align*}
-  z & = x+y\\
-  y &= x \\
-  x &= 0 \\
-  z &= -1 \\
-  y &= 2
+  \mathop{\int_{0}^{2} \! \int_0^{1-y/2} \int_0^{1-x-y/2} } f(x,y,z) dzdxdy
 \end{align*}
-\textit{Hint: it may help to start by plotting the planes in Google or in Wolfram Alpha.}\\
-\rednote{The solutions need to be adjusted so that z is in -1 to x+y}
+Do not use cylindrical or spherical coordinates. \textit{Hint: you may want to check that your integrals represent the same volume for particular integrands f(x,y,z) using WolframAlpha}.
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \EEN % END OF SUBSECTION
+\newpage
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 \subsection{Change of Variables in Multiple Integrals}
-\purple{\From Section 3.5 of \VCT.}
+\FromC{\From Section 3.5 of \VCT.}
 \BEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % GENERAL TRANSFORMATION
@@ -263,7 +269,7 @@ represents the volume of a solid. Describe the shape of the solid, and find its 
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 \subsection{Application: Center of Mass}
-\purple{\From Section 3.6 of \VCT.}
+\FromC{\From Section 3.6 of \VCT.}
 \BEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % CENTER OF MASS OF 2D TRIANGULAR PLATE

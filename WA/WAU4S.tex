@@ -54,6 +54,7 @@ where $g(y)$ is an unknown function of one variable, $y$.
 \EEN
 
 \EEN % END OF QUESTIONS
+\newpage
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 \subsection{Double Integrals Over a General Region}
 \BEN
@@ -231,6 +232,7 @@ Then $h(-x,y) = 11(-x)y = -11xy = -h(x,y)$.
 \EEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \EEN % END OF SOLUTIONS
+\newpage
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s
 \subsection{Triple Integrals}
@@ -268,17 +270,19 @@ The volume can be calculated with the triple integral
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % VOLUME OF AN ELLIPSOID
 \textbf{Volume of an Ellipsoid}\\
-We are given the transformations
+We are given the transformations  
 \begin{align*}
   x=au, \quad y=bv, \quad z=cw.
 \end{align*}
-The Jacobian becomes
+The Jacobian becomes 
 \begin{align*}   J &=  
   \begin{vmatrix}
-   \pxu &  \pxv \\ \\
-   \pyu & \pyv \\
+   \pxu &  \pxv & \pxw \\\\
+   \pyu & \pyv & \pyw \\\\
+   \pzu & \pzv & \pzw 
   \end{vmatrix}
-  =     \begin{vmatrix}
+  =     
+  \begin{vmatrix}
  a&0&0\\
  0&b&0\\
  0&0&c\\
@@ -295,8 +299,8 @@ The Jacobian becomes
 \end{align*}
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % VOLUME OF SOLID
-\textbf{Volume of a Solid}\\
+\item % CHANGING ORDER OF INTEGRATION
+\textbf{Changing the Order of Integration}\\
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \EEN % END OF SUBSECTION
 % s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s

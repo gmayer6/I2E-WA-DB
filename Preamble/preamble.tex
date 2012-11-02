@@ -6,11 +6,19 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{hyperref} % for hyperlinks
 \usepackage{float} % for figures
-
+% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+\title{Written Assignment Questions and Solutions}
+\date{}
+\author{}
+% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+% HEADER/FOOTER
 \usepackage{fancyheadings}
-\pagestyle{fancy}
+\pagestyle{myheadings} % set headings to be user defined
+\fancyhead{} % To create custom header, clear default layout
 
-%\rfoot[\thesection]{}
+\renewcommand{\subsectionmark}[1]{\markright{{\color{Sepia}\thesubsection} \ {\color{Sepia}#1}}}
+\fancyhead[LE,LO]{\subsectionmark} % To create custom header, clear default layout
+
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 % ENUMERATION
 
@@ -35,18 +43,25 @@
 
 \newcommand{\px}{\frac{\partial}{\partial x}} % Partial wrt x
 \newcommand{\py}{\frac{\partial}{\partial y}} % Partial wrt y
+
 \newcommand{\pxu}{\frac{\partial x}{\partial u}} % x wrt u
 \newcommand{\pxv}{\frac{\partial x}{\partial v}} % x wrt v
+\newcommand{\pxw}{\frac{\partial x}{\partial w}} % x wrt v
 \newcommand{\pyu}{\frac{\partial y}{\partial u}} % y wrt u
 \newcommand{\pyv}{\frac{\partial y}{\partial v}} % y wrt v
+\newcommand{\pyw}{\frac{\partial y}{\partial w}} % x wrt v
+\newcommand{\pzu}{\frac{\partial z}{\partial u}} % z wrt u
+\newcommand{\pzv}{\frac{\partial z}{\partial v}} % z wrt v
+\newcommand{\pzw}{\frac{\partial z}{\partial w}} % z wrt v
+
 
 \newcommand{\VCT}{\textit{Vector Calculus} by Michael Corral} % Vector Calculus Textbook
 \newcommand{\CAT}{\textit{College Algebra} by Carl Stitz and Jeff Zeager} % College Algebra Textbook
 \newcommand{\From}{The following questions are related to } % Questions ....
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 % ONLY USED FOR EDITING
-\newcommand{\rednote}[1]{{\color{red}\textit{#1}}} % Shortcut for red italics
-\newcommand{\purple}[1]{{\color{Violet}\textit{#1}}} % Shortcut for red italics 
+\newcommand{\rednote}[1]{{\color{red}\textit{\textbf{#1}}}} % Shortcut for formatting notes for developers
+\newcommand{\FromC}[1]{{\color{Sepia}\textit{#1}}} % Shortcut for coloring the "from" text
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 % AUGMENTED MATRIX MACRO
 % thanks to http://tex.stackexchange.com/questions/2233/whats-the-best-way-make-an-augmented-coefficient-matrix
