@@ -1,0 +1,531 @@
+
+\subsection{Partial Derivatives}
+
+\BEN
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+\begin{enumerate}
+
+ \item
+  \begin{align*}
+   \frac{\partial f}{\partial x}
+   &= \frac{\partial}{\partial x}(xy \sin(\frac{x}{y})) \\
+   &= y\sin(\frac{x}{y}) + xy\cos(\frac{x}{y})\frac{1}{y} \\
+   &= y\sin(\frac{x}{y}) + x\cos(\frac{x}{y}) \\
+   \frac{\partial^2 f}{\partial x^2}
+   &= \frac{\partial}{\partial x}\frac{\partial f}{\partial x} \\
+   &= \frac{\partial}{\partial x}(y\sin(\frac{x}{y}) + x\cos(\frac{x}{y})) \\
+   &= y\cos(\frac{x}{y})\frac{1}{y} + \cos(\frac{x}{y}) - x\sin(\frac{x}{y})\frac{1}{y} \\
+   &= 2\cos(\frac{x}{y}) - \frac{x}{y}\sin(\frac{x}{y}) \\
+  \frac{\partial^2 f}{\partial y \partial x}
+   &= \frac{\partial}{\partial y}\frac{\partial f}{\partial x} \\
+   &= \frac{\partial}{\partial y}(y\sin(\frac{x}{y}) + x\cos(\frac{x}{y})) \\
+   &= \sin(\frac{x}{y}) + y\cos(\frac{x}{y})(\frac{-x}{y^2}) - x\sin(\frac{x}{y})(\frac{-x}{y^2}) \\
+   &= \sin(\frac{x}{y}) - \frac{x}{y}\cos(\frac{x}{y}) + \frac{x^2}{y^2}\sin(\frac{x}{y}) \\
+   &= \frac{x^2+y^2}{y^2}\sin(\frac{x}{y}) - \frac{x}{y}\cos(\frac{x}{y}) \\
+   \frac{\partial f}{\partial y}
+   &= \frac{\partial}{\partial y}(xy \sin(\frac{x}{y})) \\
+   &= x\sin(\frac{x}{y}) + xy\cos(\frac{x}{y})(\frac{-x}{y^2}) \\
+   &= x\sin(\frac{x}{y}) - \frac{x^2}{y}\cos(\frac{x}{y}) \\
+   \frac{\partial^2 f}{\partial x \partial y}
+   &= \frac{\partial}{\partial x}\frac{\partial f}{\partial y} \\
+   &= \frac{\partial}{\partial x}(x\sin(\frac{x}{y}) - \frac{x^2}{y}\cos(\frac{x}{y})) \\
+   &= \sin(\frac{x}{y}) + x\cos(\frac{x}{y})(\frac{1}{y}) - \frac{2x}{y}\cos(\frac{x}{y}) + \frac{x^2}{y}\sin(\frac{x}{y})(\frac{1}{y}) \\
+   &= \frac{x^2+y^2}{y^2}\sin(\frac{x}{y}) - \frac{x}{y}\cos(\frac{x}{y}) \\
+   \nabla f
+   &= \begin{bmatrix}
+       \frac{\partial f}{\partial x} \\
+       \frac{\partial f}{\partial y}
+      \end{bmatrix} \\
+   &= \begin{bmatrix}
+       y\sin(\frac{x}{y}) + x\cos(\frac{x}{y}) \\
+       x\sin(\frac{x}{y}) - \frac{x^2}{y}\cos(\frac{x}{y})
+      \end{bmatrix}
+  \end{align*}
+
+ \item
+  \begin{align*}
+   \frac{\partial f}{\partial x}
+   &= \frac{\partial}{\partial x}(\frac{x+y}{e^{xy}}) \\
+   &= \frac{e^{xy} - (x+y)ye^{xy}}{e^{2xy}} \\
+   &= \frac{1 - xy - y^2}{e^{xy}} \\
+   \frac{\partial^2 f}{\partial x^2}
+   &= \frac{\partial}{\partial x}\frac{\partial f}{\partial x} \\
+   &= \frac{\partial}{\partial x}(\frac{1 - xy - y^2}{e^{xy}}) \\
+   &= \frac{e^{xy}(-y) - (1 - xy - y^2)ye^{xy}}{e^{2xy}} \\
+   &= \frac{-2y + xy^2 + y^3}{e^{xy}} \\
+   \frac{\partial^2 f}{\partial y \partial x}
+   &= \frac{\partial}{\partial y}\frac{\partial f}{\partial x} \\
+   &= \frac{\partial}{\partial y}(\frac{1 - xy - y^2}{e^{xy}}) \\
+   &= \frac{e^{xy}(-x - 2y) - (1 - xy - y^2)xe^{xy}}{e^{2xy}} \\
+   &= \frac{-2x - 2y + x^2y + xy^2}{e^{xy}} \\
+   \frac{\partial f}{\partial y}
+   &= \frac{\partial}{\partial y}(\frac{x+y}{e^{xy}}) \\
+   &= \frac{e^{xy} - (x+y)xe^{xy}}{e^{2xy}} \\
+   &= \frac{1 - x^2 - xy}{e^{xy}} \\
+   \frac{\partial^2 f}{\partial y^2}
+   &= \frac{\partial}{\partial y}\frac{\partial f}{\partial y} \\
+   &= \frac{\partial}{\partial y}(\frac{1 - x^2 - xy}{e^{xy}}) \\
+   &= \frac{e^{xy}(-x) - (1 - x^2 - xy)xe^{xy}}{e^{2xy}} \\
+   &= \frac{-2x + x^3 + x^2y}{e^{xy}} \\
+   \frac{\partial^2 f}{\partial x \partial y}
+   &= \frac{\partial}{\partial x}\frac{\partial f}{\partial y} \\
+   &= \frac{\partial}{\partial x}(\frac{1 - x^2 - xy}{e^{xy}}) \\
+   &= \frac{e^{xy}(-2x - y) - (1 - x^2 - xy)ye^{xy}}{e^{2xy}} \\
+   &= \frac{-2x - 2y + x^2y + xy^2}{e^{xy}} \\
+   \nabla f
+   &= \begin{bmatrix}
+       \frac{\partial f}{\partial x} \\
+       \frac{\partial f}{\partial y}
+      \end{bmatrix} \\
+   &= \begin{bmatrix}
+       \dfrac{1 - xy - y^2}{e^{xy}} \\
+       \dfrac{1 - x^2 - xy}{e^{xy}}
+      \end{bmatrix}
+  \end{align*}
+
+\end{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+We must first compute the partial derivatives $\frac{\partial z}{\partial x}$ and $\frac{\partial z}{\partial y}$:
+
+ \begin{align*}
+  \frac{\partial}{\partial x}(xy) &= \frac{\partial}{\partial x}(z^{x+y}) \\
+  y &= \frac{\partial}{\partial x}(e^{\ln(z)(x+y)}) \\
+  y &= e^{\ln(z)(x+y)}\frac{\partial}{\partial x}(\ln(z)(x+y)) \\
+  y &= e^{\ln(z)(x+y)}(\frac{1}{z}\frac{\partial z}{\partial x}(x+y) + \ln(z)) \\
+  y &= z^{x+y}(\frac{x+y}{z}\frac{\partial z}{\partial x} + \ln(z)) \\
+  y &= \frac{\partial z}{\partial x}(x+y)z^{x+y-1} + z^{x+y}\ln(z) \\
+  \frac{\partial z}{\partial x} &= \frac{y - z^{x+y}\ln(z)}{(x+y)z^{x+y-1}}
+ \end{align*}
+
+ \begin{align*}
+  \frac{\partial}{\partial y}(xy) &= \frac{\partial}{\partial y}(z^{x+y}) \\
+  x &= \frac{\partial}{\partial y}(e^{\ln(z)(x+y)}) \\
+  x &= e^{\ln(z)(x+y)}\frac{\partial}{\partial y}(\ln(z)(x+y)) \\
+  x &= e^{\ln(z)(x+y)}(\frac{1}{z}\frac{\partial z}{\partial y}(x+y) + \ln(z)) \\
+  x &= z^{x+y}(\frac{x+y}{z}\frac{\partial z}{\partial y} + \ln(z)) \\
+  x &= \frac{\partial z}{\partial y}(x+y)z^{x+y-1} + z^{x+y}\ln(z) \\
+  \frac{\partial z}{\partial y} &= \frac{x - z^{x+y}\ln(z)}{(x+y)z^{x+y-1}}
+ \end{align*}
+
+So $\nabla h(x,y) = \begin{bmatrix}
+                \dfrac{y - z^{x+y}\ln(z)}{(x+y)z^{x+y-1}} \\
+                \dfrac{x - z^{x+y}\ln(z)}{(x+y)z^{x+y-1}}
+               \end{bmatrix}$.
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+ Recall that the equation of the plane tangent to the surface defined by
+ $g(x,y,z) = 0$ at the point $(x_0, y_0, z_0)$ is $\nabla g(x_0,y_0,z_0)
+ \cdot \begin{bmatrix} x - x_0 \\ y - y_0 \\ z - z_0 \end{bmatrix} = 0$.
+
+ \begin{enumerate}
+  \item Define $g(x,y,z) = f(x,y) - z = \frac{x^2}{9} - y^2 - z$, so that the
+   surface  $z = f(x,y)$ is equivalently defined by the equation
+   $g(x,y,z) = 0$.
+   We can then find the equation of the tangent plane at the point
+   $(2, \frac{1}{3}, \frac{1}{3})$ by computing $\nabla g$ and applying the
+   above formula:
+
+   \begin{align*}
+    \nabla g(x,y,z) &=
+     \begin{bmatrix} \frac{2x}{9} \\ -2y \\ -1 \end{bmatrix} \\
+    \nabla g(2,\frac{1}{3},\frac{1}{3}) &=
+     \begin{bmatrix} \frac{4}{9} \\ -\frac{2}{3} \\ -1 \end{bmatrix} \\
+   \end{align*}
+
+   This yields the equation
+   \begin{align*}
+    \frac{4}{9}(x - 2) - \frac{2}{3}(y - \frac{1}{3}) - (z - \frac{1}{3}) &= 0 \\
+    \frac{4}{9}x - \frac{2}{3}y - z &= \frac{1}{3} \\
+    4x - 6y - 9z &= 3.
+   \end{align*}
+
+  \item Define $g(x,y,z) = x^2 + x + y - z^2 - 7$.  Then compute
+   \begin{align*}
+    \nabla g(x,y,z) &= \begin{bmatrix} 2x + 1 \\ 1 \\ -2z \end{bmatrix} \\
+    \nabla g(2,5,2) &= \begin{bmatrix} 5 \\ 1 \\ -4 \end{bmatrix}.
+   \end{align*}
+
+   Thus the equation of the tangent plane is
+   \begin{align*}
+    5(x - 2) + (y - 5) - 4(z - 2) &= 0 \\
+    5x + y - 4z &= 7.
+   \end{align*}
+ \end{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+ \begin{enumerate}
+  \item $f$ will increase fastest in the direction of the vector
+   $\nabla f(x_0,y_0)$ from the point $(x_0, y_0)$.  Therefore we compute and
+   evaluate the gradient $\nabla f$ at the point $(1, 1)$:
+
+   \begin{align*}
+    \nabla f &= \begin{bmatrix}
+                 \dfrac{\partial f}{\partial x} \\
+                 \dfrac{\partial f}{\partial y}
+                \end{bmatrix} \\
+             &= \begin{bmatrix}
+                 \dfrac{\partial}{\partial x}(e^{-(x^2+x+1+y^2-2y)}) \\
+                 \dfrac{\partial}{\partial y}(e^{-(x^2+x+1+y^2-2y)})
+                \end{bmatrix} \tag{1} \label{fastest_incr:grad}  \\
+             &= \begin{bmatrix}
+                 (-2x - 1)e^{-(x^2+x+1+y^2-2y)} \\
+                 (2y - 2)e^{-(x^2+x+1+y^2-2y)}
+                \end{bmatrix} \\
+    \nabla f(1, 1) &= \begin{bmatrix} -3e^{-2} \\ 0 \end{bmatrix}
+   \end{align*}
+
+ \item The rate of change of $f$ in the direction of the vector $\mathbf{v}$
+  from the point $(x, y)$ is given by $\nabla f(x,y) \cdot \mathbf{v}$.  Using
+  (\ref{fastest_incr:grad}) we find that $\nabla f(2, 1) =
+  \begin{bmatrix} -5e^{-6} \\ 0 \end{bmatrix}$.  The direction from $(2, 1)$
+  to $(5, 4)$ is given by the vector $\begin{bmatrix} 3 \\ 3 \end{bmatrix}$;
+  thus the rate of change of $f$ from $(2, 1)$ towards $(5, 4)$ is
+  $\begin{bmatrix} -5e^{-6} \\ 0 \end{bmatrix} \cdot
+   \begin{bmatrix} 3 \\ 3 \end{bmatrix} = -15e^{-6}$.
+
+ \end{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+First we find the partial derivatives of each component with respect to each
+variable:
+
+ \begin{align*}
+  \frac{\partial f_1}{\partial x} &= cos(x + y) \\
+  \frac{\partial f_1}{\partial y} &= cox(x + y) \\
+  \frac{\partial f_2}{\partial x} &= \frac{1}{x} \\
+  \frac{\partial f_2}{\partial y} &= \frac{1}{y}
+ \end{align*}
+
+The Jacobian matrix, then, is
+$\begin{bmatrix}
+ cos(x + y) & cos(x + y) \\ \frac{1}{x} & \frac{1}{y}
+\end{bmatrix}$.
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+We only need to verify that (\ref{eqn:heat}) holds for the given function $u$:
+
+\begin{align*}
+ \frac{\partial u}{\partial t} &= \frac{K_0}{c\rho} \frac{\partial^2 u}{\partial x^2} \\
+ -\frac{K_0}{c\rho}e^{-tK_0/(c\rho)}\sin(x) &=
+ \frac{K_0}{c\rho}\frac{\partial}{\partial x}(e^{-tK_0/(c\rho)}\cos(x)) \\
+ -\frac{K_0}{c\rho}e^{-tK_0/(c\rho)}\sin(x) &=
+ -\frac{K_0}{c\rho}e^{-tK_0/(c\rho)}\sin(x)
+\end{align*}
+
+which is true.  So $u(x,t) = e^{-tK_0/(c\rho)}\sin(x)$ is indeed a solution
+to the heat equation (\ref{eqn:heat}).
+
+\EEN % END OF SOLUTIONS
+
+\newpage
+
+\subsection{Optimization}
+
+\BEN
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+Local extreme values of a function occur at points where the gradient of
+the function is the zero vector.
+
+ \begin{enumerate}
+  \item First we find the critical points:
+   \begin{align*}
+    \nabla f(x,y) &= \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+    \begin{bmatrix}
+     \dfrac{\partial}{\partial x}(x^2 + 2x - xy + y^2) \\
+     \dfrac{\partial}{\partial y}(x^2 + 2x - xy + y^2)
+    \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+    \begin{bmatrix}
+     2x + 2 \\
+     -x + 2y
+    \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+    x &= -1 \\
+    y &= -\frac{1}{2}
+   \end{align*}
+   To categorize this point $(-1, -\frac{1}{2})$ as a local minimum or maximum
+   we apply the second partial derivative test:
+   \begin{align*}
+    D(x,y)
+    &= \begin{vmatrix}
+     \dfrac{\partial^2 f(x,y)}{\partial x^2} &
+      \dfrac{\partial^2 f(x,y)}{\partial y \partial x} \\
+     \dfrac{\partial^2 f(x,y)}{\partial x \partial y} &
+      \dfrac{\partial^2 f(x,y)}{\partial y^2}
+    \end{vmatrix} \\
+    &= \begin{vmatrix}
+     \dfrac{\partial^2}{\partial x^2}(x^2 + 2x - xy + y^2) &
+      \dfrac{\partial^2}{\partial y \partial x}(x^2 + 2x - xy + y^2) \\
+     \dfrac{\partial^2}{\partial x \partial y}(x^2 + 2x - xy + y^2) &
+      \dfrac{\partial^2}{\partial y^2}(x^2 + 2x - xy + y^2)
+    \end{vmatrix} \\
+    &= \begin{vmatrix} 2 & 0 \\ -1 & 2 \end{vmatrix} \\
+    &= 4 \\
+    &> 0
+   \end{align*}
+  for all values of $x,y$.
+  Additionally, $\dfrac{\partial^2 f(x,y)}{\partial x^2} = 2 > 0$, so that
+  the point $(-1, -\frac{1}{2})$ is a local minimum.
+
+  \item Again, we look for the critical points by setting the gradient to zero.
+   \begin{align*}
+    \nabla h(x,y) &= \begin{bmatrix} 0 \\ 0 \end{bmatrix} \\
+    \begin{bmatrix} y\cos(xy) \\ x\cos(xy) \end{bmatrix}
+    &= \begin{bmatrix} 0 \\ 0 \end{bmatrix}
+   \end{align*}
+  The solutions (and therefore the critical points) are the point $(0, 0)$
+  and the family of curves $xy = \pi/2 + k\pi$, where $k \in \mathbb{Z}$.
+
+  To categorize the points, again compute the matrix
+  \begin{align*}
+   D(x,y)
+    &= \begin{vmatrix}
+     \dfrac{\partial^2 h(x,y)}{\partial x^2} &
+      \dfrac{\partial^2 h(x,y)}{\partial y \partial x} \\
+     \dfrac{\partial^2 h(x,y)}{\partial x \partial y} &
+      \dfrac{\partial^2 h(x,y)}{\partial y^2}
+    \end{vmatrix} \\
+    &= \begin{vmatrix}
+     \dfrac{\partial^2}{\partial x^2}(\sin(xy)) &
+      \dfrac{\partial^2}{\partial y \partial x}(\sin(xy)) \\
+     \dfrac{\partial^2}{\partial x \partial y}(\sin(xy)) &
+      \dfrac{\partial^2}{\partial y^2}(\sin(xy))
+    \end{vmatrix} \\
+    &= \begin{vmatrix}
+     -y^2\sin(xy) & \cos(xy) - xy\sin(xy) \\
+     \cos(xy) - xy\sin(xy) & -x^2\sin(xy)
+    \end{vmatrix} \\
+    D(0,0) &= \begin{vmatrix} 0 & 1 \\ 1 & 0 \end{vmatrix} \\
+           &= -1 \\
+   \end{align*}
+
+   So $(0, 0)$ is a saddle point.
+
+   \begin{align*}
+    D(x, \frac{\pi/2 + k\pi}{x})
+    &= \begin{vmatrix}
+     -\dfrac{\pi/2 + k\pi}{x}^2\sin(\pi/2 + k\pi)
+     & \cos(\pi/2 + k\pi) - (\pi/2 + k\pi)\sin(\pi/2 + k\pi) \\
+     \cos(\pi/2 + k\pi) - (\pi/2 + k\pi)\sin(\pi/2 + k\pi)
+     & -x^2\sin(\pi/2 + k\pi)
+    \end{vmatrix} \\
+    &= \begin{vmatrix}
+     -(\dfrac{\pi/2 + k\pi}{x})^2 (-1)^k & - (\pi/2 + k\pi)(-1)^k \\
+     - (\pi/2 + k\pi)(-1)^k & -x^2 (-1)^k
+    \end{vmatrix} \\
+    &= (\pi/2 + k\pi)^2 - (\pi/2 + k\pi)^2 \\
+    &= 0
+  \end{align*}
+
+  So the test is inconclusive.
+
+ \end{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+We use the method of Lagrange Multipliers.  To find the extreme values
+of the function $f(x,y)$ subject to the constraint $g(x,y)=c$, we define
+a new function $F(x,y,t) = f(x,y) + t(g(x,y) - c)$ and solve the equation
+$\nabla F(x,y,t) = 0$.  The solutions $(x,y)$ are the candidate solutions,
+which we test by plugging into the original equation $f$.
+
+\begin{enumerate}
+ \item
+  Define $F(x,y,t) = e^{-(x^2+y^2)} - t(x - y^2)$.  Then
+  \begin{align}
+   \nabla F(x,y,t) &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
+   \begin{bmatrix}
+    -2xe^{-(x^2+y^2)} - t \\
+    -2ye^{-(x^2+y^2)} + 2yt \\
+    -(x - y^2)
+   \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}. \label{lagr:2}
+  \end{align}
+  $(0,0)$ is one solution.  When $x \neq 0$, by the third component of
+  (\ref{lagr:2}) we see that $y \neq 0$, so that we get $t = e^{-(x^2+y^2)}$
+  from the second component, which in turn by the first component shows
+  that $x = -1/2$.  However, there is no $y$ that satisfies the third
+  component of (\ref{lagr:2}) when $x = -1/2$.  Thus $(0, 0)$ is the only
+  extreme value.
+
+ \item
+  Define $F(x,y,t) = e^{x-y^2} - t(\frac{x^2}{4}+y+y^2 - 1)$.  Then
+  \begin{align}
+   \nabla F(x,y,t) &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
+   \begin{bmatrix}
+    e^{x-y^2} - tx/2 \\
+    -2ye^{x-y^2} - t + 2yt \\
+    -(\frac{x^2}{4}+y+y^2 - 1)
+   \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix}. \label{lagr:1}
+  \end{align}
+  From the first two components we see that
+  \begin{align*}
+   e^{x-y^2} &= tx/2 \\
+   e^{x - y^2} &= \frac{t-2yt}{-2y}.
+  \end{align*}
+  This yields the equation $y = \dfrac{1}{2-x}$, so that the extreme values
+  of $f$ fall on the intersection of the ellipse $\frac{x^2}{4}+y+y^2 = 1$
+  and the curve $y = \dfrac{1}{2-x}$.
+  Plugging $y$ into the third component of (\ref{lagr:1}) gives the equation
+  $\frac{x^2}{4} + \frac{1}{2-x} + (\frac{1}{2-x})^2 = 1$.
+
+\end{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+The divergence is given by the equation \[
+ \nabla \cdot f = \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y} + \frac{\partial f_3}{\partial z}
+\] and the curl by the equation \[
+ \nabla \times f = \begin{bmatrix}
+  \dfrac{\partial f_3}{\partial y} - \dfrac{\partial f_2}{\partial z} \\
+  \dfrac{\partial f_1}{\partial z} - \dfrac{\partial f_3}{\partial x} \\
+  \dfrac{\partial f_2}{\partial x} - \dfrac{\partial f_1}{\partial y}
+ \end{bmatrix}.
+\]  Applying these equations yields the solutions:
+
+\begin{align*}
+ \nabla \cdot f &= \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y} + \frac{\partial f_3}{\partial z} \\
+ &= \frac{\partial}{\partial x}(x^2+y^2) + \frac{\partial}{\partial y}(y^2+z^2) + \frac{\partial}{\partial z}(z^2+x^2) \\
+ &= 2x + 2y + 2z \\
+ \nabla \times f &= \begin{bmatrix}
+  \dfrac{\partial f_3}{\partial y} - \dfrac{\partial f_2}{\partial z} \\
+  \dfrac{\partial f_1}{\partial z} - \dfrac{\partial f_3}{\partial x} \\
+  \dfrac{\partial f_2}{\partial x} - \dfrac{\partial f_1}{\partial y}
+ \end{bmatrix} \\
+ &= \begin{bmatrix} - 2z \\ - 2x \\ - 2y \end{bmatrix}.
+\end{align*}
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+It is possible to solve this problem using Lagrangian optimization;
+however, the closest point on the sphere to the plane will occur at
+the point on the sphere where its normal vector is parallel to the plane's
+normal vector.
+
+% Should include more explanation for this?  Maybe not a proof,
+% but perhaps a picture...
+
+Knowing this, we first find the sphere's normal vector by computing
+the gradient of the function $F(x,y,z) = x^2 + y^2 + z^2 - 1$, which by
+a straightforward calculation is the vector
+$\nabla F = \begin{bmatrix} 2x \\ 2y \\ 2z \end{bmatrix}$.  Now, by
+rearranging the equation $x + 2y + 2z = 5$ into the form
+$\begin{bmatrix} x - 3 \\ y -2 \\ z + 1 \end{bmatrix} \cdot
+ \begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix} = 0$, we see that
+$\begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}$ is a vector normal to the plane.
+
+We want to find a point on the sphere where these two normal vectors are
+parallel; equivalently, we want to find a point on the sphere such that
+$\begin{bmatrix} 2x \\ 2y \\ 2z \end{bmatrix}
+ = k\begin{bmatrix} 1 \\ 2 \\ 2 \end{bmatrix}$ for some $k$.  We can plug
+$x = k/2$, $y = k$, $z = k$ into the equation $x^2 + y^2 + z^2 = 1$, which
+yields the solution $k = 2/3$.  Thus $(1/3, 2/3, 2/3)$ is a point on the
+sphere where the sphere's normal vector is parallel to the plane's, and
+therefore is the point closest to the plane.
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+Let $l$ be the length
+of the rectangular sides of the prism and $w$ be their width, so that
+the sides of the equilateral triangle ends are also of length $w$.
+The surface area of such a prism is given by the function $A(l,w) =
+\frac{\sqrt{3}}{2}l^2 + 3lw$, and its volume by the function $V(l,w) =
+\frac{\sqrt{3}}{4}l^2w$.  Since the sides cost $\$10/ft^2$ and the ends
+cost $\$8/ft^2$, we wish to maximize the function $V(l,w)$ subject to
+the restriction $C(l,w) = 5\sqrt{3}l^2 + 24lw = 500$.
+
+We apply the method of Lagrange Multipliers.  Define the function
+$F(l,w) = V(l,w) + t(C(l,w) - 500) =
+\frac{\sqrt{3}}{4}l^2w + t(5\sqrt{3}l^2 + 24lw - 500)$;
+the constrained extreme values of $V$ satisfy the equation
+$\nabla F(l,w) = \mathbf{0}$.
+
+\begin{align}
+ \nabla F(l,w) &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
+ \begin{bmatrix}
+  \dfrac{\partial F}{\partial l} \\
+  \dfrac{\partial F}{\partial w} \\
+  \dfrac{\partial F}{\partial t}
+ \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
+ \begin{bmatrix}
+  \frac{\sqrt{3}}{2}lw + 10\sqrt{3}lt + 24wt \\
+  \frac{\sqrt{3}}{4}l^2 + 24lt \\
+  5\sqrt{3}l^2 + 24lw - 500
+ \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \label{soln:opt_box}
+\end{align}
+
+From the second row of (\ref{soln:opt_box}) we get $t = \frac{-\sqrt{3}}{96}l$.
+Substitution into the first row yields
+\begin{align}
+ \frac{\sqrt{3}}{2}lw - \frac{10}{32}l^2 - \frac{\sqrt{3}}{4}lw &= 0 \nonumber \\
+ \frac{\sqrt{3}}{4}lw - \frac{10}{32}l^2 &= 0 \nonumber \\
+ 8\sqrt{3}lw - 10l^2 &= 0 \nonumber \\
+ 8\sqrt{3}lw &= 10l^2 \nonumber \\
+ w &= \frac{5}{4\sqrt{3}}l \label{soln:opt_box2}
+\end{align}
+
+Substituting (\ref{soln:opt_box2}) into the third row of (\ref{soln:opt_box})
+yields
+\begin{align*}
+ 5\sqrt{3}l^2 + 24l(\frac{5}{4\sqrt{3}}l) &= 500 \\
+ 5\sqrt{3}l^2 + \frac{30}{\sqrt{3}}l^2 &= 500 \\
+ 15l^2 + 30l^2 &= 500\sqrt{3} \\
+ 45l^2 &= 500\sqrt{3} \\
+ l^2 &= \frac{100}{3^{3/2}} \\
+ l &= \frac{10}{3^{3/4}}
+\end{align*}
+
+which, when combined with (\ref{soln:opt_box2}), gives
+$w = \dfrac{50}{4\cdot3^{5/4}}$.
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+We want to optimize the function $T(x,y,z) = 200xyz^2$ subject to the
+constraint $x^2+y^2+z^2 = 1$.  Define the function
+$F(x,y,z) = 200xyz^2 + t(x^2+y^2+z^2-1)$; the extreme points satisfy the
+equation $\nabla F(x,y,z) = 0$.
+
+\begin{align}
+ \nabla F(x,y,z) &= \begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
+ \begin{bmatrix}
+  \dfrac{\partial F}{\partial x} \\
+  \dfrac{\partial F}{\partial y} \\
+  \dfrac{\partial F}{\partial z} \\
+  \dfrac{\partial F}{\partial t}
+ \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
+ \begin{bmatrix}
+  200yz^2 + 2xt \\
+  200xz^2 + 2yt \\
+  400xyz + 2zt \\
+  x^2 + y^2 + z^2 - 1
+ \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \label{soln:opt_heat}
+\end{align}
+
+The third equation of (\ref{soln:opt_heat}) yields $t = -200xy$.  Substituting
+this value of $t$ into the first and second equations gives $z^2 = 2x^2 = 2y^2$.
+Combining this with the fourth equation yields $4x^2 = 1$, or
+$x = \pm \frac{1}{2} \implies y = \pm \frac{1}{2}, z = \pm \frac{1}{\sqrt{2}}$.
+
+
+
+\EEN
