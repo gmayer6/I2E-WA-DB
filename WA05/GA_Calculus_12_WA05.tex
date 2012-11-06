@@ -348,6 +348,35 @@ yields
 which, when combined with (\ref{soln:opt_box2}), gives
 $w = \dfrac{50}{4\cdot3^{5/4}}$.
 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+We want to optimize the function $T(x,y,z) = 200xyz^2$ subject to the
+constraint $x^2+y^2+z^2 = 1$.  Define the function
+$F(x,y,z) = 200xyz^2 + t(x^2+y^2+z^2-1)$; the extreme points satisfy the
+equation $\nabla F(x,y,z) = 0$.
+
+\begin{align}
+ \nabla F(x,y,z) &= \begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
+ \begin{bmatrix}
+  \dfrac{\partial F}{\partial x} \\
+  \dfrac{\partial F}{\partial y} \\
+  \dfrac{\partial F}{\partial z} \\
+  \dfrac{\partial F}{\partial t}
+ \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
+ \begin{bmatrix}
+  200yz^2 + 2xt \\
+  200xz^2 + 2yt \\
+  400xyz + 2zt \\
+  x^2 + y^2 + z^2 - 1
+ \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \label{soln:opt_heat}
+\end{align}
+
+The third equation of (\ref{soln:opt_heat}) yields $t = -200xy$.  Substituting
+this value of $t$ into the first and second equations gives $z^2 = 2x^2 = 2y^2$.
+Combining this with the fourth equation yields $4x^2 = 1$, or
+$x = \pm \frac{1}{2} \implies y = \pm \frac{1}{2}, z = \pm \frac{1}{\sqrt{2}}$.
+
 \end{enumerate}
 
 \end{document}
