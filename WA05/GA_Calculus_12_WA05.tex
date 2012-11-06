@@ -52,7 +52,9 @@ Find its divergence $\nabla \cdot f$ and curl $\nabla \times f$.
 \item
 
 Find the point on the sphere $x^2 + y^2 + z^2 = 1$ that is closest
-to the plane $x + 2y + 2z = 5$.
+to the plane $x + 2y + 2z = 5$. (Hint: using some geometric intuition
+is is possible to complete this problem without using the method of
+Lagrange multipliers.)
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item
@@ -64,14 +66,16 @@ and the two triangular sides must also have equal dimensions.  You
 can purchase glass for the rectangular sides at a cost of $\$8/ft^2$ 
 and for the triangular sides at a cost of $\$10/ft^2$.
 
-What is the volume of the prism of maximum surface area that you can 
-build under these constraints?
+What are the dimensions of the prism of largest volume that you can build?
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item
-\Emph{Application: Labor and Capital}
+\Emph{Application: Heat Optimization}
 
-%http://people.ucsc.edu/~lewis/Math140/econ_lag_mult.pdf
+Suppose that the temperature in a space is given by the function
+$T(x,y,z) = 200xyz^2$.  Find the hottest point on the unit sphere.
+
+(This question taken from section 4.5 of {\it Vector Calculus} by Susan Colley)
 
 \end{enumerate}
 
@@ -287,6 +291,62 @@ $x = k/2$, $y = k$, $z = k$ into the equation $x^2 + y^2 + z^2 = 1$, which
 yields the solution $k = 2/3$.  Thus $(1/3, 2/3, 2/3)$ is a point on the
 sphere where the sphere's normal vector is parallel to the plane's, and
 therefore is the point closest to the plane.
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+Let $l$ be the length
+of the rectangular sides of the prism and $w$ be their width, so that
+the sides of the equilateral triangle ends are also of length $w$.
+The surface area of such a prism is given by the function $A(l,w) =
+\frac{\sqrt{3}}{2}l^2 + 3lw$, and its volume by the function $V(l,w) =
+\frac{\sqrt{3}}{4}l^2w$.  Since the sides cost $\$10/ft^2$ and the ends
+cost $\$8/ft^2$, we wish to maximize the function $V(l,w)$ subject to
+the restriction $C(l,w) = 5\sqrt{3}l^2 + 24lw = 500$.
+
+We apply the method of Lagrange Multipliers.  Define the function
+$F(l,w) = V(l,w) + t(C(l,w) - 500) =
+\frac{\sqrt{3}}{4}l^2w + t(5\sqrt{3}l^2 + 24lw - 500)$;
+the constrained extreme values of $V$ satisfy the equation
+$\nabla F(l,w) = \mathbf{0}$.
+
+\begin{align}
+ \nabla F(l,w) &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
+ \begin{bmatrix}
+  \dfrac{\partial F}{\partial l} \\
+  \dfrac{\partial F}{\partial w} \\
+  \dfrac{\partial F}{\partial t}
+ \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
+ \begin{bmatrix}
+  \frac{\sqrt{3}}{2}lw + 10\sqrt{3}lt + 24wt \\
+  \frac{\sqrt{3}}{4}l^2 + 24lt \\
+  5\sqrt{3}l^2 + 24lw - 500
+ \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \label{soln:opt_box}
+\end{align}
+
+From the second row of (\ref{soln:opt_box}) we get $t = \frac{-\sqrt{3}}{96}l$.
+Substitution into the first row yields
+\begin{align}
+ \frac{\sqrt{3}}{2}lw - \frac{10}{32}l^2 - \frac{\sqrt{3}}{4}lw &= 0 \nonumber \\
+ \frac{\sqrt{3}}{4}lw - \frac{10}{32}l^2 &= 0 \nonumber \\
+ 8\sqrt{3}lw - 10l^2 &= 0 \nonumber \\
+ 8\sqrt{3}lw &= 10l^2 \nonumber \\
+ w &= \frac{5}{4\sqrt{3}}l \label{soln:opt_box2}
+\end{align}
+
+Substituting (\ref{soln:opt_box2}) into the third row of (\ref{soln:opt_box})
+yields
+\begin{align*}
+ 5\sqrt{3}l^2 + 24l(\frac{5}{4\sqrt{3}}l) &= 500 \\
+ 5\sqrt{3}l^2 + \frac{30}{\sqrt{3}}l^2 &= 500 \\
+ 15l^2 + 30l^2 &= 500\sqrt{3} \\
+ 45l^2 &= 500\sqrt{3} \\
+ l^2 &= \frac{100}{3^{3/2}} \\
+ l &= \frac{10}{3^{3/4}}
+\end{align*}
+
+which, when combined with (\ref{soln:opt_box2}), gives
+$w = \dfrac{50}{4\cdot3^{5/4}}$.
 
 \end{enumerate}
 
