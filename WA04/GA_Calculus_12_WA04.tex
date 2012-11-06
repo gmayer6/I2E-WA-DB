@@ -59,7 +59,7 @@ $f(x,y) = \begin{bmatrix} \sin(x+y) \\ \ln(xy) \end{bmatrix}$.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item
-\Emph{Application: Introduction to Partial Differential Equations}
+\Emph{Application: The Heat Equation}
 
 A \emph{partial differential equation} is an equation that involves
 the partial derivatives of a function.  For example, 
@@ -74,9 +74,19 @@ partial derivatives.  For example, the function $f(x, y) = y$
 satisfies the above partial differential equation since
 $(\frac{\partial}{\partial x}(y))^2 = 0$ and $\frac{\partial^2}{\partial x \partial y}(y) = \frac{\partial}{\partial x}(1) = 0$.
 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item
-\Emph{Application: The Heat Equation}
+The one-dimensional heat equation is a partial differential equation
+which relates physical properties of a material to the function that
+specifies the exact temperature at any point along a fixed-length rod
+of that material.  Under a few assumptions, it can be stated in the
+following form:
+\begin{equation}
+\frac{\partial u}{\partial t} = \frac{K_0}{c\rho} \frac{\partial^2 u}{\partial x^2} \label{eqn:heat}
+\end{equation}
+where $u = u(x,t)$, $x$ is the position along the rod, $t$ is the point in time, 
+$K_0$ is the thermal conductivity of the material, $c$ is its specific heat, 
+and $\rho$ is its mass density.
+
+Show that $u(x,t) = e^{-tK_0/(c\rho)}\sin(x)$ is a solution to (\ref{eqn:heat}).
 
 \end{enumerate}
 
@@ -297,6 +307,22 @@ The Jacobian matrix, then, is
 $\begin{bmatrix}
  cos(x + y) & cos(x + y) \\ \frac{1}{x} & \frac{1}{y}
 \end{bmatrix}$.
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+
+We only need to verify that (\ref{eqn:heat}) holds for the given function $u$:
+
+\begin{align*}
+ \frac{\partial u}{\partial t} &= \frac{K_0}{c\rho} \frac{\partial^2 u}{\partial x^2} \\
+ -\frac{K_0}{c\rho}e^{-tK_0/(c\rho)}\sin(x) &=
+ \frac{K_0}{c\rho}\frac{\partial}{\partial x}(e^{-tK_0/(c\rho)}\cos(x)) \\
+ -\frac{K_0}{c\rho}e^{-tK_0/(c\rho)}\sin(x) &=
+ -\frac{K_0}{c\rho}e^{-tK_0/(c\rho)}\sin(x)
+\end{align*}
+
+which is true.  So $u(x,t) = e^{-tK_0/(c\rho)}\sin(x)$ is indeed a solution
+to the heat equation (\ref{eqn:heat}).
 
 \end{enumerate}
 
