@@ -1,3 +1,5 @@
+% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb} % for \mathbb
@@ -7,16 +9,18 @@
 \usepackage{hyperref} % for hyperlinks
 \usepackage{float} % for figures
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-\title{Written Assignment Questions and Solutions}
-\date{}
-\author{}
+% CUSTOM COLOUR
+\definecolor{DGrey}{rgb}{0.1,0.1,0.1} % Dark Grey
+% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+\title{ Introduction to Engineering Written Assignment Questions}
+\date{January 2013}
+\author{Greg Mayer and Daniel Connelly}
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 % HEADER/FOOTER
 \usepackage{fancyheadings}
 \pagestyle{myheadings} % set headings to be user defined
 \fancyhead{} % To create custom header, clear default layout
-
-\renewcommand{\subsectionmark}[1]{\markright{{\color{Sepia}\thesubsection} \ {\color{Sepia}#1}}}
+\renewcommand{\subsectionmark}[1]{\markright{{\color{DGrey}\thesubsection} \ {\color{DGrey}#1}}}
 \fancyhead[LE,LO]{\subsectionmark} % To create custom header, clear default layout
 
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
@@ -44,6 +48,17 @@
 \newcommand{\px}{\frac{\partial}{\partial x}} % Partial wrt x
 \newcommand{\py}{\frac{\partial}{\partial y}} % Partial wrt y
 
+\newcommand{\pfx}{\frac{\partial f}{\partial x}} % Partial of f wrt x
+\newcommand{\pfy}{\frac{\partial f}{\partial y}} % Partial of f wrt y
+\newcommand{\pfxy}{\frac{\partial^2 f}{\partial y \partial x}} % Partial of f wrt y
+\newcommand{\pfyx}{\frac{\partial^2 f}{\partial x \partial y}} % Partial of f wrt y
+
+\newcommand{\ux}{\frac{\partial u}{\partial x }} % Partial of u wrt x
+\newcommand{\uk}{\frac{\partial u}{\partial k }} % Partial of u wrt k
+\newcommand{\ut}{\frac{\partial u}{\partial t}} % Partial of u wrt t
+\newcommand{\kx}{\frac{\partial k}{\partial x }} % Partial of k wrt x
+\newcommand{\kt}{\frac{\partial k}{\partial t }} % Partial of k wrt t
+
 \newcommand{\pxu}{\frac{\partial x}{\partial u}} % x wrt u
 \newcommand{\pxv}{\frac{\partial x}{\partial v}} % x wrt v
 \newcommand{\pxw}{\frac{\partial x}{\partial w}} % x wrt v
@@ -61,7 +76,7 @@
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 % ONLY USED FOR EDITING
 \newcommand{\rednote}[1]{{\color{red}\textit{\textbf{#1}}}} % Shortcut for formatting notes for developers
-\newcommand{\FromC}[1]{{\color{Sepia}\textit{#1}}} % Shortcut for coloring the "from" text
+\newcommand{\FromC}[1]{{\color{DGrey}\textit{#1}}} % Shortcut for coloring the "from" text
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 % AUGMENTED MATRIX MACRO
 % thanks to http://tex.stackexchange.com/questions/2233/whats-the-best-way-make-an-augmented-coefficient-matrix
@@ -70,5 +85,9 @@
 }{%
   \end{array}\right]
 }
-
+% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+% PAGE LAYOUT
+\addtolength{\topmargin}{10pt}
+\addtolength{\headsep}{10pt}
+\addtolength{\textheight}{-20pt}
 

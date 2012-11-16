@@ -1,0 +1,99 @@
+\documentclass{article}
+\input{../Preamble/preamble.tex}
+\usepackage{multienum}
+\usepackage{wrapfig}
+
+\date{}
+% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+\begin{document}
+\begin{center}
+\textsc{\LARGE Midterm 2}\\[0.5cm]
+\end{center}
+\section*{Questions}
+
+\begin{enumerate}
+\item % EVEN AND ODD
+Determine the value of
+\begin{align*}
+  \mathop{\int_0^{\pi} \!\! \int_{-1}^1} x^4e^{x^2 + y^2}\sin(y) dydx.
+\end{align*}
+Do not use integration by parts.
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % CHANGING ORDER OF INTEGRATION
+\textbf{Changing the Order of Integration}\\
+The volume, $V$, of the solid bounded by
+\begin{align*}
+  z=0, \quad x=y^2, \quad x+z=1
+\end{align*}
+can be found using the triple integral 
+\begin{align*}
+  V = \mathop{\int_{0}^{1} \!\! \int_{-\sqrt{x}}^{\sqrt{x}} \! \int_0^{1-x} } dz\ dy\ dx = \frac{8}{15}.
+\end{align*}
+By simply changing the order of integration, we can find five other ways of expressing the volume of the solid. Find three of them. 
+
+Note that for this question, you do not need to perform any integration. Simply set up three other triple integrals that represent the volume of the solid.
+\textit{Hint: you may however want to check that your integrals represent the same volume with WolframAlpha}.
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\end{enumerate} % END OF QUESTIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% SOLUTIONS
+\newpage
+\section*{Solutions}
+
+\begin{enumerate}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % EVEN AND ODD
+The integral can be written as
+\begin{align*}
+  \mathop{\int_0^{\pi} \!\! \int_{-1}^1} e^{x^2 + y^2}\sin(y) dydx 
+  &= \mathop{\int_0^{\pi} \!\! \int_{-1}^1} e^{x^2}e^{y^2}\sin(y) dydx  = \Bigg( \int_0^{\pi} e^{x^2} dx \Bigg)\Bigg( \int_{-1}^1 e^{y^2}\sin(y)dy \Bigg)  
+\end{align*}
+The second term is the integral of an odd function over a symmetrical interval, and so is equal to zero. Therefore,
+\begin{align*}
+  \mathop{\int_0^{\pi} \!\! \int_{-1}^1} e^{x^2 + y^2}\sin(y) dydx =0.
+\end{align*}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % CHANGING ORDER OF INTEGRATION
+\textbf{Changing the Order of Integration}\\
+Noting that the limits of integration are not dependent on $y$, the $z$ and the $y$ integrals can be interchanged:
+\begin{align*}
+  V &= \mathop{\int_{0}^{1} \!\! \int_{-\sqrt{x}}^{\sqrt{x}} \! \int_0^{1-x} } dz\ dy\ dx \\
+   &= \mathop{\int_{0}^{1} \Bigg( \int_{-\sqrt{x}}^{\sqrt{x}} dy \Bigg) \Bigg( \int_0^{1-x} } dz\Bigg) dx \\
+   &= \mathop{\int_{0}^{1}  \Bigg( \int_0^{1-x} } dz\Bigg) \Bigg( \int_{-\sqrt{x}}^{\sqrt{x}} dy \Bigg)dx \\
+   &= \mathop{\int_{0}^{1} \!\! \int_0^{1-x} \!\! \int_{-\sqrt{x}}^{\sqrt{x}}} dy\ dz\ dx 
+\end{align*}
+We can also integrate $y$ last. We are given that the solid can be expressed as the region 
+\begin{align*}
+  S = \{(x,y,z)\ |\  0 \le x \le 1, -\sqrt{x} \le y \le \sqrt{x}, 0 \le z \le 1-x \}.
+\end{align*}
+We can re-write this as
+\begin{align*}
+  S = \{(x,y,z)\ |\  y^2 \le x \le 1, -1 \le y \le 1, 0 \le z \le 1-x \}.
+\end{align*}
+This gives us the integral
+\begin{align*}
+  V &= \mathop{\int_{-1}^{1} \! \int_{y^2}^{1} \! \int_0^{1-x} } dz\ dx\ dy
+\end{align*}
+We can also define the region in this way \rednote{wrong}
+\begin{align*}
+  S = \{(x,y,z)\ |\  0 \le x \le 1-z, -1 \le y \le 1, 0 \le z \le 1 \}.
+\end{align*}
+This gives us the integral
+\begin{align*}
+  V &= \mathop{\int_{-1}^{1} \! \int_{0}^{1} \! \int_0^{1-z} } dx\ dz\ dy
+\end{align*}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\end{enumerate}
+
+\end{document}

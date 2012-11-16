@@ -12,7 +12,16 @@
 \section*{Questions}
 
 \begin{enumerate}
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item 
+\Emph{Finding the Equation of a Sphere from Four Points}\\
+Solve Question 10 from Section 1.6 of \VCT, which is: 
+\begin{quotation}
+\noindent
+It can be shown that any four non-coplanar points (i.e. points that do not lie in the same plane) determine a sphere. Find the equation of the sphere that passes through the points $(0, 0, 0), (0, 0, 2), (1, -4, 3)$ and $(0, -1, 3)$. (Hint: Equation (1.31))
+\end{quotation}
+\rednote{This question has not been reviewed.}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item 
 % QUESTION
 Provide an example of a function, $f(x,y)$, that has the following two properties.
@@ -69,9 +78,12 @@ Complete Exercise 14(b) from Section 1.8 of \textit{Vector Calculus} by M. Corra
 \item Find an equation that expresses $c$ in terms of $a$. 
 \EEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item Choose one device that you use in your everyday life. Describe the roots of its invention, its historical importance, and how it helps in every day life. Also, describe why the invention is important to the engineering field(s) today. Please be clear and use historical examples.% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item From your unit readings in this course and your own knowledge base, elaborate on the place of engineering in society today.% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item In a paragraph, please describe the importance of interdisciplinary engineering today. Please use examples of interdisciplinary fields and works. 
+\item Choose one device that you use in your everyday life. Describe the roots of its invention, its historical importance, and how it helps in every day life. Also, describe why the invention is important to the engineering field(s) today. Please be clear and use historical examples.
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item From your unit readings in this course and your own knowledge base, elaborate on the place of engineering in society today.
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item In a paragraph, please describe the importance of interdisciplinary engineering today. Please use examples of interdisciplinary fields and works. 
+
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \end{enumerate} % END OF QUESTIONS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -83,6 +95,44 @@ Complete Exercise 14(b) from Section 1.8 of \textit{Vector Calculus} by M. Corra
 \section*{Solutions}
 
 \begin{enumerate}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item 
+\Emph{Finding the Equation of a Sphere from Four Points}\\
+Equation 1.31 from \VCT \ is 
+\begin{align*}
+   x^2 + y^2 + z^2 + ax + by + cz + d = 0,
+\end{align*}
+where $a$, $b$, $c$, and $d$ are constants to be determined. Substituting the four points into this equation gives us four equations
+\begin{align*}
+   0 &= (0)^2 + (0)^2 + (0)^2 + a(0) + b(0) + c(0) + d \\
+   0 &= (0)^2 + (0)^2 + (2)^2 + a(0) + b(0) + c(2) + d \\
+   0 &= (1)^2 + (-4)^2 + (3)^2 + a(1) + b(-4) + c(3) + d \\
+   0 &= (0)^2 + (-1)^2 + (3)^2 + a(0) + b(-1) + c(3) + d 
+\end{align*} 
+The first equation, which corresponds to the point (0,0,0), simplifies to $d=0$. The second equation reduces to
+\begin{align*}
+   0 &= (0)^2 + (0)^2 + (2)^2 + a(0) + b(0) + c(2) + d \\
+    &= 4 + 2c
+\end{align*}
+Thus, $c=-2$.  The last equation can be used to find $b$:
+\begin{align*}
+   0 &= (0)^2 + (-1)^2 + (3)^2 + a(0) + b(-1) + c(3) + d \\
+      &= 1 + 9 -b + (-2)(3) \\
+      b&= 10 - 6 = 4
+\end{align*} 
+Thus, $b=4$. The equation that corresponds to the point $(1,-4,3)$, is
+\begin{align*}
+   0 &= (1)^2 + (-4)^2 + (3)^2 + a(1) + b(-4) + c(3) + d \\
+   0 &= 1 + 16 + 9 + a + -4b + 3c + d \\
+   0 &= 26 + a  -4(4) + 3(-2) + (0) \\
+   0 &= 26 + a  -16 - 6  \\
+   0 &= 4+ a 
+\end{align*} 
+Thus, $a= -4$. The equation of the sphere is
+\begin{align*}
+   x^2 + y^2 + z^2 - 4x + 4y - 2z = 0.
+\end{align*}
+
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % LIMIT
 \item 

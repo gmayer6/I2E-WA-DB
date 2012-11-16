@@ -1,0 +1,116 @@
+\subsection{Functions of Two or Three Variables}
+\FromC{\From section 2.1 of \VCT.}
+
+\BEN
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item 
+% QUESTION
+% GPS: Not in GPS
+For the following functions, 
+\begin{itemize}
+\item determine the domain of the function,
+\item sketch the domain of the function in the $xy$ plane, and
+\item determine the range of the function
+\end{itemize}
+\begin{enumerate}
+  \item $f(x,y) = \frac{1}{\sqrt{(x-1)(y-1)}}$
+  \item $g(x,y) = \frac{\sqrt{x+1}}{yx^2+xy^2}$
+  \item $h(x,y) = \frac{xyz}{x^2+y^2-1}$
+  \item $z(x,y) = \ln(x+2y)$
+\end{enumerate}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item 
+% QUESTION
+%GPS: MMCD1
+Evaluate the following limits or show that they do not exist.  
+\begin{enumerate}
+\item $\displaystyle \lim_{(r,s)\rightarrow(0,2\pi) } \frac{3r^2+rs^3-3r^4\sin (s/4)}{r^2}$
+\item $\displaystyle \lim_{(x,y)\rightarrow(0,0) } \frac{x-y}{x+y}$
+\item $\displaystyle \lim_{(x,y,z)\rightarrow(1,1,1)} \big|3x - 2y - z \big|$
+\item $\displaystyle \lim_{(x,y,z)\rightarrow(0,0,0) } \frac{x^2-y^2-z^2}{x^2+y^2+z^2}$
+\item $\displaystyle \lim_{(x,y)\rightarrow(1,0) } \frac{\sqrt{2x+y}-\sqrt{2x-y}}{2y}$
+\end{enumerate}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item 
+% QUESTION
+%GPS: MMCD1
+Consider the function
+\begin{align*}
+g(x,y,z) = \left\{
+\begin{array}{rl}
+1 & \text{if } (x,y,z) = (0,0,1) \\
+x + y + 2z & \text{if } (x,y,z) \ne (0,0,1) 
+\end{array} \right. .
+\end{align*}
+Find all points or regions where $g(x,y,z)$ has a discontinuity.
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item 
+% QUESTION
+%GPS: MMCD1
+Evaluate the following limit, if it exists.
+\begin{align*} 
+\lim_{(x,y)\rightarrow(1,0) } \frac{x(x-1)^3 + y^2}{4(x-1)^2+9y^3}
+\end{align*}
+ \textit{Hint: approach the limit point along straight lines}.
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item 
+% QUESTION
+%GPS: MMCA3b
+Sketch, by hand, the level curves of the following functions for the indicated values of $c$, if possible. You may of course want to check your answer using a calculator or with graphing software. 
+\begin{enumerate}
+\item $f(x,y) =\frac{\ln y}{x^2} $, $c=-2, - 1, 0 , 1 , 2$
+\item $f(x,y) = \frac{x^2}{x^2+y^2}$, $c=0,\frac{1}{4},\frac{1}{2},1,2$
+\end{enumerate}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item 
+% QUESTION
+%GPS: MMCA3b
+\begin{enumerate}
+\item Find a function $f(x,y)$ whose family of level curves are straight lines that pass through the point $(2,1)$.
+\item Find a function $f(x,y)$ whose family of level curves are circles with radius $\sqrt{e^c}$. 
+\end{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item Let $m$ be any real number. 
+\begin{enumerate}
+\item Provide an example of a function, $f(x,y)$, with the following two properties:
+\begin{itemize}
+\item $f(x,y) \rightarrow m$ as $(x,y) \rightarrow (1,0)$ along any parabola, $y=m(x-1)^2$
+\item $f(x,y)$ is not constant
+\end{itemize}
+\item Explain why the limit you provided in part (a) does not exist. 
+\end{enumerate}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% TEMPERATURE DISTRIBUTION
+\item \textbf{Application to Temperature Distributions\footnote{The temperature and electrical potential questions are based on a similar exercises that can be found in \textit{Calculus, One and Several Variables}, 10th Edition, by Salas, Hille, Etgen, Wiley, 2007.}}\\
+Suppose that a metal object occupies a space in three dimensions, and that the temperature, $T(x,y)$ of the object at the point $(x,y)$ is inversely proportional to the distance between the point and the origin. 
+\BEN
+\item Write down an expression for $T$ as a function of $x$ and $y$.
+\item Describe the level curves in words. Sketching them is not necessary, but the level curves are known as \Emph{isothermals}, and represent curves upon which the temperature is constant. 
+\item Suppose the temperature of the object at the point (2,1) is $10^{\circ}$C. Find the temperature of the object at (1,3).
+\EEN
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% ELECTRICAL FIELD DISTRIBUTION
+\item \textbf{Application to Electrical Potential Distributions}\\
+The scalar function
+\begin{align*}
+V(x,y) = \frac{c}{\sqrt{r^2 - x^2 -y^2}}\ ,
+\end{align*}
+where $c$ and $r$ are positive constants, represents the electrical potential (in volts) at a point $(x,y)$ in the $xy-$plane. Describe, in words, the level curves $V(x,y)=K$ for constant $K\in\R$, and determine the values of $K$ for which the curves exist. Note that the level curves are known as \Emph{equipotential curves}, because all points on a given curve have the same potential. 
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item 
+% BONUS QUESTION, LIMITS
+\textbf{Bonus Problem}\\
+\textit{This question goes beyond the requirements for this course. Before starting this problem, make sure that your instructor will give you marks for solving it.} \\
+Using the definition of limit (the $\epsilon, \delta$ definition) for a function of two variables, prove that the limit
+\begin{align*}
+\lim_{(x,y)\rightarrow(0,0) } \frac{xy^2}{x^2+y^2}
+\end{align*}
+exists. \textit{Hint: start by evaluating the limit along the $x$-axis, or along other straight lines to determine what the limit could be equal to}.
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\EEN

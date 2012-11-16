@@ -1,0 +1,45 @@
+\subsection{Double Integrals}
+\FromC{\From Section 3.1 of \VCT.}
+
+\BEN
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % VOLUME OF SIMPLE SOLID 
+\textbf{Volume of a Solid} \\
+Consider the solid that lies under the plane $z = -x-2y+2$ and above the rectangle \\$\{(x,y) \ | \ -2\le x\le 0, 0\le y \le1 \}$.
+\BEN
+\item Sketch the solid in $\R^3$. \textit{Hint: start by plotting the points that are located on the given plane and above the corners of the rectangle. Then connect the points with solid lines.}
+\item Find the volume of the solid.
+\EEN
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % FLUID MECHANICS
+\textbf{Application to Fluid Mechanics} \\
+In a two-dimensional, steady-state, incompressible fluid flow, the velocity \textbf{v} of the flow can be expressed as $\MB{v} = u(x,y)\MB{i} + v(x,y)\MB{j}$. The functions $u(x,y)$ and $v(x,y)$ must satisfy 
+\begin{align*}
+  \nabla\cdot\MB{v} = 0.
+\end{align*}
+\BEN
+\item If $u(x,y) = x^2 + y^2$, find the most general form of $v(x,y)$. 
+\item If $v(x,y) = \cos(x)$, find the most general form of $u(x,y)$.
+\EEN
+\textit{Hint: you are asked to find the most \Emph{general} form of functions u and v}.
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % INTEGRAL WITH AN ABSOLUTE VALUE
+\textbf{Double Integral with an Absolute Value}\\
+Evaluate the double integral
+\begin{align*}
+  \mathop{\int_{0}^{1} \! \int_0^{2}  }y \big| x-1\big| dxdy.
+\end{align*}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % MAXIMUM AND MINIMUM VALUES
+\textbf{Double Integral Given Maximum and Minimum Values}\\
+Suppose that we are given a function, $f(x,y)$, that is continuous on the rectangle 
+\begin{align*}
+S = [a,b]\times[c,d]
+\end{align*}
+in $\R^2$. Suppose also that the maximum value $f(x,y)$ on $S$ is equal to the constant $K$, and that the minimum value of $f(x,y)$ on $S$ is also equal to $K$. Evaluate
+\begin{align*}
+  \iint\limits_S f(x,y) dxdy.
+\end{align*}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\EEN % END OF SUBSECTION
+

@@ -1,18 +1,41 @@
 \BOOKMARK [0][-]{part.1}{I Questions for Written Assignments}{}% 1
 \BOOKMARK [1][-]{section.2}{Multivariable Functions and Algebra}{part.1}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Dot Products and Cross Products}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Lines and Planes}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Surfaces}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Curvilinear Coordinates}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.5}{Vector-Valued Functions}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.6}{Linear Systems}{section.2}% 8
-\BOOKMARK [1][-]{section.3}{Multiple Integrals}{part.1}% 9
-\BOOKMARK [0][-]{part.2}{II Solutions to Written Assignment Questions}{}% 10
-\BOOKMARK [1][-]{section.2}{Multivariable Functions and Algebra}{part.2}% 11
-\BOOKMARK [2][-]{subsection.2.1}{Dot Products and Cross Products}{section.2}% 12
-\BOOKMARK [2][-]{subsection.2.2}{Lines and Planes}{section.2}% 13
-\BOOKMARK [2][-]{subsection.2.3}{Surfaces}{section.2}% 14
-\BOOKMARK [2][-]{subsection.2.4}{Curvilinear Coordinates}{section.2}% 15
-\BOOKMARK [2][-]{subsection.2.5}{Vector-Valued Functions}{section.2}% 16
-\BOOKMARK [2][-]{subsection.2.6}{Linear Systems}{section.2}% 17
-\BOOKMARK [1][-]{section.3}{Multiple Integrals}{part.2}% 18
+\BOOKMARK [2][-]{subsection.2.0}{Wolfram Alpha Syntax}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.0.1}{Multivariable Functions}{subsection.2.0}% 4
+\BOOKMARK [3][-]{subsubsection.2.0.2}{Determinants and Matrices}{subsection.2.0}% 5
+\BOOKMARK [2][-]{subsection.2.1}{Dot Products and Cross Products}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Lines and Planes}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{Surfaces}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.4}{Curvilinear Coordinates}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.5}{Vector-Valued Functions}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.6}{Linear Systems}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.7}{Functions of Two or Three Variables}{section.2}% 12
+\BOOKMARK [1][-]{section.3}{Partial Derivatives}{part.1}% 13
+\BOOKMARK [2][-]{subsection.3.0}{Wolfram Alpha Syntax}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.1}{Partial Derivatives}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.2}{Optimization}{section.3}% 16
+\BOOKMARK [1][-]{section.4}{Multiple Integrals}{part.1}% 17
+\BOOKMARK [2][-]{subsection.4.0}{Wolfram Alpha Syntax}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.1}{Double Integrals}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.2}{Double Integrals Over a General Region}{section.4}% 20
+\BOOKMARK [2][-]{subsection.4.3}{Triple Integrals}{section.4}% 21
+\BOOKMARK [2][-]{subsection.4.4}{Change of Variables in Multiple Integrals}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.5}{Application: Center of Mass}{section.4}% 23
+\BOOKMARK [0][-]{part.2}{II Solutions to Written Assignment Questions}{}% 24
+\BOOKMARK [1][-]{section.2}{Multivariable Functions and Algebra}{part.2}% 25
+\BOOKMARK [2][-]{subsection.2.1}{Dot Products and Cross Products}{section.2}% 26
+\BOOKMARK [2][-]{subsection.2.2}{Lines and Planes}{section.2}% 27
+\BOOKMARK [2][-]{subsection.2.3}{Surfaces}{section.2}% 28
+\BOOKMARK [2][-]{subsection.2.4}{Curvilinear Coordinates}{section.2}% 29
+\BOOKMARK [2][-]{subsection.2.5}{Vector-Valued Functions}{section.2}% 30
+\BOOKMARK [2][-]{subsection.2.6}{Linear Systems}{section.2}% 31
+\BOOKMARK [2][-]{subsection.2.7}{Functions of Two or Three Variables}{section.2}% 32
+\BOOKMARK [1][-]{section.3}{Partial Derivatives}{part.2}% 33
+\BOOKMARK [2][-]{subsection.3.1}{Partial Derivatives}{section.3}% 34
+\BOOKMARK [2][-]{subsection.3.2}{Optimization}{section.3}% 35
+\BOOKMARK [1][-]{section.4}{Multiple Integrals}{part.2}% 36
+\BOOKMARK [2][-]{subsection.4.1}{Double Integrals}{section.4}% 37
+\BOOKMARK [2][-]{subsection.4.2}{Double Integrals Over a General Region}{section.4}% 38
+\BOOKMARK [2][-]{subsection.4.3}{Triple Integrals}{section.4}% 39
+\BOOKMARK [2][-]{subsection.4.4}{Change of Variables in Multiple Integrals}{section.4}% 40
+\BOOKMARK [2][-]{subsection.4.5}{Application: Center of Mass}{section.4}% 41

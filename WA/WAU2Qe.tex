@@ -1,419 +1,211 @@
-%\documentclass{article}
-%\input{../Preamble/preamble.tex}
-%\usepackage{multienum}
-%\usepackage{wrapfig}
+\subsection{Vector-Valued Functions}
+
+\FromC{\From Section 1.8 of \VCT.}
+
+\BEN
+
+%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%\item
+%% QUESTION 
+%For $A$ and \textbf{b} below, solve the linear system $A\mathbf{x} = \mathbf{b}$, if possible:
+%\begin{align*}
+% A = \BM
+%  1 & 2 & 0 & 1 \\
+%  3 & -1 & 1 & 2 \\
+%  0 & 1 & 0 & 2 \\
+%  4 & 0 & 3 & 1
+% \EM, \ 
+% \mathbf{b} = \BM 1 \\ 5 \\ 0 \\ 10 \EM.
+%\end{align*}
+% If it isn't possible to solve this system, explain why. 
 %
-%\date{}
-%% ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-%\begin{document}
+%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%\item
+%% QUESTION 
+%For the systems below,
+%\begin{itemize}
+%\item Compute the determinant of matrix $A$, if possible. If it is not possible to do so, explain why. 
+%\item Solve the linear system $A\mathbf{x} = \mathbf{b}$, if possible. 
+%\item State whether the system has no solution, infinitely many solutions, or a unique solution.
+%\end{itemize}
+%
+%\begin{enumerate}
+%\item \(
+% A = \begin{bmatrix}
+%  -3 &  1 & 2 &  4 \\
+%   2 & -1 & 2 &  3 \\
+%   1 &  0 & 4 & -2
+% \end{bmatrix}, \ 
+% \mathbf{b} = \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}
+%\)
+%\item \( A = \begin{bmatrix}
+% 1 & 2 & -1 \\
+% 2 & 5 & 0 \\
+% 4 & 9 & -2
+%\end{bmatrix} , \ 
+% \mathbf{b} =
+%\begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix} \)
+%\end{enumerate}
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item 
+% QUESTION
+Find the values of $t$ and the points on the curve 
+\begin{align*}
+  \mathbf{r}(t) &= (1+t^2) \mathbf{i} + t\mathbf{j}, \quad t\in \R
+\end{align*}
+where
+\begin{enumerate}
+  \item $\mathbf{r}(t)$ and $\mathbf{r}'(t)$ are perpendicular,
+  \item $\mathbf{r}(t)$ and $\mathbf{r}'(t)$ have the same direction, and
+  \item $\mathbf{r}(t)$ and $\mathbf{r}'(t)$ have opposite directions.   
+\end{enumerate}
+%
+%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%\item 
+%% QUESTION 4
+%%GPS: MMCA2b
+%
+%Consider the system of simultaneous linear equations
+%\begin{align*}
+%  x + 2y -  z &= 2 \\
+% 2x + ay - 2z &= b \\
+% 3x + 2y      &= 1
+%\end{align*}
+%where $x, y, z$ are unknown.
+%
+%\begin{enumerate}
+%\item Find all values of $a$ and $b$ such that the above system has
+%\begin{enumerate}
+%\item \label{q:one_solution} exactly one solution;
+%\item no solutions;
+%\item \label{q:many_solutions} infinitely many solutions.
+%\end{enumerate}
+%\item For those values of $a$ and $b$ from~\ref{q:one_solution}, what is the
+%unique solution?
+%\item For those values of $a$ and $b$ from~\ref{q:many_solutions},
+% parameterize the set of all solutions.
+%\end{enumerate}
+%
+%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%
+\item \textbf{Application to Mechanics}\\
+%For $t\in\R$, the real valued functions
+%\begin{align*}
+%y(t)=2+5t, \quad y(t) = \sin(4t) , \quad y(t)=e^{6t}
+%\end{align*}
+%are referred to as \textbf{scalar functions}, because in each case, they assign a real number $y$, to another real number $t$. However, functions such as
+%\begin{align*}
+%\mathbf{v}(t)=\mathbf{r}_0+t\mathbf{r}, \quad \mathbf{v}(t) = \sin(4t)\mathbf{a} , \quad \mathbf{v}(t)=e^{6t}\mathbf{b}
+%\end{align*}
+%assign a vector to real numbers, and are referred to as \textbf{vector functions}. They could be used, for example if the position of a particle is specified by the vector $\mathbf{r}\in \R^3$, and that the particle is moving, so that \textbf{r} is a function of time: \textbf{r}=\textbf{r}$(t)$. 
+%
+%Many of the properties of vector functions are intuitive. For example, the derivative of a vector function, defined as
+%\begin{align*}
+%\lim_{h\rightarrow0} \frac{\mathbf{r}(t+h) - \mathbf{r}(t)}{h}
+%\end{align*}
+%describes the rate of change of $\mathbf{r}$ at $t$ (provided that the limit exists). If the vector \textbf{r} represents the position of a particle at time $t$, then, naturally, $\mathbf{r}'(t)$ represents its velocity at time $t$, and $\mathbf{r}''(t)$ represents its acceleration at time $t$. Moreover, we can compute the derivative of a vector by simply taking the derivative of each of its components separately. For example, if $\mathbf{v}(t) = 5t \mathbf{i} + \cos(t)\mathbf{j} - \mathbf{k}$, then $\mathbf{v}'(t) = 5 \mathbf{i} - \sin(t)\mathbf{j} - 0 \mathbf{k}$, or 
+%\begin{align*}
+% \frac{d \mathbf{v}(t)}{dt} = \mathbf{v}'(t) &= \BM 5 \\ -\sin(t) \\ 0 \EM.
+%\end{align*}
+%Differentiation rules for scalar multiplication, cross and dot products can also be derived and resemble the product rule for scalar functions:
+%\begin{align*}
+%\frac{d}{dt} \big( C \mathbf{u}(t)\big) &=C \frac{d \mathbf{u}(t) }{dt}  , \quad C \text{ is a constant} \\
+%\frac{d}{dt} \big( \mathbf{v}(t) \cdot \mathbf{u}(t)\big) &= \mathbf{v}(t) \cdot \frac{d \mathbf{u}(t) }{dt}  +  \frac{d \mathbf{v}(t)}{dt}  \cdot  \mathbf{u}(t) \\
+%\frac{d}{dt} \big( \mathbf{v}(t) \times \mathbf{u}(t)\big) &= \mathbf{v}(t) \times \frac{d \mathbf{u}(t) }{dt}  +  \frac{d \mathbf{v}(t)}{dt}  \times  \mathbf{u}(t) 
+%\end{align*}
+%Other differentiation formulas that you may need throughout this course are provided in your textbook. \\\\
+%\noindent\textbf{Questions}
+Recall from a previous assignment that we defined torque as $\boldsymbol\tau = \mathbf{r} \times \MB{F}$. Now that we have introduced the concepts of vector-valued functions and their derivatives, let's consider the more general case when $\boldsymbol\tau$, $\MB{r}$, and $\MB{F}$ are all functions of time:
+\begin{align*}
+  \boldsymbol\tau(t) &= \mathbf{r}(t) \times \MB{F}(t).
+\end{align*}
+Moreover, using the relation $\MB{F}(t)=m\MB{a}(t)$ (Newton's second law), we can write our definition of torque as
+\begin{align*}
+  \boldsymbol\tau(t) &= \mathbf{r}(t) \times \MB{F}(t) \\
+  &= \mathbf{r}(t) \times \big(m\MB{a}(t)\big) \\
+  &= m\big( \mathbf{r}(t) \times \mathbf{r}''(t)\big).
+\end{align*}
+These alternate forms for the torque vector may be helpful in solving the following problems.
+\begin{enumerate}
+\item If the position of a particle with mass $m$ is given by the position vector $\mathbf{r}(t)$, then its angular momentum is a vector defined as $\mathbf{L}(t) = m\mathbf{r}(t)\times \mathbf{r}'(t)$. Show that $\mathbf{L}'(t) = \boldsymbol\tau(t)$.
+\item Show that if the torque is a zero vector for all $t$, then the angular momentum of the particle is constant for all $t$. This is what is known as the \Emph{law of conservation of angular momentum}.
+\end{enumerate}
+%% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%% POLYNOMIAL INTERPOLATION 
+%\item \textbf{Application to Polynomial Interpolation}
+%
+%In many areas of engineering, experimental data is collected that must be analyzed to extract parameters that tell us something about a physical process. Suppose we have measured a set of experimental data that are represented in the $xy$-plane. An \Emph{interpreting polynomial} for the measured data is a polynomial that passes through every measured point. We can use this polynomial, for example, to estimate values between the measured data points. \\
+%
+%Suppose for example that we have measured the data points (0,-6), (1,-2), (2,4), (3,10). To find an interpreting polynomial of order 2 for these data, we would try to find a polynomial of the form $p(x) = a_0+a_1x+a_2x^2$ that passes through all four measured points. In other words, we need to find the unknown constants $a_0, a_1, a_2$ that satisfy the equations
+%\begin{align*}
+%p(0) = a_0+a_1(0)+a_2(0)^2 &= -6 \\
+%p(1) = a_0+a_1(1)+a_2(1)^2 &= -2 \\
+%p(2) = a_0+a_1(2)+a_2(2)^2 &= 4  \\
+%p(3) = a_0+a_1(3)+a_2(3)^2 &= 10 
+%\end{align*}
+%The above system has four equations and four unknowns. Upon solving this system, you should be able to determine that $a_0 = -6, a_1 = 4, a_2=0$.\\
+%
+%\textbf{Wind Tunnel Experiment}\\
+%In a fictitious wind tunnel experiment, the following measurements were made. 
 %\begin{center}
-%\textsc{\LARGE Written Assignment 3}\\[0.5cm]
+%  \begin{tabular}{ c c }
+%    Velocity (m/s) & Force (N)  \\ \hline
+%     0  & 0 \\
+%    1 & 5.5 \\
+%    2 & 20 \\
+%    3 & 46.5 \\
+%    4 & 88
+%  \end{tabular}
 %\end{center}
-\subsection{Multivariable Functions}
-\FromC{\From section 2.1 of \VCT.}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\section*{Wolfram Alpha Syntax}
-You may want to use Wolfram Alpha (wolframalpha.com) to check your answers. If you're not sure what syntax to use to compute square roots and evaluate multivariable limits with Wolfram Alpha, let's suppose that we want to determine the value of
-\begin{align*} 
-  f(x,y,z) = \frac{2 \sqrt{x}}{y^2 + \sqrt{z}}
-\end{align*}
-at the point (4,5,9). The syntax we could use to evaluate $f$ at the given point is
-\begin{quote}
-  \begin{verbatim}
-     substitute x=4 and y=5 and z=9 into (2 * sqrt(x) / ( y^2 + sqrt(z) )
-  \end{verbatim}
-\end{quote}
-Or we can simply use the syntax
-\begin{quote}
-  \begin{verbatim}
-     (2 * sqrt(4) / ( 5^2 + sqrt(9) )
-  \end{verbatim}
-\end{quote}
-\section*{Questions}
-
-\begin{enumerate}
+%
+%The data represent the measured force due to air resistance, on an object suspended in the tunnel, measured at different air speed velocities.
+%\begin{enumerate}
+%\item Using the data above, derive a $5\times4$ system of equations, that when solved, find an interpreting polynomial of the form $p(x) = a_0+a_1x+a_2x^2+a_3x^3$. Write the system in the form $A\mathbf{x}=\mathbf{b}$.
+%\item Solve your system to obtain $p(x) = a_0+a_1x+a_2x^2+a_3x^3$.
+%\item As mentioned above, engineers sometimes use interpreting polynomials to estimate values in between measured data points. Using your polynomial, estimate the value of the force when the velocity is 1.5 m/s. 
+%\item In practice, it can be difficult to determine what order of polynomial to use. Sometimes, polynomials of different orders must be used to decide which polynomial yields the most useful results. For the above data, explain what what would happen if we used a polynomial less than 3. It may help to see what happens if we use a 1$^{st}$ order polynomial. 
+%\end{enumerate}
+%\begin{figure}[h]
+%  \vspace{-5pt}
+%  \begin{center}
+%    \includegraphics[width=0.6\textwidth]{ImgWindTunnel.jpg}
+%  \end{center}
+%  \vspace{-20pt}
+%  \caption{\small{An airfoil in a fog wind tunnel (image from Wikimedia Commons, Smart Blade GmbH).}}
+%\end{figure}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% PARTICLE MOTION
 \item 
-% QUESTION
-% GPS: Not in GPS
-For the following functions, 
-\begin{itemize}
-\item determine the domain of the function,
-\item sketch the domain of the function in the $xy$ plane, and
-\item determine the range of the function
-\end{itemize}
-\begin{enumerate}
-  \item $f(x,y) = \frac{1}{\sqrt{(x-1)(y-1)}}$
-  \item $g(x,y) = \frac{\sqrt{x+1}}{yx^2+xy^2}$
-  \item $h(x,y) = \frac{xyz}{x^2+y^2-1}$
-  \item $z(x,y) = \ln(x+2y)$
-\end{enumerate}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item 
-% QUESTION
-%GPS: MMCD1
-Evaluate the following limits or show that they do not exist.  
-\begin{enumerate}
-\item $\displaystyle \lim_{(r,s)\rightarrow(0,2\pi) } \frac{3r^2+rs^3-3r^4\sin (s/4)}{r^2}$
-\item $\displaystyle \lim_{(x,y)\rightarrow(0,0) } \frac{x-y}{x+y}$
-\item $\displaystyle \lim_{(x,y,z)\rightarrow(1,1,1)} \big|3x - 2y - z \big|$
-\item $\displaystyle \lim_{(x,y,z)\rightarrow(0,0,0) } \frac{x^2-y^2-z^2}{x^2+y^2+z^2}$
-\item $\displaystyle \lim_{(x,y)\rightarrow(1,0) } \frac{\sqrt{2x+y}-\sqrt{2x-y}}{2y}$
-\end{enumerate}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item 
-% QUESTION
-%GPS: MMCD1
-Consider the function
+\textbf{Integration with Vector-Valued Functions}\\
+If the position of a particle is given by the vector function $\MB{r}(t) \in \R^3$, then we know that we can determine its velocity, $\MB{v}(t)= \MB{r}'(t)$, by differentiating each of its components. That is, if 
 \begin{align*}
-g(x,y,z) = \left\{
-\begin{array}{rl}
-1 & \text{if } (x,y,z) = (0,0,1) \\
-x + y + 2z & \text{if } (x,y,z) \ne (0,0,1) 
-\end{array} \right. .
+  \MB{r}(t) = \BM r_1(t) \\ r_2(t) \\ r_3(t) \EM,
 \end{align*}
-Find all points or regions where $g(x,y,z)$ has a discontinuity.
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item 
-% QUESTION
-%GPS: MMCD1
-Evaluate the following limit, if it exists.
-\begin{align*} 
-\lim_{(x,y)\rightarrow(1,0) } \frac{x(x-1)^3 + y^2}{4(x-1)^2+9y^3}
+then
+\begin{align*}
+  \MB{v}(t)= \MB{r}'(t) = \BM \frac{d}{dt} r_1(t) \\ \frac{d}{dt} r_2(t) \\ \frac{d}{dt} r_3(t) \EM = \BM v_1(t) \\ v_2(t) \\ v_3(t) \EM,
 \end{align*}
- \textit{Hint: approach the limit point along straight lines}.
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item 
-% QUESTION
-%GPS: MMCA3b
-Sketch, by hand, the level curves of the following functions for the indicated values of $c$, if possible. You may of course want to check your answer using a calculator or with graphing software. 
-\begin{enumerate}
-\item $f(x,y) =\frac{\ln y}{x^2} $, $c=-2, - 1, 0 , 1 , 2$
-\item $f(x,y) = \frac{x^2}{x^2+y^2}$, $c=0,\frac{1}{4},\frac{1}{2},1,2$
-\end{enumerate}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item 
-% QUESTION
-%GPS: MMCA3b
-\begin{enumerate}
-\item Find a function $f(x,y)$ whose family of level curves are straight lines that pass through the point $(2,1)$.
-\item Find a function $f(x,y)$ whose family of level curves are circles with radius $\sqrt{e^c}$. 
-\end{enumerate}
+provided that the derivatives of the components of $\MB{r}$ exist at $t$. It follows from the Fundamental Theorem of Calculus that if we were instead given the velocity of the particle, we could compute its position by integrating each of the components with respect to $t$. We would of course introduce constants of integration. That is, given
+\begin{align*}
+  \MB{v}(t) = \BM v_1(t) \\ v_2(t) \\ v_3(t) \EM, 
+\end{align*}
+we could obtain $\MB{r}$ by integrating each of the components of $\MB{v}(t)$
+\begin{align*}
+  \MB{r}(t) = \BM \int v_1(t) dt \\ \int v_2(t) dt \\ \int v_3(t) dt \EM = \BM r_1(t) + c_1 \\ r_2(t) +c_2 \\ r_3(t) +c_3 \EM,
+\end{align*}
+where $c_1,c_2,c_3$ are constants. 
 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item Let $m$ be any real number. 
-\begin{enumerate}
-\item Provide an example of a function, $f(x,y)$, with the following two properties:
-\begin{itemize}
-\item $f(x,y) \rightarrow m$ as $(x,y) \rightarrow (1,0)$ along any parabola, $y=m(x-1)^2$
-\item $f(x,y)$ is not constant
-\end{itemize}
-\item Explain why the limit you provided in part (a) does not exist. 
-\end{enumerate}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% TEMPERATURE DISTRIBUTION
-\item \textbf{Application to Temperature Distributions}\\
-Suppose that a metal object occupies a space in three dimensions, and that the temperature, $T(x,y)$ of the object at the point $(x,y)$ is inversely proportional to the distance between the point and the origin. 
+Suppose that a particle with mass $m$ is subjected to a force, $\MB{F}(t) = m\pi^2\big(\cos(\pi t)\MB{j}+\sin(\pi t)\MB{k}\big)$, where $t \ge 0$. Suppose also that when $t=0$, 
+\begin{align*}
+  \MB{r}(0) &= \BM -1 \\ 0 \\ 0 \EM , \quad
+  \MB{r}'(0) = \BM +1 \\ 0 \\ 0 \EM.
+\end{align*}
 \BEN
-\item Write down an expression for $T$ as a function of $x$ and $y$.
-\item Describe the level curves in words. Sketching them is not necessary, but the level curves are known as \Emph{isothermals}, and represent curves upon which the temperature is constant. 
-\item Suppose the temperature of the object at the point (2,1) is $10^{\circ}$C. Find the temperature of the object at (1,3).
+\item Using the relation $\MB{F} = m\MB{a}$, find the velocity of the particle at time $t$. \textit{Hint: you will need to apply the velocity at time t=0}.
+\item Find the position of the particle at time $t=1$.
+\item Plot the position of the particle at times $t=0$ and $t=1$ on the same graph in $\R^3$.
 \EEN
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% ELECTRICAL FIELD DISTRIBUTION
-\item \textbf{Application to Electrical Potential Distributions}\\
-The scalar function
-\begin{align*}
-V(x,y) = \frac{c}{\sqrt{r^2 - x^2 -y^2}}\ ,
-\end{align*}
-where $c$ and $r$ are positive constants, represents the electrical potential (in volts) at a point $(x,y)$ in the $xy-$plane. Describe, in words, the level curves $V(x,y)=K$ for constant $K\in\R$, and determine the values of $K$ for which the curves exist. Note that the level curves are known as \Emph{equipotential curves}, because all points on a given curve have the same potential. \textit{can we do something a little more interesting with this question? its somewhat similar to the previous one}
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item 
-% BONUS QUESTION, LIMITS
-\textbf{Bonus Problem}\\
-\textit{This question goes beyond the requirements for this course. Before starting this problem, make sure that your instructor will give you marks for solving it.} \\
-Using the definition of limit (the $\epsilon, \delta$ definition) for a function of two variables, prove that the limit
-\begin{align*}
-\lim_{(x,y)\rightarrow(0,0) } \frac{xy^2}{x^2+y^2}
-\end{align*}
-exists. \textit{Hint: start by evaluating the limit along the $x$-axis, or along other straight lines to determine what the limit could be equal to}.
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\end{enumerate}
-\noindent \textbf{References} \\
-The temperature and electrical potential questions are based on a similar exercises that can be found in \textit{Calculus, One and Several Variables}, 10th Edition, by Salas, Hille, Etgen, Wiley, 2007.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% SOLUTIONS
-\newpage
-\section*{Solutions}
-\begin{enumerate}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%DOMAIN AND RANGE PROBLEMS
-\item 
-\begin{enumerate}
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
-% PART A
-\item The function is not defined when the denominator is zero, or when the argument of the square root is negative. Either $x$ and $y$ are greater than 1, or less than -1. The domain, $D$, is therefore
-\begin{align*}D = \{(x,y)|x > 1, y > 1; \text{ and } x < -1, y < -1\}. \end{align*}
-The function can't be zero, and cannot be negative, because the square root will always yield a positive number. The range is $f > 0$.  
-\begin{figure}[!htbp]
-  \begin{center}
-    \includegraphics[width=0.4\textwidth]{Img1A.jpg}
-  \end{center}
-\end{figure}
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
-% PART B
-\item The function is not defined when the denominator is zero, so we require that $yx^2+xy^2\ne0$, or $xy(x+y)\ne0$. This implies that the function is not defined along the lines $x=0$, $y=0$, and $y=-x$. Moreover, the numerator has a square root. The argument must be non-negative, and so we also have the restriction that $y\ge-1$. The domain can therefore be expressed as $D=\{(x,y)| y\ge -1, x\ne0, y\ne0, y\ne-x\}$. The numerator can take on any non-negative value, and the denominator can take on any value, so the function $f$ can take on any value, so the range is $\mathbb{R}$.
-\begin{figure}[!htbp]
-  \begin{center}
-    \includegraphics[width=0.4\textwidth]{Img1B.jpg}
-  \end{center}
-\end{figure}
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
-% PART C
-\item The function is not defined when the denominator is zero, so we require that $x^2+y^2\ne1$. The domain can therefore be expressed as $D=\{(x,y)| x^2+y^2 \ne 1 \}$. The numerator can take on any value, so the function $f$ can take on any value, so the range is $\mathbb{R}$.
-\begin{figure}[!htbp]
-  \begin{center}
-    \includegraphics[width=0.4\textwidth]{Img1C.jpg}
-  \end{center}
-\end{figure}
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
-% PART D
-\newpage
-\item For the domain, we require that 
-\begin{align*}
-x+2y &> 0  \text{, or } y > - x/2.
-\end{align*}
-The domain can therefore be expressed as $D=\{(x,y)|y > - x/2\}$. The function $f$ can take on any value, so the range is $\mathbb{R}$.
-\begin{figure}[!htbp]
-  \begin{center}
-    \includegraphics[width=0.4\textwidth]{Img1D.jpg}
-  \end{center}
-\end{figure}
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
-\end{enumerate}
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item
-% LIMIT SOLUTIONS
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
-\begin{enumerate}
-\item We can simply evaluate the limit to obtain
-\begin{align*}
-\lim_{(r,s)\rightarrow(0,2\pi) } \frac{3r^2+rs^3-3\sin (s/4)}{r^2}
-&= \lim_{(r,s)\rightarrow(0,2\pi) }3+\frac{s^3}{r}-3r^2\sin (s/4)
-\end{align*}
-Because of the $s^3/r$ term, this limit tends to infinity, and therefore does not exist.
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
-\item Let $f(x,y) = (x-y)/(x+y)$. Along the $x$-axis, $f=f(x,0)$, so 
-\begin{align*}
-f(x,0) = \frac{x}{x} = 1, \quad x\ne 0.
-\end{align*}
-A similar calculation shows that along the $y$-axis, $f$ = -1, if $y\ne0$. If we approach the point $(0,0)$ along the $x$-axis and the $y$-axis, we find that 
-\begin{align*}
-\text{along the $x$-axis, } & f = f(x,0),\text{ and } f \rightarrow +1 \\
-\text{along the $y$-axis, } & f = f(0,y),\text{ and } f \rightarrow -1 
-\end{align*}
-These limits are not equal, and so the limit does not exist. 
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
-\item We can simply evaluate the limit to obtain 
-\begin{align*}
-  \lim_{(x,y,z)\rightarrow(1,1,1)} \big|3x - 2y - z \big| = 3 -2 -1 = 0
-\end{align*}
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
-\item  Let $f(x,y,z) = (x^2-y^2-z^2)/(x^2+y^2+z^2)$. Then, along the $x$-axis, $f=(x,0,0)$. As long as $x$ is not zero, $f$ is equal to 1. However, along the $y$-axis, $f=f(0,y,0)$. Provided that $y$ is not zero, $f$ is equal to -1. Therefore,
-\begin{align*}
-\text{along the $x$-axis, } & f \rightarrow +1 \\
-\text{along the $y$-axis, } & f \rightarrow -1 
-\end{align*}
-These limits are not equal, and so the limit does not exist. 
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
-\item  We can evaluate this limit by rationalizing the numerator.
-\begin{align*}
-  \lim_{(x,y)\rightarrow(1,0) } \frac{\sqrt{2x+y}-\sqrt{2x-y}}{2y} &= 
-  \lim_{(x,y)\rightarrow(1,0) } \frac{\sqrt{2x+y}-\sqrt{2x-y}}{2y} \Bigg(\frac{\sqrt{2x+y}+\sqrt{2x-y}}{\sqrt{2x+y}+\sqrt{2x-y}} \Bigg) \\
-  &=\lim_{(x,y)\rightarrow(1,0) } \frac{(2x+y)-(2x-y)}{2y \Big(\sqrt{2x+y}+\sqrt{2x-y} \Big)}  \\
-  &=\lim_{(x,y)\rightarrow(1,0) } \frac{2y}{2y \Big(\sqrt{2x+y}+\sqrt{2x-y} \Big)}  \\
-  &=\lim_{(x,y)\rightarrow(1,0) } \frac{1}{\sqrt{2x+y}+\sqrt{2x-y} }  \\
-  &= \frac{1}{2\sqrt{2} }\\
-  &= \frac{\sqrt{2}}{2}
-\end{align*}
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
-\end{enumerate}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item
-% CONTINUITY 
-The given function is defined everywhere. Now, for it to be continuous at any point $(x_0,y_0,z_0)$, we require that 
-\begin{align*} 
-   \lim_{(x,y,z)\rightarrow(x_0,y_0,z_0) } g(x,y,z) = g(x_0,y_0,z_0)
- \end{align*}
-If we evaluate the limit as $g$ approaches $(0,0,1)$, we have
-\begin{align*}
-\lim_{(x,y,z)\rightarrow(0,0,1) } f(x,y,z) 
-&= \lim_{(x,y,z)\rightarrow(0,0,1) } x+y+2z \\
-&= 0+0+2(1) \\
-&= 2
-\end{align*}
-However, at $(0,0,1)$, $g = 2$. So the given function is not continuous at the point $(0,0,1)$. Elsewhere, the function is a polynomial in three variables, and so will be continuous everywhere except at the point $(0,0,1)$. 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item The lines $y=m(x-1)$ all pass through the limit point, $(1,0)$, where $m$ is any real number. Approaching the limit point along these lines, our limit becomes
-\begin{align*} 
-   \lim_{(x,y)\rightarrow(1,0) } \frac{x(x-1)^3 + y^2}{4(x-1)^2+9y^3} 
-   &= \lim_{(x,y)\rightarrow(1,0) } \frac{x(x-1)^3 + m^2(x-1)^2}{4(x-1)^2+9m^3(x-1)^3} \\
-   &= \lim_{(x,y)\rightarrow(1,0) } \frac{x(x-1) + m^2}{4+9(x-1)} \\
-   &= \frac{m^2}{4}
- \end{align*}
- The result depends on $m$, which is an arbitrary value. Therefore, the limit does not exist. 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-\item
-\begin{enumerate}
-\item To plot the level curves, we set $z = c$, and solve for $y$: 
-\begin{align*} 
-  c &= \frac{\ln y}{x^2} \\
-  cx^2&= \ln y \\
-  y &= e^{cx^2}
-\end{align*}
-\begin{figure}[!htbp]
-  \begin{center}
-    \includegraphics[width=0.4\textwidth]{ImgLevelCurvesA.pdf}
-  \end{center}
-\end{figure}
-% -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
-\item To plot the level curves, we set $z = c$, and solve for $y$: 
-\begin{align*} 
-  c &= \frac{x^2}{x^2+y^2} \\
-  cy^2 &= (1-c)x^2
-\end{align*}
-If $c=0$, then we obtain the level curve $x = 0$. If $c \ne0$, then
-\begin{align*} 
-  y &= \pm \sqrt{\frac{1-c}{c}}x, \quad c \ne0
-\end{align*}
-For $c=2$, $y$ is undefined, so the level curves do not exist. The level curves for the other values of $c$ are shown in the graph below and are as follows:
-\begin{align*} 
-  \text{if } c&=0, \quad x = 0 \text{ (the vertical line that lies on the } y \text{-axis})\\
-  \text{if } c&=1/4, y = \pm \sqrt{3}x\\
-  \text{if } c&=1/2, y = \pm x\\  
-  \text{if } c&=1, \quad y = 0    
-\end{align*}
-
-\begin{figure}[!htbp]
-  \begin{center}
-    \includegraphics[width=0.4\textwidth]{ImgLevelCurvesB.jpg}
-  \end{center}
-\end{figure}
-
-\end{enumerate}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item
-\begin{enumerate}
-\item The set of straight lines that pass through $(2,1)$ are given by $y = c(x-2) + 1$. Rearranging yields the equation 
-\begin{align*}
-c = \frac{y-1}{x-2}
-\end{align*}
-The desired function is 
-\begin{align*}
-f(x,y) = \frac{y-1}{x-2}
-\end{align*}
-\item The set of circles with radius $e^c$ are given by $x^2 + y^2 = e^c$. Applying the natural logarithm to both sides of the equation yields 
-\begin{align*}
-\ln(x^2+y^2) = c
-\end{align*}
-The desired function is 
-\begin{align*}
-f(x,y) =\ln(x^2+y^2)
-\end{align*}\end{enumerate}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% PROVIDE EXAMPLE, LIMIT
-\item 
-\begin{enumerate}
-\item
-Suppose we let 
-\begin{align*}
-f(x,y) = \frac{y}{(x-1)^2}
-\end{align*}
-Then, along any parabola $y = m(x-1)^2$ the limit becomes
-\begin{align*}
-\lim_{(x,y)\rightarrow(1,0) } \frac{y}{(x-1)^2} = \lim_{(x,y)\rightarrow(1,0) } \frac{m(x-1)^2}{(x-1)^2} = m
-\end{align*}
-The function we chose therefore meets the specified criteria.
-\item
-The limit cannot exist because the limit depends on $m$, which is an arbitrary real number.
-\end{enumerate}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% TEMPERATURE DISTRIBUTION
-\item 
-\BEN
-\item The temperature can be written as 
-\begin{align*}T(x,y) = \frac{k}{\sqrt{x^2 + y^2}},\end{align*} 
-where $k$ is an unknown constant of proportionality.
-\item The level curves are solution sets of the equation $T(x,y)=c$, for $c\in\R$. Therefore,
-\begin{align*}
-  T(x,y) = c &= \frac{k}{\sqrt{x^2 + y^2}} \\
-  c^2 &= \frac{k^2}{x^2 + y^2} \\
-  x^2 + y^2 &= \frac{k^2}{c^2}
-\end{align*} 
-The level curves are concentric circles with radius $k/c$. 
-\item At the point (2,1), the temperature is known, which allows us to solve for $k$. 
-\begin{align*}
-  T(2,1) = 10 &= \frac{k}{\sqrt{2^2 + 1^2}}\\
-  k& = 10\sqrt{5}
-\end{align*} 
-At (1,3), the temperature is
-\begin{align*}
-  T(1,3) &= \frac{10\sqrt{5}}{\sqrt{1^2 + 3^2}}\\
-  & = 10\sqrt{\frac{5}{4}}
-\end{align*} 
-\EEN
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% ELECTRIC POTENTIAL DISTRIBUTION
-\item The level curves are solution sets of the equation $V(x,y) = K$, for constant $K\in\R$.
-\begin{align*}
-V(x,y) = K &= \frac{c}{\sqrt{r^2 - x^2 -y^2}} \\
-r^2-x^2-y^2 &= \frac{c^2}{K^2} \\
-x^2+y^2 &= r^2 -  \frac{c^2}{K^2}
-\end{align*}
-The left-hand side must be positive, so we must have that 
-\begin{align*}
-r^2 &>  \frac{c^2}{K^2}\\
-K^2 &> c^2/r^2\\
- |K| &<  |c|/|r|
-\end{align*}
-But $c, K$, and $r$ are all positive constants, so this simplifies to $K<\frac{c}{r}$. The level curves are concentric circles, centered at the origin, with radius $r^2 -  \frac{c^2}{K^2}$, for $K<\frac{c}{r}$.
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% LIMIT PROOF
-\item 
-If we approach the limit point along the $x$-axis, then $y=0$ and we obtain
-\begin{align*}
-  \lim_{(x,y)\rightarrow(0,0) } \frac{x(0)^2}{x^2+(0)^2} = 0
-\end{align*}
-We obtain the same result if we approach the origin along the $y$-axis, or along any line $y=mx$. It would seem that the limiting value could exist and could be equal to 0. To show that this is the case, we must show that for any $\epsilon > 0$, there exists a $\delta > 0$ such that   
-\begin{align*}
- \Big|  \frac{xy^2}{x^2+y^2} - 0 \Big| < \epsilon \text{  whenever  } 0 < \sqrt{(x-0)^2 + (y-0)^2} < \delta ,
-\end{align*}
-or simply
-\begin{align*}
- \Big|  \frac{xy^2}{x^2+y^2} \Big| < \epsilon \text{  whenever  } 0 < \sqrt{x^2 + y^2} < \delta .
-\end{align*}
-Now, $\big| x^2 + y^2\big| = x^2 + y^2$, and $|y^2| = y^2$, so
-\begin{align*}
- \Big|  \frac{xy^2}{x^2+y^2} \Big| &=  \frac{ \big|xy^2 \big|}{ \big|x^2+y^2 \big|}  =   \frac{ \big|x\big|y^2 }{ x^2+y^2 }
-\end{align*}
-Also, $|x| \le \sqrt{x^2+y^2}$, and $y^2 \le x^2+y^2$, so
-\begin{align*}
- \Big|  \frac{xy^2}{x^2+y^2} \Big| 
- &=  \frac{ \big|x\big|y^2 }{ x^2+y^2 }\\
- &\le \frac{ \ \sqrt{x^2+y^2} ( x^2+y^2 ) }{ x^2+y^2 }\\
- &= \sqrt{x^2+y^2}
-\end{align*}
-So if $\delta = \epsilon$, then 
-\begin{align*}
- \Big|  \frac{xy^2}{x^2+y^2} \Big| < \epsilon \text{  whenever  } 0 < \sqrt{x^2 + y^2} < \delta .
-\end{align*}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-\end{enumerate}
+\EEN % END OF QUESTIONS
 

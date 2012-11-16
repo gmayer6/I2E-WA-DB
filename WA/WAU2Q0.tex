@@ -1,0 +1,43 @@
+\setcounter{subsection}{-1}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Wolfram Alpha Syntax}
+You may want to use Wolfram Alpha (wolframalpha.com) to check your answers. The following is a brief introduction to syntax that can be used. 
+\subsubsection{Multivariable Functions}
+If you're not sure what syntax to use to compute square roots and evaluate multivariable limits with Wolfram Alpha, let's suppose that we want to determine the value of
+\begin{align*} 
+  f(x,y,z) = \frac{2 \sqrt{x}}{y^2 + \sqrt{z}}
+\end{align*}
+at the point (4,5,9). The syntax we could use to evaluate $f$ at the given point is
+\begin{quote}
+  \begin{verbatim}
+     substitute x=4 and y=5 and z=9 into (2 * sqrt(x)) / ( y^2 + sqrt(z) )
+  \end{verbatim}
+\end{quote}
+Or we can simply use the syntax
+\begin{quote}
+  \begin{verbatim}
+     (2 * sqrt(4)) / ( 5^2 + sqrt(9) )
+  \end{verbatim}
+\end{quote}
+\subsubsection{Determinants and Matrices}
+If we want to calculate the determinant of the matrix 
+\begin{align*} 
+  \BM a & b \\ c & d \EM,
+\end{align*}
+the syntax we could use is 
+\begin{quote}
+  \begin{verbatim}
+    determinant of [[a,b],[c,d]]
+  \end{verbatim}
+\end{quote}
+To find the solution of the linear system 
+\begin{align*} 
+  \BM 2 & 0 \\ 0 & 3 \EM \BM x \\ y \EM = \BM 1 \\ 2 \EM,
+\end{align*}
+we could use the syntax 
+\begin{quote}
+  \begin{verbatim}
+    solve [[2,0],[0,3]]*[[x],[y]]=[[1],[2]] 
+  \end{verbatim}
+\end{quote}
+
