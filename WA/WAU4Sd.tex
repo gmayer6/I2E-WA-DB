@@ -162,9 +162,7 @@ The solid is a section of a sphere with radius 1, centered at the origin. The se
 \end{align*}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % SIMPLIFYING
-\Emph{Simplifying a Double Integral as a Product of Two Single Integrals} 
-\BEN
-\item
+\Emph{Simplifying a Double Integral as a Product of Two Single Integrals} \\
 Substituting $f(x,y) = g(x)h(y)$ into the double integral yields
 \begin{align*}
    \iint\limits_{R} f(x,y) dA 
@@ -184,7 +182,10 @@ The term in the brackets is a constant, and so
    &=  \int_a^b   g(x) dx \int_c^d h(y) dy.
 \end{align*}
 This is the result we were asked to prove.
-\item Let the left-hand-side be equal to $I$,
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % NORMAL DISTRIBUTION
+\Emph{The Normal Distribution} \\
+ Let the left-hand-side be equal to $I$,
 \begin{align*}
    I=\int_{0}^{\infty} e^{-x^2} dx.
 \end{align*}
@@ -213,7 +214,43 @@ Taking the square root of both sides of this yields the desired result,
 \begin{align*}
   I &= \frac{\sqrt{\pi}}{2} .
 \end{align*}
-\EEN
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % INTEGRATION IN A SPHERE
+\Emph{Integration Inside a Sphere} \\
+Switching to spherical coordinates and using symmetry:
+\begin{align*}
+  \iiint_E x^2 dV 
+  &= 8 {\int_0^{\pi/2} \!\! \int_{0}^{\pi/2} \!\! \int_{0}^a} (\rho\sin\phi\cos\theta) \rho^2\sin\phi \ d\rho d\phi d\theta \\
+  &= 8 {\int_0^{\pi/2} \!\! \int_{0}^{\pi/2} \!\! \int_{0}^a} \rho^3\sin^2\phi\cos\theta d\rho d\phi d\theta \\
+  &= 8 \int_0^{\pi/2} \cos\theta d\theta \ \int_{0}^{\pi/2} \sin^2\phi d\phi  \ \int_{0}^a \rho^3 d\rho  .
+\end{align*}
+But
+\begin{align*}
+ \int_0^{\pi/2} \cos\theta d\theta =1
+\end{align*}
+so
+\begin{align*}
+  \iiint_E x^2 dV
+  &= 8 \int_{0}^{\pi/2} \sin^2\phi \ d\phi  \ \int_{0}^a \rho^3 d\rho.
+\end{align*}
+Similarly, 
+\begin{align*}
+  \iiint_E y^2 dV 
+  &= 8 {\int_0^{\pi/2} \!\! \int_{0}^{\pi/2} \!\! \int_{0}^a} (\rho\sin\phi\sin\theta) \rho^2\sin\phi \ d\rho d\phi d\theta \\
+  &= 8 \int_0^{\pi/2} \sin\theta d\theta \ \int_{0}^{\pi/2} \sin^2\phi d\phi  \ \int_{0}^a \rho^3 d\rho \\
+  &= 8  \int_{0}^{\pi/2} \sin^2\phi d\phi  \ \int_{0}^a \rho^3 d\rho \\
+  &= \iiint_E x^2 dV .
+\end{align*}
+Similarly, \rednote{not right}
+\begin{align*}
+  \iiint_E z^2 dV 
+  &= 8 {\int_0^{\pi/2} \!\! \int_{0}^{\pi/2} \!\! \int_{0}^a} (\rho\cos\phi) \rho^2\sin\phi \ d\rho d\phi d\theta \\
+  &= 8 \int_0^{\pi/2} (1) d\theta \ \int_{0}^{\pi/2} \sin\phi\cos\phi d\phi  \ \int_{0}^a \rho^3 d\rho \\
+  &= 8 \cdot  \frac{\pi}{2} \cdot \int_{0}^{\pi/2} \sin^2\phi d\phi  \ \int_{0}^a \rho^3 d\rho \\
+  &= \iiint_E x^2 dV .
+\end{align*}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \EEN % END OF SUBSECTION
 %% s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s

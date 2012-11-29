@@ -65,9 +65,7 @@ The integral
 represents the volume of a solid. Describe the shape of the solid, and find its volume. \\\rednote{Textbook doesn't do a great job of integrals in cylindrical and spherical}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % SIMPLIFYING
-\Emph{Simplifying a Double Integral as a Product of Two Single Integrals} 
-\BEN
-\item
+\Emph{Simplifying a Double Integral as a Product of Two Single Integrals} \\
 Show that, in the special case where the function $f(x,y)$ can be factored as the product $f(x,y) = g(x)h(y)$, the double integral 
 \begin{align*}
    \iint\limits_{R} f(x,y) dA 
@@ -78,14 +76,27 @@ can be expressed as the following product
   & = \int_a^b g(x) dx \int_c^d h(y) dy  ,
 \end{align*}
 where $R$ is the rectangular region $R=\{(x,y) | a \le x \le b, c\le y \le d\}$. 
-This result can be helpful in simplifying certain multiple integrals, as we will see in part (b).
-\item Use polar coordinates and the result from part (a) to show that 
+This result can be helpful in simplifying certain multiple integrals, as we will see in next question.
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % NORMAL DISTRIBUTION
+\Emph{The Normal Distribution} \\
+Use polar coordinates and the result from the previous question to show that 
 \begin{align*}
    \int_{0}^{\infty} e^{-x^2} dx
    = \frac{\sqrt{\pi}}{2}.
 \end{align*}
 This result is important in probability and statistics: the above integral is related to the \Emph{normal} or \Emph{Gaussian distribution}. 
-\EEN
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % INTEGRATION IN A SPHERE
+\Emph{Integration Inside a Sphere} \\
+Let $E$ be the sphere $x^2+y^2+z^2\le a^2$. Show that 
+\begin{align*}
+  \iiint_E x^2 dV = \frac{1}{3} \iiint_E \Big(x^2 +y^2+z^2\Big)dV,
+\end{align*}
+and use this result to calculate the value of 
+\begin{align*}
+  \iiint_E x^2 dV.
+\end{align*}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \EEN % END OF SUBSECTION 
 %% s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s~s

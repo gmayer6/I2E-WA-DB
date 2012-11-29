@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  16 NOV 2012 17:00
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  26 NOV 2012 13:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -736,32 +736,33 @@ Package pdftex.def Info: ImgRegions.jpg used on input line 92.
                                                   \fi \fi 
 l.108 \end{align*}
                    <./ImgRegions.jpg>]) (./WAU4Qc.tex) (./WAU4Qd.tex [20]
-[21]) (./WAU4Qe.tex <ImgRadialCenterOfMass.jpg, id=517, 722.7pt x 361.35pt>
+[21]) (./WAU4Qe.tex <ImgRadialCenterOfMass.jpg, id=516, 722.7pt x 361.35pt>
 File: ImgRadialCenterOfMass.jpg Graphic file (type jpg)
 
 <use ImgRadialCenterOfMass.jpg>
 Package pdftex.def Info: ImgRadialCenterOfMass.jpg used on input line 25.
 (pdftex.def)             Requested size: 295.90588pt x 147.95044pt.
- [22pdfTeX warning (ext4): destination with the same identifier (name{figure.5}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.37 \end{align*}
-                  <./ImgRadialCenterOfMass.jpg>]
-<ImgCardioid.jpg, id=530, 602.25pt x 602.25pt>
+ [22]
+<ImgCardioid.jpg, id=529, 602.25pt x 602.25pt>
 File: ImgCardioid.jpg Graphic file (type jpg)
  <use ImgCardioid.jpg>
 Package pdftex.def Info: ImgCardioid.jpg used on input line 41.
 (pdftex.def)             Requested size: 159.33821pt x 159.33818pt.
-) [23pdfTeX warning (ext4): destination with the same identifier (name{figure.6
+) [23pdfTeX warning (ext4): destination with the same identifier (name{figure.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.43 \newpage
-              <./ImgCardioid.jpg>]pdfTeX warning (ext4): destination with the s
-ame identifier (name{section.2}) has been already used, duplicate ignored
+             pdfTeX warning (ext4): destination with the same identifier (name{
+figure.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.43 \newpage
+              <./ImgRadialCenterOfMass.jpg> <./ImgCardioid.jpg>]pdfTeX warning 
+(ext4): destination with the same identifier (name{section.2}) has been already
+ used, duplicate ignored
 <to be read again> 
                    \relax 
 l.47 \section{Multivariable Functions and Algebra}
@@ -962,9 +963,9 @@ ame identifier (name{subsection.4.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.558 \subsection{Application: Center of Mass}
-                                               [71] [72])
+                                               [71] [72] [73])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
- [73]
+ [74]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
 
 (./GA_Calculus_12_WA.aux)
@@ -979,10 +980,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 7875 strings out of 493488
- 107946 string characters out of 3141326
- 219329 words of memory out of 3000000
- 10445 multiletter control sequences out of 15000+200000
+ 7879 strings out of 493488
+ 107961 string characters out of 3141326
+ 219371 words of memory out of 3000000
+ 10448 multiletter control sequences out of 15000+200000
  19537 words of font info for 72 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  31i,20n,45p,822b,626s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1014,10 +1015,10 @@ t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2012/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2012/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2012/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on GA_Calculus_12_WA.pdf (73 pages, 2753966 bytes).
+Output written on GA_Calculus_12_WA.pdf (74 pages, 2755997 bytes).
 PDF statistics:
- 1214 PDF objects out of 1440 (max. 8388607)
- 1065 compressed objects within 11 object streams
- 496 named destinations out of 1000 (max. 500000)
+ 1218 PDF objects out of 1440 (max. 8388607)
+ 1068 compressed objects within 11 object streams
+ 497 named destinations out of 1000 (max. 500000)
  419 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -38,4 +38,4 @@
 \contentsline {subsection}{\numberline {4.2}Double Integrals Over a General Region}{62}{subsection.4.2}
 \contentsline {subsection}{\numberline {4.3}Triple Integrals}{65}{subsection.4.3}
 \contentsline {subsection}{\numberline {4.4}Change of Variables in Multiple Integrals}{67}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Application: Center of Mass}{71}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.5}Application: Center of Mass}{72}{subsection.4.5}
