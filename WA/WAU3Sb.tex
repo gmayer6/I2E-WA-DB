@@ -2,6 +2,14 @@
 
 \BEN
 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % PUDDLE
+First we find the critical points:
+\begin{align*}
+    \px z &= \px (x^2-2xy+y^2) = 2x-2y \\
+    \py z &= \py (x^2-2xy+y^2) = -2x+2y \\    
+\end{align*}
+Setting these equations to zero yields the equation $x=y$. The puddle forms along the line $y=x$.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item
@@ -155,32 +163,6 @@ which we test by plugging into the original equation $f$.
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item
 
-The divergence is given by the equation \[
- \nabla \cdot f = \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y} + \frac{\partial f_3}{\partial z}
-\] and the curl by the equation \[
- \nabla \times f = \begin{bmatrix}
-  \dfrac{\partial f_3}{\partial y} - \dfrac{\partial f_2}{\partial z} \\
-  \dfrac{\partial f_1}{\partial z} - \dfrac{\partial f_3}{\partial x} \\
-  \dfrac{\partial f_2}{\partial x} - \dfrac{\partial f_1}{\partial y}
- \end{bmatrix}.
-\]  Applying these equations yields the solutions:
-
-\begin{align*}
- \nabla \cdot f &= \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y} + \frac{\partial f_3}{\partial z} \\
- &= \frac{\partial}{\partial x}(x^2+y^2) + \frac{\partial}{\partial y}(y^2+z^2) + \frac{\partial}{\partial z}(z^2+x^2) \\
- &= 2x + 2y + 2z \\
- \nabla \times f &= \begin{bmatrix}
-  \dfrac{\partial f_3}{\partial y} - \dfrac{\partial f_2}{\partial z} \\
-  \dfrac{\partial f_1}{\partial z} - \dfrac{\partial f_3}{\partial x} \\
-  \dfrac{\partial f_2}{\partial x} - \dfrac{\partial f_1}{\partial y}
- \end{bmatrix} \\
- &= \begin{bmatrix} - 2z \\ - 2x \\ - 2y \end{bmatrix}.
-\end{align*}
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item
-
 It is possible to solve this problem using Lagrangian optimization;
 however, the closest point on the sphere to the plane will occur at
 the point on the sphere where its normal vector is parallel to the plane's
@@ -274,9 +256,9 @@ equation $\nabla F(x,y,z) = 0$.
 \begin{align}
  \nabla F(x,y,z) &= \begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
  \begin{bmatrix}
-  \dfrac{\partial F}{\partial x} \\
-  \dfrac{\partial F}{\partial y} \\
-  \dfrac{\partial F}{\partial z} \\
+  \dfrac{\partial F}{\partial x} \\ \\
+  \dfrac{\partial F}{\partial y} \\ \\
+  \dfrac{\partial F}{\partial z} \\ \\
   \dfrac{\partial F}{\partial t}
  \end{bmatrix} &= \begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \end{bmatrix} \nonumber \\
  \begin{bmatrix}
@@ -291,6 +273,31 @@ The third equation of (\ref{soln:opt_heat}) yields $t = -200xy$.  Substituting
 this value of $t$ into the first and second equations gives $z^2 = 2x^2 = 2y^2$.
 Combining this with the fourth equation yields $4x^2 = 1$, or
 $x = \pm \frac{1}{2} \implies y = \pm \frac{1}{2}, z = \pm \frac{1}{\sqrt{2}}$.
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item
+\rednote{Move to a later assignment}\\
+The divergence is given by the equation \[
+ \nabla \cdot f = \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y} + \frac{\partial f_3}{\partial z}
+\] and the curl by the equation \[
+ \nabla \times f = \begin{bmatrix}
+  \dfrac{\partial f_3}{\partial y} - \dfrac{\partial f_2}{\partial z} \\
+  \dfrac{\partial f_1}{\partial z} - \dfrac{\partial f_3}{\partial x} \\
+  \dfrac{\partial f_2}{\partial x} - \dfrac{\partial f_1}{\partial y}
+ \end{bmatrix}.
+\]  Applying these equations yields the solutions:
+
+\begin{align*}
+ \nabla \cdot f &= \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y} + \frac{\partial f_3}{\partial z} \\
+ &= \frac{\partial}{\partial x}(x^2+y^2) + \frac{\partial}{\partial y}(y^2+z^2) + \frac{\partial}{\partial z}(z^2+x^2) \\
+ &= 2x + 2y + 2z \\
+ \nabla \times f &= \begin{bmatrix}
+  \dfrac{\partial f_3}{\partial y} - \dfrac{\partial f_2}{\partial z} \\
+  \dfrac{\partial f_1}{\partial z} - \dfrac{\partial f_3}{\partial x} \\
+  \dfrac{\partial f_2}{\partial x} - \dfrac{\partial f_1}{\partial y}
+ \end{bmatrix} \\
+ &= \begin{bmatrix} - 2z \\ - 2x \\ - 2y \end{bmatrix}.
+\end{align*}
+
 
 
 

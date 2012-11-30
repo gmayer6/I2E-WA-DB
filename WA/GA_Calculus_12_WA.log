@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  26 NOV 2012 13:13
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  29 NOV 2012 16:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -552,11 +552,7 @@ Version 1.0, Aug 13, 1994
 \@Rightmargin=\dimen119
 \@Topmargin=\dimen120
 \@Bottommargin=\dimen121
-)) (./GA_Calculus_12_WA.aux
-
-LaTeX Warning: Label `FigCircPlate' multiply defined.
-
-)
+)) (./GA_Calculus_12_WA.aux)
 \openout1 = `GA_Calculus_12_WA.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -573,7 +569,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
- (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count112
 \scratchdimen=\dimen122
@@ -620,405 +617,65 @@ LaTeX Info: Redefining \nameref on input line 6.
 \@outlinefile=\write3
 \openout3 = `GA_Calculus_12_WA.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 9.
+ (./WAU3Qb.tex
+LaTeX Font Info:    Try loading font information for U+msa on input line 11.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 9.
+LaTeX Font Info:    Try loading font information for U+msb on input line 11.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-)
-(./GA_Calculus_12_WA.toc [1
+)) (./WAU3Sb.tex
+[1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
-\tf@toc=\write4
-\openout4 = `GA_Calculus_12_WA.toc'.
-
- [2] (./WAU2Q0.tex) (./WAU2Qa.tex [3]
-<ImgTorqueExample.jpg, id=222, 401.5pt x 401.5pt>
-File: ImgTorqueExample.jpg Graphic file (type jpg)
- <use ImgTorqueExample.jpg>
-Package pdftex.def Info: ImgTorqueExample.jpg used on input line 59.
-(pdftex.def)             Requested size: 227.62206pt x 227.62596pt.
-
-<ImgBicycle.jpg, id=224, 325.215pt x 216.81pt>
-File: ImgBicycle.jpg Graphic file (type jpg)
- <use ImgBicycle.jpg>
-Package pdftex.def Info: ImgBicycle.jpg used on input line 76.
-(pdftex.def)             Requested size: 182.09486pt x 121.39954pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--79
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--79
-
- []
-
-[4pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.79 \end{figure}
-                  <./ImgTorqueExample.jpg>]) (./WAU2Qb.tex [5pdfTeX warning (ex
-t4): destination with the same identifier (name{figure.2}) has been already use
-d, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.18 \end{enumerate}
-                     <./ImgBicycle.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-
- []
-
-) (./WAU2Qc.tex [6]) (./WAU2Qd.tex) (./WAU2Qe.tex [7]) (./WAU2Qf.tex [8]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 28.
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 147--149
-
- []
-
-<ImgWindTunnel.jpg, id=321, 803.0pt x 509.905pt>
-File: ImgWindTunnel.jpg Graphic file (type jpg)
- <use ImgWindTunnel.jpg>
-Package pdftex.def Info: ImgWindTunnel.jpg used on input line 153.
-(pdftex.def)             Requested size: 273.14923pt x 173.45099pt.
-
-[9]) (./WAU2Qg.tex [10pdfTeX warning (ext4): destination with the same identifi
-er (name{figure.3}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.20 \end{enumerate}
-                     <./ImgWindTunnel.jpg>] [11]) [12] (./WAU3Q0.tex)
-(./WAU3Qa.tex
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
-
- []
-
-[13] [14]) (./WAU3Qb.tex [15]) [16] (./WAU4Q0.tex) (./WAU4Qa.tex) (./WAU4Qb.tex
-<ImgTetrahedrons.jpg, id=453, 353.32pt x 172.645pt>
-File: ImgTetrahedrons.jpg Graphic file (type jpg)
- <use ImgTetrahedrons.jpg>
-Package pdftex.def Info: ImgTetrahedrons.jpg used on input line 15.
-(pdftex.def)             Requested size: 159.33821pt x 77.85812pt.
-
-[17] [18 <./ImgTetrahedrons.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
-
- []
-
-<ImgRegions.jpg, id=481, 1228.59pt x 316.18124pt>
-File: ImgRegions.jpg Graphic file (type jpg)
- <use ImgRegions.jpg>
-Package pdftex.def Info: ImgRegions.jpg used on input line 92.
-(pdftex.def)             Requested size: 432.48051pt x 111.30193pt.
- [19pdfTeX warning (ext4): destination with the same identifier (name{figure.4}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.108 \end{align*}
-                   <./ImgRegions.jpg>]) (./WAU4Qc.tex) (./WAU4Qd.tex [20]
-[21]) (./WAU4Qe.tex <ImgRadialCenterOfMass.jpg, id=516, 722.7pt x 361.35pt>
-File: ImgRadialCenterOfMass.jpg Graphic file (type jpg)
-
-<use ImgRadialCenterOfMass.jpg>
-Package pdftex.def Info: ImgRadialCenterOfMass.jpg used on input line 25.
-(pdftex.def)             Requested size: 295.90588pt x 147.95044pt.
- [22]
-<ImgCardioid.jpg, id=529, 602.25pt x 602.25pt>
-File: ImgCardioid.jpg Graphic file (type jpg)
- <use ImgCardioid.jpg>
-Package pdftex.def Info: ImgCardioid.jpg used on input line 41.
-(pdftex.def)             Requested size: 159.33821pt x 159.33818pt.
-) [23pdfTeX warning (ext4): destination with the same identifier (name{figure.5
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.43 \newpage
-             pdfTeX warning (ext4): destination with the same identifier (name{
-figure.6}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.43 \newpage
-              <./ImgRadialCenterOfMass.jpg> <./ImgCardioid.jpg>]pdfTeX warning 
-(ext4): destination with the same identifier (name{section.2}) has been already
- used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.47 \section{Multivariable Functions and Algebra}
-                                                   (./WAU2Sa.texpdfTeX warning 
-(ext4): destination with the same identifier (name{subsection.2.1}) has been al
-ready used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \subsection{Dot Products and Cross Products}
-                                                 [24]
-<ImgTorqueSol.jpg, id=544, 401.5pt x 401.5pt>
-File: ImgTorqueSol.jpg Graphic file (type jpg)
- <use ImgTorqueSol.jpg>
-Package pdftex.def Info: ImgTorqueSol.jpg used on input line 389.
-(pdftex.def)             Requested size: 182.09486pt x 182.10077pt.
- [25]
-[26 <./ImgTorqueSol.jpg>]) [27] (./WAU2Sb.texpdfTeX warning (ext4): destination
- with the same identifier (name{subsection.2.2}) has been already used, duplica
-te ignored
-<to be read again> 
-                   \relax 
-l.1 \subsection{Lines and Planes}
-                                  [28] [29]
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
-
- []
-
-[30] [31]) [32] (./WAU2Sc.texpdfTeX warning (ext4): destination with the same i
-dentifier (name{subsection.2.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \subsection{Surfaces}
-                          [33]) [34] (./WAU2Sd.texpdfTeX warning (ext4): destin
-ation with the same identifier (name{subsection.2.4}) has been already used, du
-plicate ignored
-<to be read again> 
-                   \relax 
-l.1 \subsection{Curvilinear Coordinates}
-                                        
-Underfull \hbox (badness 10000) in paragraph at lines 11--12
-
- []
-
-) [35] (./WAU2Se.texpdfTeX warning (ext4): destination with the same identifier
- (name{subsection.2.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \subsection{Vector-Valued Functions}
-                                         [36]
-<ImgParticle.jpg, id=655, 401.5pt x 401.5pt>
-File: ImgParticle.jpg Graphic file (type jpg)
- <use ImgParticle.jpg>
-Package pdftex.def Info: ImgParticle.jpg used on input line 427.
-(pdftex.def)             Requested size: 204.85846pt x 204.8603pt.
-) [37 <./ImgParticle.jpg>] (./WAU2Sf.texpdfTeX warning (ext4): destination with
- the same identifier (name{subsection.2.6}) has been already used, duplicate ig
-nored
-<to be read again> 
-                   \relax 
-l.1 \subsection{Linear Systems}
-                               
-Underfull \hbox (badness 10000) in paragraph at lines 99--104
-
- []
-
-[38] [39] [40]) [41] (./WAU2Sg.texpdfTeX warning (ext4): destination with the s
-ame identifier (name{subsection.2.7}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 ...ection{Functions of Two or Three Variables}
-                                                  
-<Img1A.jpg, id=714, 401.5pt x 401.5pt>
-File: Img1A.jpg Graphic file (type jpg)
- <use Img1A.jpg>
-Package pdftex.def Info: Img1A.jpg used on input line 15.
-(pdftex.def)             Requested size: 182.09486pt x 182.10077pt.
-
-<Img1B.jpg, id=715, 401.5pt x 401.5pt>
-File: Img1B.jpg Graphic file (type jpg)
- <use Img1B.jpg>
-Package pdftex.def Info: Img1B.jpg used on input line 23.
-(pdftex.def)             Requested size: 182.09486pt x 182.10077pt.
-
-<Img1C.jpg, id=716, 401.5pt x 401.5pt>
-File: Img1C.jpg Graphic file (type jpg)
- <use Img1C.jpg>
-Package pdftex.def Info: Img1C.jpg used on input line 31.
-(pdftex.def)             Requested size: 182.09486pt x 182.10077pt.
- [42 <./Img1A.jpg> <./Img1B.jpg>] <Img1D.jpg, id=725, 401.5pt x 401.5pt>
-File: Img1D.jpg Graphic file (type jpg)
- <use Img1D.jpg>
-Package pdftex.def Info: Img1D.jpg used on input line 44.
-(pdftex.def)             Requested size: 182.09486pt x 182.10077pt.
- [43 <./Img1C.jpg> <./Img1D.jpg>] [44] <ImgLevelCurvesA.pdf, id=745, 501.875pt 
-x 387.4475pt>
-File: ImgLevelCurvesA.pdf Graphic file (type pdf)
-
-<use ImgLevelCurvesA.pdf>
-Package pdftex.def Info: ImgLevelCurvesA.pdf used on input line 133.
-(pdftex.def)             Requested size: 182.09486pt x 140.58061pt.
-
-<ImgLevelCurvesB.jpg, id=746, 561.09625pt x 421.575pt>
-File: ImgLevelCurvesB.jpg Graphic file (type jpg)
-
-<use ImgLevelCurvesB.jpg>
-Package pdftex.def Info: ImgLevelCurvesB.jpg used on input line 156.
-(pdftex.def)             Requested size: 182.09486pt x 136.81082pt.
- [45 <./ImgLevelCurvesA.pdf> <./ImgLevelCurvesB.jpg>]
-[46]) [47]pdfTeX warning (ext4): destination with the same identifier (name{sec
-tion.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.56 \section{Partial Derivatives}
-                                   (./WAU3Sa.texpdfTeX warning (ext4): destinat
-ion with the same identifier (name{subsection.3.1}) has been already used, dupl
-icate ignored
-<to be read again> 
-                   \relax 
-l.2 \subsection{Partial Derivatives}
-                                     [48] [49] [50] [51] [52] [53] [54])
-(./WAU3Sb.texpdfTeX warning (ext4): destination with the same identifier (name{
-subsection.3.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \subsection{Optimization}
-                              [55]
-Overfull \hbox (8.45573pt too wide) in paragraph at lines 99--99
+]
+[2]
+Overfull \hbox (8.45573pt too wide) in paragraph at lines 107--107
 [] 
  []
 
-[56] [57] [58]) [59]pdfTeX warning (ext4): destination with the same identifier
- (name{section.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.61 \section{Multiple Integrals}
-                                  (./WAU4Sa.texpdfTeX warning (ext4): destinati
-on with the same identifier (name{subsection.4.1}) has been already used, dupli
-cate ignored
-<to be read again> 
-                   \relax 
-l.2 \subsection{Double Integrals}
-                                  <ImgSolid.jpg, id=900, 401.5pt x 401.5pt>
-File: ImgSolid.jpg Graphic file (type jpg)
-
-<use ImgSolid.jpg>
-Package pdftex.def Info: ImgSolid.jpg used on input line 12.
-(pdftex.def)             Requested size: 159.33821pt x 159.34123pt.
- [60 <./ImgSolid.jpg>] [61]) (./WAU4Sb.texpdfTeX warning (ext4): destination wi
-th the same identifier (name{subsection.4.2}) has been already used, duplicate 
-ignored
-<to be read again> 
-                   \relax 
-l.114 ...n{Double Integrals Over a General Region}
-                                                  
-<ImgTetExample.jpg, id=917, 352.31625pt x 357.335pt>
-File: ImgTetExample.jpg Graphic file (type jpg)
- <use ImgTetExample.jpg>
-Package pdftex.def Info: ImgTetExample.jpg used on input line 123.
-(pdftex.def)             Requested size: 159.33821pt x 161.60623pt.
-
-[62 <./ImgTetExample.jpg>] [63] <ImgLog.jpg, id=939, 562.1pt x 420.57124pt>
-File: ImgLog.jpg Graphic file (type jpg)
-
-<use ImgLog.jpg>
-Package pdftex.def Info: ImgLog.jpg used on input line 249.
-(pdftex.def)             Requested size: 250.38564pt x 187.34293pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[64]) (./WAU4Sc.texpdfTeX warning (ext4): destination with the same identifier 
-(name{subsection.4.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.293 \subsection{Triple Integrals}
-                                   
-File: ImgTetExample.jpg Graphic file (type jpg)
- <use ImgTetExample.jpg>
-Package pdftex.def Info: ImgTetExample.jpg used on input line 302.
-(pdftex.def)             Requested size: 159.33821pt x 161.60623pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[65 <./ImgLog.jpg>] [66]) (./WAU4Sd.texpdfTeX warning (ext4): destination with 
-the same identifier (name{subsection.4.4}) has been already used, duplicate ign
-ored
-<to be read again> 
-                   \relax 
-l.1 ...{Change of Variables in Multiple Integrals}
-                                                  
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
-
- []
-
-[67] [68] [69] [70]) (./WAU4Se.texpdfTeX warning (ext4): destination with the s
-ame identifier (name{subsection.4.5}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.558 \subsection{Application: Center of Mass}
-                                               [71] [72] [73])
+[3] [4] [5])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
- [74]
+ [6]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
-
-(./GA_Calculus_12_WA.aux)
+ (./GA_Calculus_12_WA.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
 Package rerunfilecheck Info: File `GA_Calculus_12_WA.out' has not changed.
-(rerunfilecheck)             Checksum: 05BA11990C5DE29C8740649FF58FC9FB;2948.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+(rerunfilecheck)             Checksum: 40AE9AB3C6F9DA2E1F6DCC3A5B4DEBE9;104.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 68.
  ) 
 Here is how much of TeX's memory you used:
- 7879 strings out of 493488
- 107961 string characters out of 3141326
- 219371 words of memory out of 3000000
- 10448 multiletter control sequences out of 15000+200000
- 19537 words of font info for 72 fonts, out of 3000000 for 9000
+ 7116 strings out of 493488
+ 100061 string characters out of 3141326
+ 210835 words of memory out of 3000000
+ 10277 multiletter control sequences out of 15000+200000
+ 11381 words of font info for 43 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 31i,20n,45p,822b,626s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,15n,45p,280b,587s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
-usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><
-/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/loc
-al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local
-/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local
-/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib9.pfb></usr/l
-ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
-ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
-/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-12/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2012/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2012/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2012/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2012/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2012/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2012/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2012/texmf-dist/fo
-nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on GA_Calculus_12_WA.pdf (74 pages, 2755997 bytes).
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local
+/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/te
+xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
+ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texliv
+e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2012
+/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on GA_Calculus_12_WA.pdf (6 pages, 186627 bytes).
 PDF statistics:
- 1218 PDF objects out of 1440 (max. 8388607)
- 1068 compressed objects within 11 object streams
- 497 named destinations out of 1000 (max. 500000)
- 419 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 157 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 17 words of extra memory for PDF output out of 10000 (max. 10000000)
 
