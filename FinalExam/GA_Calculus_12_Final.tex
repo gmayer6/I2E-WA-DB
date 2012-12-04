@@ -22,10 +22,10 @@ The diagram below shows the typical flow of traffic (in number of vehicles per h
   \end{center}
   \vspace{-20pt}
 \end{figure}
-Set up a linear system of equations that could be used to determine all of the $x$'s, and find the value of $x_6$ so that the system has exactly one solution. Assume that the total number of cars in this area of the city remains constant throughout Saturday afternoons. \textit{Hint: you shouldn't need to use a computer or row reduction to find $x_6$}.
+Set up a linear system of equations that could be used to determine all of the $x$'s, and find the value of $x_6$ so that the system has exactly one solution. Assume that the total number of cars in this area of the city remains constant throughout Saturday afternoons. \textit{Hint: you shouldn't need to use a computer, a calculator, or Gaussian elimination to find $x_6$}.
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % NAVIER STOKES
-When a particle moves through a liquid in a region of $\R^3$, it traces out a path $C$ described by $x=x(t), y=y(t), z=z(t)$, where $t$ represents time. If $\rho=\rho(x,y,z,t)=\rho\big(x(t),y(t),z(t),t\big)$ is the density of the fluid at time $t$, show that, along $C$,
+When a particle moves through a liquid in a region of $\R^3$, it traces out a path $C$ described by $x=x(t), y=y(t), z=z(t)$, where $t$ represents time. If the density of the particle changes over time, then $\rho=\rho(x,y,z,t)=\rho\big(x(t),y(t),z(t),t\big)$ is the density of the fluid at time $t$. Show that, along $C$,
 \begin{align*}
   \frac{d\rho}{dt} &= \frac{\partial \rho}{\partial t} + \nabla \rho \cdot \MB{r}'(t),
 \end{align*}
@@ -35,11 +35,8 @@ where $\MB{r} = x\MB{i}+y\MB{j}+z\MB{k}$.
 Find the area of the triangle with vertices $(0,0,0)$, $(1,0,0)$, and $(0,1,1)$ using a double integral. \textit{Hint: you may want to check your answer by calculating the area another way (for example, by using a cross product)}.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % CHAIN RULE
-Let $f=-\frac{x^2}{2}+y^3$, and $\phi$ be a differentiable function of $x$, so that $\phi = \phi(x)$. Suppose also that $f(x,\phi(x))=\frac{1}{2}$ for all $x$. Find $\phi'(1)$, and do not leave your answer in terms of $\phi$. \rednote{We probably want to move this question back to a written assignment}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % LINEAR PROGRAMMING
-Suppose that we wish to minimize a function of the form $f=Ax+By$, where $A$ and $B$ are positive constants, subject to the constraint that we may only consider points in the region $D$ that describes a polygon in the $xy$-plane. Let the region $D$ be the 
+Suppose that we wish to minimize a function of the form $f=Ax+By$, where $A$ and $B$ are positive constants, subject to the constraint that we may only consider points in the region $D$ that describes a polygon\footnote{Recall that a polygon is a two-dimensional shape with any number of straight sides. Rectangles, triangles, and hexagons, are three examples of polygons.} in the $xy$-plane. Let the region $D$ be the region bounded by a polygon in the first quadrant. 
 \BEN
 \item By considering level sets of $f(x,y)$, show that $f$ is minimized at one or more vertices of region $D$. Use $\nabla f$ in your explanation. 
 \item For what values of $A$ and $B$ does the minimum values of $f$ have two minima? 
@@ -65,6 +62,9 @@ Calculate the volume of ...
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item In one paragraph, please describe the importance of interdisciplinary engineering today. Please use examples of interdisciplinary fields and works. Your paragraph should not exceed $X$ words, where $X$ is a number that your instructor will provide. 
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % CHAIN RULE
+Let $f=-\frac{x^2}{2}+y^3$, and $\phi$ be a differentiable function of $x$, so that $\phi = \phi(x)$. Suppose also that $f(x,\phi(x))=\frac{1}{2}$ for all $x$. Find $\phi'(1)$, and do not leave your answer in terms of $\phi$. \rednote{We may want to move this question back to a written assignment. I'm not sure yet.}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \end{enumerate} % END OF QUESTIONS
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
