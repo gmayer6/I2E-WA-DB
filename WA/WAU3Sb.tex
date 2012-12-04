@@ -274,8 +274,42 @@ this value of $t$ into the first and second equations gives $z^2 = 2x^2 = 2y^2$.
 Combining this with the fourth equation yields $4x^2 = 1$, or
 $x = \pm \frac{1}{2} \implies y = \pm \frac{1}{2}, z = \pm \frac{1}{\sqrt{2}}$.
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % CRITICAL POINTS
+\Emph{Critical Points of a Function of Two Variables}\\
+\BEN
+\item The point $(0,0)$ may not be a local maximum, because that point could be a saddle point.
+\item Consider the function $f(x,y)=x^4+y^4-4xy-1$. 
+\BEN
+\item Taking the usual derivatives to find the critical points yields the equations:
+\begin{align*}
+  \px (x^4+y^4-4xy-1) &= 4x^3-4y =0 \\
+  \py (x^4+y^4-4xy-1) &= 4y^3-4x =0
+\end{align*}
+Rearranging yields the equations $y=x^3$ and $x=y^3$, which are both satisfied by the three given points. 
+\item The second derivatives are:
+\begin{align*}
+  \pfxx &= \px (4x^3-4y) = 12x^2 \\
+  \pfyy &= \py (4y^3-4x) = 12y^2 \\
+  \pfxy &= \py (4x^3-4y) = -4
+\end{align*}
+At the point $(-1,-1)$:
+\begin{align*}
+  D &= 12\cdot12-(-4)^2=128 > 0, \text{ and } f_{xx} = 12 >0.
+\end{align*}
+The point $(-1,-1)$ is a local minima. At the point $(1,1)$:
+\begin{align*}
+  D &= 128 > 0, \text{ and } f_{xx} = 12 >0.
+\end{align*}
+The point $(1,1)$ is a local minima. At the point $(0,0)$:
+\begin{align*}
+  D &= 0\cdot0-(-4)^2 < 0.
+\end{align*}
+The point $(1,1)$ is a saddle point.
+\EEN
+\EEN
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item
-\rednote{Move to a later assignment}\\
+\rednote{This question will be moved to a later assignment}\\
 The divergence is given by the equation \[
  \nabla \cdot f = \frac{\partial f_1}{\partial x} + \frac{\partial f_2}{\partial y} + \frac{\partial f_3}{\partial z}
 \] and the curl by the equation \[

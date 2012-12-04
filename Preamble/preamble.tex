@@ -12,8 +12,9 @@
 % CUSTOM COLOUR
 \definecolor{DGrey}{rgb}{0.1,0.1,0.1} % Dark Grey
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
-\title{ Introduction to Engineering Written Assignment Questions}
-\date{January 2013}
+\newcommand{\DocumentTitle}{Introduction to Engineering Written Assignment Questions  }
+\title{\DocumentTitle}
+\date{}
 \author{Greg Mayer and Daniel Connelly}
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 % HEADER/FOOTER
@@ -50,8 +51,10 @@
 
 \newcommand{\pfx}{\frac{\partial f}{\partial x}} % Partial of f wrt x
 \newcommand{\pfy}{\frac{\partial f}{\partial y}} % Partial of f wrt y
-\newcommand{\pfxy}{\frac{\partial^2 f}{\partial y \partial x}} % Partial of f wrt y
-\newcommand{\pfyx}{\frac{\partial^2 f}{\partial x \partial y}} % Partial of f wrt y
+\newcommand{\pfxy}{\frac{\partial^2 f}{\partial y \partial x}} % 
+\newcommand{\pfyx}{\frac{\partial^2 f}{\partial x \partial y}} % 
+\newcommand{\pfxx}{\frac{\partial^2 f}{ \partial x^2}} % 
+\newcommand{\pfyy}{\frac{\partial^2 f}{ \partial y^2}} % 
 
 \newcommand{\ux}{\frac{\partial u}{\partial x }} % Partial of u wrt x
 \newcommand{\uk}{\frac{\partial u}{\partial k }} % Partial of u wrt k
@@ -92,6 +95,27 @@
   \end{array}\right]
 }
 % ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+\hypersetup{
+%    bookmarks=true,         % show bookmarks bar?
+%    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+%    pdftoolbar=true,        % show Acrobat’s toolbar?
+%    pdfmenubar=true,        % show Acrobat’s menu?
+%    pdffitwindow=false,     % window fit to page when opened
+%    pdfstartview={FitH},    % fits the width of the page to the window
+%    pdftitle={My title},    % title
+%    pdfauthor={Author},     % author
+%    pdfsubject={Subject},   % subject of the document
+%    pdfcreator={Creator},   % creator of the document
+%    pdfproducer={Producer}, % producer of the document
+%    pdfkeywords={keyword1} {key2} {key3}, % list of keywords
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
 % PAGE LAYOUT
 \addtolength{\topmargin}{10pt}
 \addtolength{\headsep}{10pt}
