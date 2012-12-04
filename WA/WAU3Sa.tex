@@ -350,7 +350,22 @@ We can take the square root of both sides to obtain
   \uk &= \pm ck^{(n-1)/2} 
 \end{align*}
 \EEN
-
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % WAVE EQUATION
+Applying the chain rule yields
+\begin{align*}
+  \ut &= f'(s-ct)\frac{\partial (s-ct)}{\partial t} + g'(s+ct)\frac{\partial (s+ct)}{\partial t} \\ &= -c f'(s-ct) + cg'(s+ct).
+\end{align*}
+Differentiating again yields
+\begin{align*}
+  \utt &= ( -c)^2 f''(s-ct) + c^2g''(s+ct) \\& =  c^2 f''(s-ct) + c^2g''(s+ct)
+\end{align*}
+Similarly:
+\begin{align*}
+  \us &= f'(s-ct)\frac{\partial (s-ct)}{\partial s} + g'(s+ct)\frac{\partial (s+ct)}{\partial s} \\& = f'(s-ct) + g'(s+ct) \\
+  \uss &= f''(s-ct) + g''(s+ct) 
+\end{align*}
+By comparison, \begin{align*}\utt = c^2\uss \end{align*}.
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 

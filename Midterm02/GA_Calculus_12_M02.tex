@@ -22,9 +22,6 @@ Determine the value of
 \end{align*}
 Do not use integration by parts, and do not use a change of variables. 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % CHANGING ORDER OF INTEGRATION
 The volume, $V$, of the solid bounded by
 \begin{align*}
@@ -34,9 +31,9 @@ can be found using the triple integral
 \begin{align*}
   V = \mathop{\int_{0}^{1} \!\! \int_{-\sqrt{x}}^{\sqrt{x}} \! \int_0^{1-x} } dz\ dy\ dx = \frac{8}{15}.
 \end{align*}
-By simply changing the order of integration, we can find five other ways of expressing the volume of the solid. Find three of them. 
+By simply changing the order of integration, we can find \textit{other} ways of expressing the volume of the solid. Find two of them. 
 
-Note that for this question, you do not need to perform any integration. Simply set up three other triple integrals that represent the volume of the solid.
+Note that for this question, you do not need to perform any integration. Simply set up other triple integrals that represent the volume of the solid.
 \textit{Hint: you may however want to check that your integrals represent the same volume with WolframAlpha}.
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % TRIG OPTIMIZATION
@@ -46,7 +43,7 @@ Show that
 \end{align*}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % TEMPERATURE
-The temperature of the wire $x^2+y^2\le1$ in $\R^3$ is $T(x,y)=xy$. Find the coldest and hottest points or regions of the wire. 
+The temperature of the wire $x^2+y^2\le1$ in $\R^3$ is $T(x,y)=xy$. Find the coldest and hottest regions of the wire. 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % FUNNY AREA
 It can be shown that 
@@ -69,16 +66,11 @@ This question has two parts.
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % SIMPLE CHAIN RULE
 Let $f=f(x,y)$ and $g=g(t)=f(\sin t, e^t+\cos t)$. Find an expression for $g'(t)$.
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % WAVE EQUATION
-If $f=f(t)$ and $g=g(t)$ are functions of one variable whose second derivatives exist, and \\ $u=f(s+ct)+g(s-ct)$, show that 
-\begin{align*}
-  \utt=c^2\uss,
-\end{align*}
-where $c$ is a constant. 
+
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % CYLINDERS VOLUME
 Find the volume bounded by the cylinders $x^2+y^2=1$ and $x^2+y^2 = 4$, and bounded by \\ $z = \ln(x^2+y^2)$. You may use the formula $\int \ln(x)dx = x\ln(x)-x+C$. 
+\newpage
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % FUNCTION THAT IS NOT A GRADIENT
 Let $f(x,y)$ be a function of two variables that has the form $f(x,y) = g_1(x,y)\MB{i} + g_2(x,y)\MB{j}$.
@@ -86,7 +78,9 @@ Let $f(x,y)$ be a function of two variables that has the form $f(x,y) = g_1(x,y)
 \item Provide an example of an $f(x,y)$ that has the form $f(x,y) = g_1(x,y)\MB{i} + g_2(x,y)\MB{j}$, and has the property that there does not exist an $F(x,y)$ such that $\nabla F = f(x,y)$. 
 \item Show that, for the function you chose in part (a), that there does not exist an $F$ such that $\nabla F=f$.
 \EEN
-
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % LOCAL AND GLOBAL MAXIMA
+Suppose that a continuous, differential function $f(x,y)$ is defined on $\R^2$, and has only one critical point at $(a,b)$, and that $(a,b)$ is a local maximum of $f(x,y)$. Is $(a,b)$ necessarily a global maximum of $f(x,y)$? Explain why or why not. \textit{Hint: consider the function $f(x,y)=4ye^x-y^2-e^{8x}$, and the value of $f(0,2)$}.
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \end{enumerate} % END OF QUESTIONS
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -109,8 +103,6 @@ The second term is the integral of an odd function over a symmetrical interval, 
 \end{align*}
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % CHANGING ORDER OF INTEGRATION
 Noting that the limits of integration are not dependent on $y$, the $z$ and the $y$ integrals can be interchanged:
 \begin{align*}
@@ -130,14 +122,6 @@ We can re-write this as
 This gives us the integral
 \begin{align*}
   V &= \mathop{\int_{-1}^{1} \! \int_{y^2}^{1} \! \int_0^{1-x} } dz\ dx\ dy
-\end{align*}
-We can also define the region in this way \rednote{wrong}
-\begin{align*}
-  S = \{(x,y,z)\ |\  0 \le x \le 1-z, -1 \le y \le 1, 0 \le z \le 1 \}.
-\end{align*}
-This gives us the integral
-\begin{align*}
-  V &= \mathop{\int_{-1}^{1} \! \int_{0}^{1} \! \int_0^{1-z} } dx\ dz\ dy
 \end{align*}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % TRIG OPTIMIZATION
@@ -218,22 +202,7 @@ Applying the chain rule yields
   &= \frac{\partial f}{\partial x}\cdot\frac{d \sin t}{d t} +  \frac{\partial f}{\partial y}\cdot\frac{d (e^t \cos t)}{d t} \\
   &= \cos t\frac{\partial f}{\partial x} +  (e^t - \sin t) \frac{\partial f}{\partial y}
 \end{align*}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item % WAVE EQUATION
-Applying the chain rule yields
-\begin{align*}
-  \ut &= f'(s-ct)\frac{\partial (s-ct)}{\partial t} + g'(s+ct)\frac{\partial (s+ct)}{\partial t} \\ &= -c f'(s-ct) + cg'(s+ct).
-\end{align*}
-Differentiating again yields
-\begin{align*}
-  \utt &= ( -c)^2 f''(s-ct) + c^2g''(s+ct) \\& =  c^2 f''(s-ct) + c^2g''(s+ct)
-\end{align*}
-Similarly:
-\begin{align*}
-  \us &= f'(s-ct)\frac{\partial (s-ct)}{\partial s} + g'(s+ct)\frac{\partial (s+ct)}{\partial s} \\& = f'(s-ct) + g'(s+ct) \\
-  \uss &= f''(s-ct) + g''(s+ct) 
-\end{align*}
-By comparison, \begin{align*}\utt = c^2\uss \end{align*}.
+
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item % CYLINDERS VOLUME
 Using cylindrical coordinates, $ z =\ln(x^2+y^2) = \ln(r^2)$, and $1 \le r^2 \le 4$, or $1\le r \le 2$. The desired volume is given by the triple integral
@@ -266,6 +235,22 @@ But the first equation implies that $F=xy+\phi(y)$, where $\phi$ is an arbitrary
 \end{align}
 There does not exist a $\phi'(y)$ such that this is equal to $g_2=y$. Therefore, the function we chose in part (a) is not a gradient of a function. 
 \EEN
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item % LOCAL AND GLOBAL MAXIMA
+Consider the example function given in the hint. It is straightforward to show that $f(x,y)=4ye^x-y^2-e^{8x}$, has only one critical point. Its first partial derivatives are as follows.
+\begin{align*}
+  \pfx&=4ye^x-8e^{8x}\\
+  \pfy&=4e^x-2y
+\end{align*}
+Setting these equations to zero yields: $y=2e^x$ and $y=2e^{7x}$. These curves only intersect at $(0,1)$, so the only critical point is at the point $(0,1)$. The second partial derivatives are
+\begin{align*}
+  \pfxx&= 4ye^x-64e^{8x}\\
+  \pfyy&=-2\\
+  \pfxy&=4e^x
+\end{align*}
+At the critical point, $D$ is positive $\big(D$ is equal to $(4-64)(-2)-(4)^2=104\big)$, and $f_{xx}$ is negative, so $(0,1)$ is a local maximum. But, $f(0,1)=2$, and $f(0,2)=3$, so $(0,1)$ is not a global maximum. 
+
+Essentially, if a function of two variables has only one critical point, which is a local maximum, the critical point may or may not be a global maximum. This is because the critical points, as we have defined them are where the first partial derivatives $f_x$ and $f_y$ are \textit{both} zero. But there could be points where the first partial derivatives, $f_x$ and $f_y$ go to zero, but are not zero simultaneously. 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \end{enumerate}
