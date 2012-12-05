@@ -1,0 +1,56 @@
+\subsection{Surface Integrals}
+\FromC{\From Sections 4.4 and 4.5 of \VCT.}
+
+\BEN
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\item
+\textbf{Surface area} \\
+Prove, using surface integration (in rectangular coordinates), that the surface
+area of a cone with base radius $r$ and height $h$ is $\pi r \sqrt{h^2 + r^2}$.
+
+\item
+\textbf{Computing mass from density} \\
+Compute, using surface integration, the mass of the top half of a hollow
+spherical shell of radius $R$ whose density at the point $(x,y,z)$, assuming
+the center of the shell lies at the origin, is given by the function $d(x,y,z)
+= x + y + z^2$. You may assume that the shell is infinitesimally thin.
+
+\item \label{flux-surface}
+\textbf{Flux through a surface} \\
+Consider the vector field
+$\mathbf{f}(x,y,z) = x\mathbf{i} + y\mathbf{j} + z\mathbf{k}$
+and the surface $S$ parameterized by
+$\mathbf{r}(s,t) = (s^2 + t^2)\mathbf{i} + s\mathbf{j} + t\mathbf{k}$
+for $-2 \leq s \leq 2$, $-3 \leq t \leq 3$.  Compute the flux of $\mathbf{f}$
+through $S$.
+
+\item
+\textbf{Flux and the Divergence Theorem} \\
+Consider the vector field $\mathbf{f}(x,y,z) = 3xz^2\mathbf{i} +
+xe^{y}\mathbf{j} + \frac{1}{z}\mathbf{k}$.  Use the Divergence Theorem to
+compute the flux of $f$ through the box $S$ bounded by $0 \leq x \leq 2$, $-2
+\leq y \leq 4$, $-3 \leq z \leq -1$.
+
+\item
+\textbf{Application: Work done by wind} \\
+An airplane's path from point $A$ to point $B$ can be parameterized by the
+equation $\mathbf{r}(t) = t\mathbf{i} + \cos^2(t)\mathbf{j} +
+\sin(t)\mathbf{k}$ for $0 \leq t \leq \pi$.  The wind exerts a force on the
+airplance that can be described by the vector field $f(x,y,z) = (3y +
+3x^2z)\mathbf{i} + (3x + z^2)\mathbf{j} + (2yz + x^3)\mathbf{k}$.
+\BEN
+\item Find a potential for $f$.
+\item Compute the work done by the wind on the airplane during its flight.
+\EEN
+
+\item
+\textbf{Stokes' Theorem} \\
+Recall the surface $S$ from (\ref{flux-surface}) and let $\mathbf{f}(x,y,z) =
+2xy\mathbf{i} + y^2\mathbf{j} + (x+z)\mathbf{k}$.  Use Stokes' Theorem to
+compute the line integral $\int_{\partial S} \! \mathbf{f} \cdot d\mathbf{r}
+\,$.
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\EEN

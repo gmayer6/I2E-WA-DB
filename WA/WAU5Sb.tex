@@ -1,0 +1,178 @@
+\subsection{Surface Integrals}
+
+\BEN
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\item The area of a surface $S$ with parameterization $\mathbf{r}(s,t) =
+x(s,t)\mathbf{i} + y(s,t)\mathbf{j} + z(s,t)\mathbf{k}$ is given by the
+integral $\iint\limits_S \! d\sigma \,$, where $d\sigma = |\frac{\partial
+\mathbf{r}}{\partial s} \times \frac{\partial \mathbf{r}}{\partial t}| ds dt$.
+
+A cone with base radius $r$ and height $h$ can be parameterized, assuming the
+center of the base is centered at the origin and the point of the cone lies at
+$(0,0,h)$, as
+\[\mathbf{r}(s,t) = \dfrac{r}{h}(h - t)\cos(s)\mathbf{i} + \dfrac{r}{h}(h - t)\sin(s)\mathbf{j} + t\mathbf{k}.\]
+Therefore we compute
+\begin{align*}
+ |\frac{\partial \mathbf{r}}{\partial s} \times \frac{\partial \mathbf{r}}{\partial t}|
+ &= |\begin{bmatrix}
+       -\frac{r}{h}(h - t)\sin(s) \\
+       \frac{r}{h}(h - t)\cos(s) \\
+       0
+      \end{bmatrix} \times \begin{bmatrix}
+                            -\frac{r}{h}\cos(s) \\
+                            -\frac{r}{h}\sin(s) \\
+                            1
+                           \end{bmatrix}| \\
+ &= |\begin{bmatrix}
+      \mathbf{i} & \mathbf{j} & \mathbf{k} \\
+      -\frac{r}{h}(h - t)\sin(s) & \frac{r}{h}(h - t)\cos(s) & 0 \\
+      -\frac{r}{h}\cos(s) & -\frac{r}{h}\sin(s) & 1 \\
+     \end{bmatrix}| \\
+ &= | \frac{r}{h}(h - t)\cos(s)\mathbf{i} + \frac{r}{h}(h - t)\sin(s)\mathbf{j} + \frac{r^2}{h^2}(h-t)\mathbf{k} | \\
+ &= \sqrt{\frac{r^2}{h^2}(h - t)^2\cos^2(s) + \frac{r^2}{h^2}(h - t)^2\sin^2(s) + \frac{r^4}{h^4}(h-t)^2} \\
+ &= \sqrt{\frac{r^2}{h^2}(h - t)^2 + \frac{r^4}{h^4}(h-t)^2} \\
+ &= \frac{r}{h}(h-t)\sqrt{1 + \frac{r^2}{h^2}} \\
+ &= \frac{r}{h^2}(h-t)\sqrt{h^2 + r^2} \\
+ \iint\limits_S \! d\sigma \,
+ &= \int_{0}^{h} \int_{0}^{2\pi} \! \frac{r}{h^2}(h-t)\sqrt{h^2 + r^2} ds dt \, \\
+ &= \int_{0}^{h} \! 2\pi \frac{r}{h^2}(h-t)\sqrt{h^2 + r^2} dt \, \\
+ &= \left. 2\pi \frac{r}{h^2}(ht-\frac{1}{2}t^2)\sqrt{h^2 + r^2} \right|_0^h \\
+ &= \pi r \sqrt{h^2 + r^2}.
+\end{align*}
+
+\item
+
+We can parameterize the shell as $\mathbf{r}(s,t) = R\cos(s)\sin(t)\mathbf{i} +
+R\sin(s)\sin(t)\mathbf{j} + R\cos(t)\mathbf{k}$ for $0 \leq s \leq 2\pi$ and $0
+\leq t \leq \pi$.
+
+\begin{align*}
+ |\frac{\partial \mathbf{r}}{\partial s} \times \frac{\partial \mathbf{r}}{\partial t}|
+ &= |\begin{vmatrix}
+     \mathbf{i} & \mathbf{j} & \mathbf{k} \\
+     -R\sin(s)\sin(t) & R\cos(s)\sin(t) & 0 \\
+     R\cos(s)\cos(t) & R\sin(s)\cos(t) & - R\sin(t)
+    \end{vmatrix}| \\
+ &= |-R^2\cos(s)\sin^2(t)\mathbf{i}
+    - R^2\sin(s)\sin^2(t)\mathbf{j}
+    + (-R^2\sin^2(s)\sin(t)\cos(t) - R^2\cos^2(s)\cos(t)\sin(t))\mathbf{k}| \\
+ &= |-R^2\cos(s)\sin^2(t)\mathbf{i}
+    - R^2\sin(s)\sin^2(t)\mathbf{j}
+    - R^2\cos(t)\sin(t)\mathbf{k}| \\
+ &= \sqrt{R^4\cos^2(s)\sin^4(t) + R^4\sin^2(s)\sin^4(t) + R^4\cos^2(t)\sin^2(t)} \\
+ &= \sqrt{R^4\sin^4(t) + R^4\cos^2(t)\sin^2(t)} \\
+ &= \sqrt{R^4\sin^2(t)(\sin^2(t) + \cos^2(t))} \\
+ &= R^2\sin(t) \\
+ \iint\limits_S \! d(x,y,z) d\sigma \,
+ &= \iint\limits_S \! d(x(s,t), y(s,t), z(s,t)) |\frac{\partial \mathbf{r}}{\partial s} \times \frac{\partial \mathbf{r}}{\partial t}| ds dt \, \\
+ &= \int_0^\pi \int_0^{2\pi} \! (R\cos(s)\sin(t) + R\sin(s)\sin(t) + R^2\cos^2(t)) R^2\sin(t) ds dt \, \\
+ &= R^3 \int_0^\pi \int_0^{2\pi} \! (\cos(s)\sin^2(t) + \sin(s)\sin^2(t) + R\cos^2(t)\sin(t)) ds dt \, \\
+ &= R^3 \int_0^\pi \! (\left. (\sin(s)\sin^2(t) - \cos(s)\sin^2(t) + sR\cos^2(t)\sin(t)) \right|_0^{2\pi} dt \, \\
+ &= R^3 \int_0^\pi \! 2\pi R\cos^2(t)\sin(t) dt \, \\
+ &= -2\pi R^4 \int_0^\pi \! -\cos^2(t)\sin(t) dt \, \\
+ &= -2\pi R^4 (\left. \frac{1}{3}\cos^3(t)) \right|_0^\pi \, \\
+ &= \frac{2}{3}\pi R^4
+\end{align*}
+
+\item
+
+The flux through the surface is given by the integral
+
+\begin{align*}
+ \iint\limits_S \! \mathbf{f} \cdot d\mathbf{\sigma} \,
+ &= \iint\limits_S \! \mathbf{f} \cdot \mathbf{n} ds dt \,
+\end{align*}
+
+where
+
+\begin{align*}
+ \mathbf{n}
+ &= \frac{\partial \mathbf{r}}{\partial s} \times \frac{\partial \mathbf{r}}{\partial t} \\
+ &= (2s\mathbf{i} + \mathbf{j}) \times (2t\mathbf{i} + \mathbf{k}) \\
+ &= \begin{vmatrix}
+     \mathbf{i} & \mathbf{j} & \mathbf{k} \\
+     2s & 1 & 0 \\
+     2t & 0 & 1
+    \end{vmatrix} \\
+ &= \mathbf{i} -2s\mathbf{j} -2t\mathbf{k} \\
+ \iint\limits_S \! \mathbf{f} \cdot \mathbf{n} ds dt \,
+ &= \int_{-3}^{3} \int_{-2}^{2} \! ((s^2+t^2)\mathbf{i} + s\mathbf{j} + t\mathbf{k}) \cdot (\mathbf{i} -2s\mathbf{j} -2t\mathbf{k}) ds dt \, \\
+ &= \int_{-3}^{3} \int_{-2}^{2} \! ((s^2+t^2) - 2s^2 - 2t^2) ds dt \, \\
+ &= \int_{-3}^{3} \int_{-2}^{2} \! (-s^2 - t^2) ds dt \, \\
+ &= \int_{-3}^{3} \! (\left. -s^3/3 - st^2) \right|_{-2}^{2} dt \, \\
+ &= \int_{-3}^{3} \! (-16/3 - 4t^2) dt \, \\
+ &= -32 - 72 \\
+ &= -104 \, \\
+\end{align*}
+
+\item
+
+According to the Divergence Theorem we can compute the flux through $S$ by
+evaluating
+
+\begin{align*}
+ \iiint\limits_S \! (\nabla \cdot \mathbf{f}) dV \,
+ &= \int_{-3}^{-1} \int_{-2}^{4} \int_{0}^{2} \! (3z^2 + xe^{y} - \frac{1}{z^2}) dxdydz \, \\
+ &= \int_{-3}^{-1} \int_{-2}^{4} \! (6z^2 + 2e^y - \frac{2}{z^2}) dydz \, \\
+ &= \int_{-3}^{-1} \! (36z^2 + 2e^4 - 2e^{-2} - \frac{12}{z^2}) dz \, \\
+ &= \left. 12z^3 + 2ze^4 - 2ze^{-2} + \frac{12}{z} \right|_{-3}^{-1} \\
+ &= 304 + 4e^4 - 4e^{-2} \\
+\end{align*}
+
+
+\item
+\BEN
+\item
+By integrating the components of $\mathbf{f}$, we see that a potential $F$ must
+satisy the equation \[3xy + x^3z + g(y,z) = 3xy + z^2y + h(x,z) = y^2z + x^3z +
+i(x,y).\]  This can be satisfied by setting $g(y,z) = z^2y$, $h(x,z) = x^3z$,
+$i(x,y) = 3xy$.  Therefore the function $F(x,y,z) = 3xy + x^3z + z^2y$ is a
+potential for $\mathbf{f}$.
+
+\item
+Since $\mathbf{f}$ is continuously differentiable everywhere and the airplane's
+path is smooth, the work done by the wind on the airplane can be computed
+as
+
+\begin{align*}
+ \int_C \! \mathbf{f} \cdot d\mathbf{r} \,
+ &= F(B) - F(A) \\
+ &= F(\pi, 1, 0) - F(0, 1, 0) \\
+ &= 3\pi - 0
+ &= 3\pi.
+\end{align*}
+
+\EEN
+
+\item
+
+According to Stokes' Theorem,
+\begin{equation}
+ \int_{\partial S} \! \mathbf{f} \cdot d\mathbf{r} \,
+ = \iint\limits_S \! ((\nabla \times \mathbf{f}) \cdot \mathbf{n}) d\sigma \, \label{stokes}
+\end{equation}
+
+where
+\begin{align*}
+ \nabla \times \mathbf{f}
+ &= (\frac{\partial}{\partial x}\mathbf{i} + \frac{\partial}{\partial y}\mathbf{j} + \frac{\partial}{\partial z}\mathbf{k}) \times (P(x,y,z)\mathbf{i} + Q(x,y,z)\mathbf{j} + R(x,y,z)\mathbf{k}) \\
+ &= (\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z})\mathbf{i} + (\frac{\partial P}{\partial z} - \frac{\partial R}{\partial x})\mathbf{j} + (\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y})\mathbf{k} \\
+ &= -\mathbf{j} - 2x\mathbf{k}.
+\end{align*}
+
+Recall from (\ref{flux-surface}) that, for the surface $S$, $\mathbf{n} =
+\mathbf{i} -2s\mathbf{j} -2t\mathbf{k}$.  Therefore (\ref{stokes}) becomes
+
+\begin{align*}
+ \int_{-3}^{3} \int_{-2}^{2} \! (-\mathbf{j} - 2x\mathbf{k}) \cdot (\mathbf{i} -2s\mathbf{j} -2t\mathbf{k}) dsdt \,
+ &= \int_{-3}^{3} \int_{-2}^{2} \! (2s + 4ts^2 + 4t^3) dsdt \, \\
+ &= \int_{-3}^{3} \! (\left. s^2 + \frac{4}{3}ts^3 + 4st^3) \right|_{-2}^{2} dt \, \\
+ &= \int_{-3}^{3} \! (\frac{64}{3}t + 16t^3) dt \, \\
+ &= (\left. \frac{32}{3}t^2 + 4t^4) \right|_{-3}^{3} \\
+ &= 0
+\end{align*}
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\EEN

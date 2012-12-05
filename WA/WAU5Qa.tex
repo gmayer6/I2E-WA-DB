@@ -1,0 +1,69 @@
+\subsection{Line Integrals}
+\FromC{\From Sections 4.1, 4.2, and 4.3 of \VCT.}
+
+\BEN
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\item
+\textbf{Computing surface area} \\
+Find the surface area of a cylindrical container of 4 inch radius with an
+open top and closed bottom whose lip height in inches is given by the function
+$f(x,y) = x^2y^2 + 2$ when the center of the bottom is located at $(0,0)$.
+
+\item
+\textbf{Work done by a spring} \\
+A ball is attached by a spring to the point $(0,0)$.  The spring pulls
+the ball towards the origin with a force proportional to the distance from the
+ball to the origin; that is, when the ball is pulled to the point $(x,y)$, the
+force exerted on the ball by the spring is given by $F(x,y) = -kx\mathbf{i} -
+ky\mathbf{j}$ for some arbitrary constant $k$.  What is the work done by the
+spring on the ball when the ball is pulled from the origin first to the point
+$(1,1)$ and then to the point $(2,1)$?
+
+\item
+\textbf{Work done by wind} \\
+An airplane departs from the point $(-2, -6)$ and follows the curve
+$\mathbf{r}(t) = t\mathbf{i} + (t^3 - t)\mathbf{j}$ to the point $(2, 6)$.  The
+wind force at each point $(x, y)$ is given by the function $F(x,y) = (1 +
+xy)\mathbf{i} + \sqrt{x}\mathbf{j}$.  How much work is done by the wind on the
+airplane during its flight?
+
+\item
+\textbf{Conservative vector fields} \\
+Let $C$ denote the unit circle parameterized as $\mathbf{r}(t) =
+\cos(t)\mathbf{i} + \sin(t)\mathbf{j}$ for $0 \leq t \leq 2\pi$.  For the
+following vector fields $\mathbf{f}$, find a potential $F$ if one exists, and
+indicate whether the existence of a potential guarantees $\int_C \! \mathbf{f}
+\cdot d\mathbf{r} \, = 0$.  Otherwise evaluate the integral $\int_C \!
+\mathbf{f} \cdot d\mathbf{r} \,$.
+
+\BEN
+\item $\mathbf{f}(x,y) = (y - x^3)\mathbf{i} + (x + 3y^2)\mathbf{j}$
+\item $\mathbf{f}(x,y) = \dfrac{x}{y}\mathbf{i} + 5xy\mathbf{j}$
+\item $\mathbf{f}(x,y) = \dfrac{2x}{(x^2+y^2)^2}\mathbf{i} + \dfrac{2y}{(x^2+y^2)^2}\mathbf{j}$
+\EEN
+
+\item
+\textbf{Green's Theorem} \\
+Evaluate the following line integrals using Green's Theorem, where $C$ is the
+curve defined by the equation $4x^2 + y^2 = 4$:
+
+\BEN
+\item $\int_C \! (\frac{1}{2}xy^4)dx + (4xy)dy \,$
+\item $\int_C \! (ye^{xy} - 7y) dx + (xe^{xy} + 3x) dy \,$
+\EEN
+
+\item
+\textbf{Applying Green's Theorem to Physics}
+
+Consider a thin annulus with inner radius 2cm and outer radius 5cm.  Assume the
+annulus has zero height and that its density at the point $(x,y)$ (where $x$
+and $y$ measure the offset in the $x$- and $y$-directions from the center of
+the annulus in centimeters) is defined by the function $f(x,y) = \dfrac{4x^2 +
+3y^2}{x^2 + y^2}$.
+
+Use Green's Theorem to set up (but not evaluate) a line integral whose value is
+equal to the mass of the annulus.
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\EEN

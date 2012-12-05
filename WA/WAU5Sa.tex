@@ -1,0 +1,199 @@
+\subsection{Line Integrals}
+
+\BEN
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\item The surface area of the container is equal to the sum of area of the
+bottom and the line integral with respect to arc length of the height function
+along the circumference of the cylinder.  The circumference of the cylinder
+can be parameterized as the curve $C$: $x(t) = 2\cos(t)$, $y(t) = 2\sin(t)$
+for $0 \leq t \leq 2\pi$.
+
+\begin{align*}
+ \int_C \! f(x,y) \, ds
+ &= \int_{0}^{2\pi} \! f(x(t), y(t)) \sqrt{x'(t)^2 + y'(t)^2} \, dt \\
+ &= \int_{0}^{2\pi} \! (16\cos^2(t)\sin^2(t) + 2) \, dt \\
+ &= (\left. 4t - \frac{1}{2}\sin{4t}) \right|_{0}^{2\pi} \\
+ &= 8\pi
+\end{align*}
+
+The area of the bottom is $\pi(4)^2 = 16\pi$, so the surface area of the
+container is $24\pi$.
+
+\item We compute the work using a line integral, where the path of
+integration is piecewise: $C = C_1 + C_2$, where $C_1$ is defined by
+$\mathbf{r}_1(t) = t\mathbf{i} + t\mathbf{j}$ for $0 \leq t \leq 1$ and $C_2$
+is defined by $\mathbf{r}_2 = (1 + t)\mathbf{i} + \mathbf{j}$ for $0 \leq t
+\leq 1$.
+
+\begin{align*}
+ \int_C \! \mathbf{F}(\mathbf{r}) \cdot d\mathbf{r} \,
+ &= \int_{C_1} \! \mathbf{F}(\mathbf{r_1}) \cdot d\mathbf{r_1} \, +
+    \int_{C_2} \! \mathbf{F}(\mathbf{r_2}) \cdot d\mathbf{r_2} \, \\
+ &= \int_0^1   \! \begin{bmatrix}
+                   -kt \\
+                   -kt
+                  \end{bmatrix} \cdot
+                  \begin{bmatrix}
+                   1 \\
+                   1
+                  \end{bmatrix}
+                  \, dt +
+    \int_0^1   \! \begin{bmatrix}
+                   -k(1 + t) \\
+                   -k
+                  \end{bmatrix} \cdot
+                  \begin{bmatrix}
+                   1 \\
+                   0
+                  \end{bmatrix}
+                  \, dt \\
+ &= \left. -\frac{1}{2}kt^2 \right|_0^1 +
+    \left. (-kt - \frac{1}{2}kt^2) \right|_0^1 \\
+ &= -2k
+\end{align*}
+
+\item We compute the work done by the wind by evaluating a line integral along
+the curve $C$ defined by $\mathbf{r}(t) = t\mathbf{i} + (t^3 - t)\mathbf{j}$
+for $-2 \leq t \leq 2$:
+
+\begin{align*}
+ \int_C \! \mathbf{F}(\mathbf{r}) \cdot d\mathbf{r} \,
+ &= \int_{-2}^{2} \! \begin{bmatrix}
+                      1 + (t)(t^3 - t) \\
+                      2t^2
+                     \end{bmatrix} \cdot
+                     \begin{bmatrix}
+                      1 \\
+                      3t^2 - 1
+                     \end{bmatrix} \, dt \\
+ &= \int_{-2}^{2} \! [(1 + t^4 - t^2) + (6t^4 - 2t^2) \, dt \\
+ &= \int_{-2}^{2} \! (7t^4 - 3t^2 + 1) \, dt \\
+ &= (\left. \frac{7}{5}t^5 - t^3 + t) \right|_{-2}^{2} \\
+ &= 0
+\end{align*}
+
+So there is no net work done by the wind on the airplane.
+
+\item
+\BEN
+\item
+
+A potential $F$ for $\mathbf{f}$ must satisfy the equations $\frac{\partial
+F}{\partial x} = y - x^3$ and $\frac{\partial F}{\partial y} = x + 3y^2$.
+Integrating the first equation with respect to $x$ yields $F(x,y) = xy -
+\frac{1}{4}x^4 + g(y)$ for some unknown function $g$ of $y$.  Integrating the
+second equation with respect to $y$ yields $F(x,y) = xy + y^3 + h(x)$ for some
+unknown function $h$ of $x$.  We can satisfy both of these by setting $h(x) =
+-\frac{1}{4}x^4$ and $g(y) = y^3$.  Therefore $F(x,y) = xy - \frac{1}{4}x^4 +
+y^3$ is a potential for $f$.
+
+Since both components $p(x,y) = y - x^3$ and $q(x,y) = x + 3y^2$ of
+$\mathbf{f}$ are continuously differentiable inside $C$, the existence of a
+potential $F$ for $\mathbf{f}$ implies that $\mathbf{f}$ is a conservative
+vector field, and thus $\int_C \! \mathbf{f} \cdot d\mathbf{r} \, = 0$.
+
+\item
+
+We again look for a potential $F$ for $\mathbf{f}$ by integrating its first and
+second component with respect to $x$ and $y$, respectively:
+
+\begin{equation*}F(x,y) = \frac{x^2}{2y} + g(y) = \frac{5}{2}xy^2 + h(x). \end{equation*}
+
+However, there are no functions $g$ and $h$ that we can choose to satisfy this
+equation.  Therefore no potential exists for $\mathbf{f}$, so it is not a
+conservative vector field.
+
+We proceed to evaluate the desired line integral:
+
+\begin{align*}
+ \int_C \! \mathbf{f} \cdot d\mathbf{r} \,
+ &= \int_{0}^{2pi} \! \mathbf{f}(\cos(t), \sin(t)) \cdot \begin{bmatrix} -\sin(t) \\ \cos(t) \end{bmatrix} dt \, \\
+ &= \int_{0}^{2pi} \! \begin{bmatrix} \dfrac{\cos(t)}{\sin(t)} \\ 5\cos(t)\sin(t) \end{bmatrix} \cdot \begin{bmatrix} -\sin(t) \\ \cos(t) \end{bmatrix} dt \, \\
+ &= \int_{0}^{2pi} \! (-\cos(t) + 5\cos^2(t)\sin(t)) dt \, \\
+ &= (\left. -\sin(t) - \frac{5}{3} \cos^3(t)) \right|_{0}^{2\pi} \\
+ &= (0 - \frac{5}{3}) - (0 - \frac{5}{3}) \\
+ &= 0
+\end{align*}
+
+\item
+Once more we look for a potential $F$ for $\mathbf{f}$ by integrating its
+components:
+
+\begin{equation*} F(x,y) = \dfrac{1}{x^2+y^2} + g(y) = \dfrac{1}{x^2+y^2} + h(x).\end{equation*}
+
+We can satisfy this equation by setting $g(y) = h(x) = 0$, so that $\nabla F =
+\mathbf{f}$, and $\mathbf{f}$ is a conservative vector field.  However, since
+neither component of $\mathbf{f}$ is defined at $(0,0)$, neither is
+continuously differentiable on the entire region bounded by $C$, so it is not
+guaranteed that $\int_C \! \mathbf{f} \cdot d\mathbf{r} \, = 0$.  We evaluate
+the integral by hand:
+
+\begin{align*}
+ \int_C \! \mathbf{f} \cdot d\mathbf{r} \,
+ &= \int_{0}^{2pi} \! \mathbf{f}(\cos(t), \sin(t)) \cdot \begin{bmatrix} -\sin(t) \\ \cos(t) \end{bmatrix} dt \, \\
+ &= \int_{0}^{2pi} \! \begin{bmatrix} \dfrac{2\cos(t)}{(\cos^2(t) + \sin^2(t))^2} \\ \dfrac{2\sin(t)}{(\cos^2(t) + \sin^2(t))^2} \end{bmatrix} \cdot \begin{bmatrix} -\sin(t) \\ \cos(t) \end{bmatrix} dt \, \\
+ &= \int_{0}^{2pi} \! \dfrac{-2\cos(t)\sin(t)}{(\cos^2(t) + \sin^2(t))^2} + \dfrac{2\sin(t)\cos(t)}{(\cos^2(t) + \sin^2(t))^2} dt \, \\
+ &= \int_{0}^{2pi} \! 0 dt \, \\
+ &= 0
+\end{align*}
+
+\EEN
+
+\item
+\BEN
+\item Using Green's Theorem requires computing
+\begin{align*}
+ \frac{\partial Q}{\partial x} &= 4y \\
+ \frac{\partial P}{\partial y} &= 2xy^3
+\end{align*}
+so that, when $A$ is the region contained by the curve $C$,
+\begin{align*}
+ \int_C \! (\frac{1}{2}xy^4)dx + (4xy)dy \,
+ &= \iint\limits_A (4y - 2xy^3) dA \\
+ &= \int_{-1}^{1} \int_{-\sqrt{4-4x^2}}^{\sqrt{4-4x^2}} \! (4y - 2xy^3) dy dx \, \\
+ &= \int_{-1}^{1} (\left. 2y^2 - \frac{1}{2}xy^4) \right|_{-\sqrt{4-4x^2}}^{\sqrt{4-4x^2}} dx \, \\
+ &= \int_{-1}^{1} (2(4-4x^2) - \frac{1}{2}x(4-4x^2)^2) - (2(4-4x^2) - \frac{1}{2}x(4-4x^2)^2) dx \, \\
+ &= \int_{-1}^{1} 0 dx \, \\
+ &= 0
+\end{align*}
+
+\item Again we compute
+\begin{align*}
+ \frac{\partial Q}{\partial x} &= e^{xy} + xye^{xy} + 3 \\
+ \frac{\partial P}{\partial y} &= e^{xy} + xye^{xy} - 7
+\end{align*}
+so that, when $A$ is the region contained by the curve $C$,
+\begin{align*}
+ \int_C \! (ye^{xy} - 7y)dx + (xe^{xy} + 3x)dy \,
+ &= \iint\limits_A 10 dA \\
+ &= 10 \iint\limits_A dA \\
+ &= 10 \text{(area of ellipse of minor radius 1 and major radius 2)} \\
+ &= 10 (\pi * 1 * 2) \\
+ &= 20\pi.
+\end{align*}
+\EEN
+
+\item
+
+Green's theorem tells us that, for smooth vector fields $\mathbf{f} =
+P(x,y)\mathbf{i} + Q(x,y)\mathbf{j}$,
+\begin{equation*}
+ \int_C \! P(x,y) dx + Q(x,y) dy =
+ \iint\limits_A \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y} dA.
+\end{equation*}
+
+To compute the mass of the annulus from the density function, we want to
+evaluate the integral \[\iint\limits_{A_1} \! \dfrac{4x^2 + 3y^2}{x^2 + y^2}
+dA_1 \, - \iint\limits_{A_2} \! \dfrac{4x^2 + 3y^2}{x^2 + y^2} dA_2 \,,\] where
+$A_1$ and $A_2$ are circles of radius 5 and 2, respectively, centered at the
+origin.
+
+If we define $P(x,y) = -4x\arctan(y/x)$ and $Q(x,y) = 3y\arctan(x/y)$, then by
+Green's Theorem, the mass is equal to the line integral \[\int_{C_1} \!
+-4x\arctan(y/x) dx + 3y\arctan(x/y) dy \, - \int_{C_2} \! -4x\arctan(y/x) dx +
+3y\arctan(x/y) dy \,.\]
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\EEN
